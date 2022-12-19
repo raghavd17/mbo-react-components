@@ -1,0 +1,137 @@
+@each $color-key,
+$color-value in $mbo-colors {
+
+    @each $tone-key,
+    $tone-value in $color-value {
+        @if $tone-key==base {
+
+
+            .border-#{$color-key},
+            .hover\:border-#{$color-key}:hover,
+            .focus\:border-#{$color-key}:focus {
+                border: 1px solid var(--color-#{$color-key}-#{$tone-key});
+                border: 1px solid #{$tone-value};
+            }
+
+
+
+            .border-t-#{$color-key},
+            .hover\:border-t-#{$color-key}:hover,
+            .focus\:border-t-#{$color-key}:focus {
+                border-top: 1px solid var(--color-#{$color-key}-#{$tone-key});
+                border-top: 1px solid #{$tone-value};
+            }
+
+            .border-r-#{$color-key},
+            .hover\:border-r-#{$color-key}:hover,
+            .focus\:border-r-#{$color-key}:focus {
+                border-right: 1px solid var(--color-#{$color-key}-#{$tone-key});
+                border-right: 1px solid #{$tone-value};
+            }
+
+            .border-b-#{$color-key},
+            .hover\:border-b-#{$color-key}:hover,
+            .focus\:border-b-#{$color-key}:focus {
+                border-bottom: 1px solid var(--color-#{$color-key}-#{$tone-key});
+                border-bottom: 1px solid #{$tone-value};
+            }
+
+            .border-l-#{$color-key},
+            .hover\:border-l-#{$color-key}:hover,
+            .focus\:border-l-#{$color-key}:focus {
+                border-left: 1px solid var(--color-#{$color-key}-#{$tone-key});
+                border-left: 1px solid #{$tone-value};
+            }
+
+
+        }
+
+        @else {
+
+            .border-#{$color-key}-#{$tone-key},
+            .hover\:border-#{$color-key}-#{$tone-key}:hover,
+            .focus\:border-#{$color-key}-#{$tone-key}:focus {
+                border: 1px solid var(--color-#{$color-key}-#{$tone-key});
+                border: 1px solid #{$tone-value};
+            }
+
+
+
+            .border-t-#{$color-key}-#{$tone-key},
+            .hover\:border-t-#{$color-key}-#{$tone-key}:hover,
+            .focus\:border-t-#{$color-key}-#{$tone-key}:focus {
+                border-top: 1px solid var(--color-#{$color-key}-#{$tone-key});
+                border-top: 1px solid #{$tone-value};
+            }
+
+            .border-r-#{$color-key}-#{$tone-key},
+            .hover\:border-r-#{$color-key}-#{$tone-key}:hover,
+            .focus\:border-r-#{$color-key}-#{$tone-key}:focus {
+                border-right: 1px solid var(--color-#{$color-key}-#{$tone-key});
+                border-right: 1px solid #{$tone-value};
+            }
+
+            .border-b-#{$color-key}-#{$tone-key},
+            .hover\:border-b-#{$color-key}-#{$tone-key}:hover,
+            .focus\:border-b-#{$color-key}-#{$tone-key}:focus {
+                border-bottom: 1px solid var(--color-#{$color-key}-#{$tone-key});
+                border-bottom: 1px solid #{$tone-value};
+            }
+
+            .border-l-#{$color-key}-#{$tone-key},
+            .hover\:border-l-#{$color-key}-#{$tone-key}:hover,
+            .focus\:border-l-#{$color-key}-#{$tone-key}:focus {
+                border-left: 1px solid var(--color-#{$color-key}-#{$tone-key});
+                border-left: 1px solid #{$tone-value};
+            }
+        }
+    }
+}
+
+
+// 
+
+@for $i from 1 through 5 {
+  .border-w-#{$i} {
+    border-width: #{$i}px;
+  }
+}
+
+// utility classes
+.border {
+    border-color: var(--color-border);
+  
+    &-all {
+      border: 1px solid var(--color-border);
+    }
+  
+    &-top {
+      border-top: 1px solid;
+    }
+  
+    &-left {
+      border-left: 1px solid;
+    }
+  
+    &-right {
+      border-right: 1px solid;
+    }
+  
+    &-borrom {
+      border-bottom: 1px solid;
+    }
+    &-0 {
+      border: none;
+    }
+  }
+  
+  hr {
+    border-color: var(--color-border);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid;
+  }
+  
+  // border end
+  

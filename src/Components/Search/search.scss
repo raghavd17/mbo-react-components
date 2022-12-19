@@ -1,0 +1,36 @@
+@tailwind components;
+
+@layer components {
+    .search {
+        @apply relative grid;
+
+        &__bar {
+            @apply grid;
+        }
+
+        &__results {
+            @apply rounded border border-neutral-300 py-4 px-2;
+        }
+
+        &__input {
+            @apply p-2 border border-neutral-300 rounded;
+            grid-column: 1/1;
+            grid-row: 1/1;
+
+        }
+
+        &__btn {
+            grid-column: 1/1;
+            grid-row: 1/1;
+            @apply justify-self-end text-2xl self-center mr-1;
+            --btn-bg: transparent;
+
+            &:hover {
+                --btn-bg: transparent;
+                box-shadow: none;
+            }
+
+        }
+    }
+
+}

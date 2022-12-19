@@ -1,0 +1,126 @@
+// TODO: Need to work on the component and styling both with new approch 
+@tailwind components;
+
+@layer components {
+
+  // amount filter
+  .mbo-amt {
+    &__dropdown-menu {
+      .dropdown-menu {
+        min-width: 320px;
+      }
+    }
+
+    // mbo-amt__dropdown-menu
+    &__filter {
+
+      @apply m-4 flex flex-col;
+
+      & .filter {
+        &__title {
+          @apply text-primary-600 mb-4 text-xs font-semibold;
+        }
+
+        &__range {
+          @apply flex mb-4;
+        }
+
+        &__value {
+          @apply flex-grow w-1/2 py-2 px-0 text-center bg-primary-200 rounded-md text-xs first:mr-2;
+
+
+
+          &--error {
+            @apply bg-white shadow shadow-error-500;
+          }
+        }
+
+        &__input {
+          @apply bg-transparent border-0 py-0 px-3 text-center w-1/2 text-xs text-action-500 outline-none font-medium focus:outline-none;
+        }
+
+        // filter__input end
+        &__slider_handle {
+          @apply outline-none h-6 relative bg-neutral-100 border border-neutral-200 border-none rounded shadow-2xl shadow-neutral-500 cursor-pointer aspect-square w-6 transition-all;
+          pointer-events: all;
+
+          @apply hover:bg-action-300 focus:bg-action-600 active:bg-action-600;
+
+          &:before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            aspect-ratio: theme('aspectRatio.square');
+            background: theme('colors.action.600');
+            border-radius: theme('borderRadius.full');
+          }
+
+
+
+
+          // before end
+          &:hover {
+            background: theme('colors.action.400');
+            ;
+
+            &:before {
+              background: theme('colors.white');
+              ;
+            }
+          }
+
+          &:focus,
+          &:active,
+          &.active {
+            background: theme('colors.action.600');
+            ;
+
+
+            &:before {
+              background: theme('colors.white');
+              ;
+
+            }
+          }
+        }
+
+        // slider__slider_handle
+
+        &__track {
+          @apply inline-block h-px w-[90%] rounded-sm my-0 mx-3;
+        }
+
+        &__progress_bar {
+
+          @apply h-full bg-primary-100;
+
+          &:nth-child(2) {
+            background-color: theme('colors.action.600');
+            ;
+
+          }
+        }
+      }
+
+      // filter end here
+
+      .alert.alert-danger {
+        @apply mt-5 bg-error-500 text-white gap-2 p-2 text-xs;
+        @apply place-items-center place-content-center -mx-6 -mb-8 border-0 flex rounded-t-none font-normal;
+
+      }
+
+      .alert-indicator {
+        @apply rounded-full font-semibold grid place-items-center place-content-center aspect-square w-5 bg-white text-error-500;
+
+      }
+    }
+
+    // mbo-amt__filter end
+  }
+}

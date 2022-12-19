@@ -1,0 +1,16 @@
+dialog {
+		width:500px;
+	border:solid var(--size-1, 1px) var(--color-gray);
+	box-shadow:10px 10px 5px var(--color-gray);
+}
+dialog::backdrop {
+
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 1px,
+    rgba(0, 0, 0, 0.3) 1px,
+    rgba(0, 0, 0, 0.3) 20px
+  );
+  backdrop-filter: blur(3px);
+}

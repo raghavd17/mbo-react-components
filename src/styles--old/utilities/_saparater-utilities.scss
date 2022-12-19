@@ -1,0 +1,36 @@
+@tailwind components;
+:root {
+    --separater-space:theme('spacing[1]');
+    --symbol: '|';
+    --color-separater: theme('colors.neutrals.200');
+}
+@layer components {
+    
+
+    .separated,
+    .separater {
+        --color: var(--color-separater);
+    }
+
+    .separated>*+*::before,
+    .separater::before {
+        color: var(--color-separater);
+        content: var(--symbol, '|');
+        margin-inline: var(--separater-space);
+    }
+
+
+    .separated,
+    .separater {
+        &.bullet {
+            --symbol: "•"
+        }
+
+        &.dash {
+            --symbol: '/'
+        }
+
+    }
+
+    
+}

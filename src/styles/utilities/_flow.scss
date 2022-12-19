@@ -1,0 +1,9 @@
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1rem);
+}
+
+
+// new solution 
+.flow > :where(:not(:first-child)) {
+  margin-block-start: var(--flow-space, 1em);
+}

@@ -1,0 +1,50 @@
+@each $name,
+$space in $mbo-sizes {
+  .gap {
+    &-#{$name} {
+      gap: var(--size-#{$name});
+    }
+
+    // .gap end 
+    &-x-#{$name} {
+      column-gap: var(--size-#{$name});
+    }
+
+    // column-gap 
+    &-y-#{$name} {
+      row-gap: var(--size-#{$name});
+    }
+
+    // row-gap 
+  }
+}
+
+
+// responsive border-radius 
+@each $b-points,
+$val in $mbo-breakpoints {
+
+  @include breakpoint-up($b-points) {
+
+    @each $name,
+    $space in $mbo-sizes {
+      .#{$b-points}\:gap {
+        &-#{$name} {
+          gap: var(--size-#{$name});
+        }
+
+        // .gap end 
+        &-x-#{$name} {
+          column-gap: var(--size-#{$name});
+        }
+
+        // column-gap 
+        &-y-#{$name} {
+          row-gap: var(--size-#{$name});
+        }
+
+      }
+    }
+
+  }
+}

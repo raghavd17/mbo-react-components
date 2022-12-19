@@ -1,0 +1,20 @@
+// TODO: Need to work on this 
+.container {
+    max-width: 75rem;
+    margin-inline:auto;
+    padding-inline:var(--size-20, 1.25rem);
+    width: 100%;
+    
+    @include breakpoint-up(sm) {
+      max-width: 640px;
+    }
+    @include breakpoint-up(md) {
+      max-width: 75rem;
+    }
+    @include breakpoint-up(lg) {
+      max-width: 75rem;
+
+    }@include breakpoint-up(xl) {
+      max-width: 75rem;
+    }
+  }

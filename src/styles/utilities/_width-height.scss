@@ -1,0 +1,209 @@
+@use "sass:map";
+
+@each $val,
+$width in $mbo-width-height {
+    .w {
+        &-#{$val} {
+            width:var(--size-#{$val});
+        }
+    }
+
+    // width % end here 
+
+    .max-w {
+        &-#{$val} {
+            max-width:var(--size-#{$val});
+        }
+    }
+
+    .min-w {
+        &-#{$val} {
+            min-width:var(--size-#{$val});
+        }
+    }
+
+    // width % utility 
+    .h {
+        &-#{$val} {
+            // height:#{$val};
+            height:var(--size-#{$val});
+        }
+    }
+
+    .max-h {
+        &-#{$val} {
+            // max-height:#{$val};
+            max-height:var(--size-#{$val});
+        }
+    }
+
+    .min-h {
+        &-#{$val} {
+            // min-height:#{$val};
+            min-height:var(--size-#{$val});
+        }
+    }
+
+    // height utilities end 
+}
+
+// width and height % based 
+
+// looping spacers 
+@each $val,
+$space in $mbo-sizes {
+
+    .w {
+        &-#{$val} {
+            width:var(--size-#{$val});
+        }
+    }
+
+    // w-* end / pixel based width 
+    .max-w {
+        &-#{$val} {
+            max-width:var(--size-#{$val});
+        }
+    }
+
+    .min-w {
+        &-#{$val} {
+            min-width:var(--size-#{$val});
+        }
+    }
+
+    // width utility 
+    .h {
+        &-#{$val} {
+            height:var(--size-#{$val});
+        }
+    }
+
+    .max-h {
+        &-#{$val} {
+            max-height:var(--size-#{$val});
+        }
+    }
+
+    .min-h {
+        &-#{$val} {
+            min-height:var(--size-#{$val});
+        }
+    }
+
+    // height utilities end 
+
+}
+
+@each $b-points,
+$val in $mbo-breakpoints {
+
+    @include breakpoint-up($b-points) {
+
+        @each $val,
+        $space in $mbo-sizes {
+
+            // xs\:
+            .#{$b-points}\:w {
+                &-#{$val} {
+                    width:var(--size-#{$val});
+                }
+            }
+
+            // width 
+
+            // w-* end / pixel based width 
+            .#{$b-points}\:max-w {
+                &-#{$val} {
+                    max-width:var(--size-#{$val});
+                }
+            }
+
+            .#{$b-points}\:min-w {
+                &-#{$val} {
+                    min-width:var(--size-#{$val});
+                }
+            }
+
+            // width utility 
+            .#{$b-points}\:h {
+                &-#{$val} {
+                    height:var(--size-#{$val});
+                }
+            }
+
+            .#{$b-points}\:max-h {
+                &-#{$val} {
+                    max-height:var(--size-#{$val});
+                }
+            }
+
+            .#{$b-points}\:min-h {
+                &-#{$val} {
+                    min-height:var(--size-#{$val});
+                }
+            }
+
+            // height utilities end 
+        }
+
+        // width and height loop end 
+
+
+        // width and height % loop 
+        @each $val,
+        $width in $mbo-width-height {
+            .#{$b-points}\:w {
+                &-#{$val} {
+                    // width:#{$val};
+                    width:var(--size-#{$val});
+                }
+            }
+
+            // width % end here 
+
+            .#{$b-points}\:max-w {
+                &-#{$val} {
+                    // max-width:#{$val};
+                    max-width:var(--size-#{$val});
+                }
+            }
+
+            .#{$b-points}\:min-w {
+                &-#{$val} {
+                    // min-width:#{$val};
+                    min-width:var(--size-#{$val});
+                }
+            }
+
+            // width % utility 
+            .#{$b-points}\:h {
+                &-#{$val} {
+                    // height:#{$val};
+                    height:var(--size-#{$val});
+                }
+            }
+
+            .#{$b-points}\:max-h {
+                &-#{$val} {
+                    max-height:var(--size-#{$val});
+                }
+            }
+
+            .#{$b-points}\:min-h {
+                &-#{$val} {
+                    min-height:var(--size-#{$val});
+                }
+            }
+
+            // height utilities end 
+        }
+
+        // width and height % based 
+        // width and height % loop end here 
+
+    }
+
+    // breakpoint end 
+
+}

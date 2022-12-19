@@ -1,0 +1,114 @@
+@use "sass:map";
+
+// Generate utility classes around colors
+// @each $name, $color in $_colors {
+//     .text-#{$name},
+//     .hover\:text-#{$name}:hover,
+//     .focus\:text-#{$name}:focus,
+//     .active\:text-#{$name}:active {
+//       color: var(--color-#{$name});
+//     }
+//   }
+
+// --color-#{$color}-#{$shade}
+
+// Generate utility classes around colors
+
+@each $color-key,
+$color-value in $mbo-colors {
+
+  @each $tone-key,
+  $tone-value in $color-value {
+    @if $tone-key==base {
+
+      .text-#{$color-key},
+      .hover\:text-#{$color-key}:hover,
+      .focus\:text-#{$color-key}:focus,
+      .active\:text-#{$color-key}:active {
+        color: var(--color-#{$color-key}-#{$tone-key});
+        // color: #{$tone-value};
+      }
+    }
+
+    @else {
+
+      .text-#{$color-key}-#{$tone-key},
+      .hover\:text-#{$color-key}-#{$tone-key}:hover,
+      .focus\:text-#{$color-key}-#{$tone-key}:focus,
+      .active\:text-#{$color-key}-#{$tone-key}:active {
+        color: var(--color-#{$color-key}-#{$tone-key});
+        // color: #{$tone-value};
+      }
+    }
+  }
+}
+
+
+// Generate utility classes around font-size
+@each $name,
+$size in $mbo-sizes {
+  .fs-#{$name} {
+    font-size: var(--size-#{$name});
+  }
+}
+
+// Generate utility classes around font-families
+@each $name,
+$size in $mbo-font-families {
+  .ff-#{$name} {
+    font-family: var(--#{$name});
+  }
+}
+
+@each $name,
+$weight in $mbo-font-weights {
+  .fw-#{$name} {
+    font-weight: $weight;
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.no-decoration,
+a.no-decoration,
+a.no-decoration>* {
+  text-decoration: none;
+}
+
+// line-height classes
+@each $name,
+$size in $mbo-lh {
+  .line-height-#{$name} {
+    line-height: var(--lh-#{$name});
+  }
+}

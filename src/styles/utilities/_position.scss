@@ -1,0 +1,31 @@
+$position:relative,
+absolute,
+fixed,
+sticky,
+static;
+
+
+@each $prop in $position {
+  .#{$prop} {
+    display:#{$prop};
+  }
+
+}
+
+// 
+
+$inset:top,
+right,
+bottom,
+left;
+;
+
+@each $val,
+$space in $mbo-sizes {
+  @each $prop in $inset {
+    .#{$prop}-#{$val} {
+      #{$prop}:var(--size-#{$val});
+    }
+
+  }
+}

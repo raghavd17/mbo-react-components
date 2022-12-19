@@ -1,0 +1,47 @@
+@tailwind components;
+
+@layer components {
+
+    .dropdown {
+        &[data-state="open"] {
+           @apply outline outline-neutral-100; 
+        }
+        --top: 100%;
+        --right: auto;
+        --min-width: 14rem;
+        --bg: theme('colors.white');
+        --radius: theme('borderRadius.sm');  
+        @apply relative;
+        
+        &>&-menu {
+            top: var(--top, initial);
+            right: var(--right, initial);
+            bottom: var(--bottom, initial);
+            left: var(--left, initial);
+            min-width: var(--min-width);
+            background: var(--bg);
+            @apply absolute border border-neutral-100 shadow-xl p-2 py-4 rounded hidden z-50;
+
+        }
+        &-toggle {
+            &:has( svg ) {
+                @apply flex gap-1 items-center;
+                &[data-dropdown='open']{
+                    @apply shadow-md;
+                    > svg {
+                        @apply origin-center rotate-180;         
+                    }
+                    + .dropdown-menu  {
+                        @apply block;
+                    }
+                }
+                // data-dropdown='open' end
+          }
+         }
+        //  .dropdown-toggle end 
+    }
+
+   
+
+    
+}

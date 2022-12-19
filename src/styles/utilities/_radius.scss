@@ -1,0 +1,73 @@
+// Generate utility classes around radius
+@each $name,
+$radius in $mbo-radius {
+
+  .radius {
+    &-#{$name} {
+      border-radius:var(--radius-#{$name});
+    }
+    // .radius
+    &-t-#{$name} {      
+      border-top-left-radius: var(--radius-#{$name});
+      border-top-right-radius: var(--radius-#{$name});
+    }
+    // .radius-top
+    &-r-#{$name} {   
+      border-top-right-radius: var(--radius-#{$name});
+      border-bottom-right-radius: var(--radius-#{$name});
+    }
+    // .radius-right
+    &-b-#{$name} {      
+      border-bottom-right-radius: var(--radius-#{$name});
+      border-bottom-left-radius: var(--radius-#{$name});
+    }
+    // .radius-bottom
+    &-l-#{$name} {      
+      border-top-left-radius: var(--radius-#{$name});
+      border-bottom-left-radius: var(--radius-#{$name});
+    }
+    // .radius-left
+  }
+
+}
+
+// responsive border-radius 
+@each $b-points,
+$val in $mbo-breakpoints {
+
+  @include breakpoint-up($b-points) {
+
+    @each $name,
+    $radius in $mbo-radius {
+      .#{$b-points}\:radius {
+        &-#{$name} {
+          border-radius:var(--radius-#{$name});
+        }
+        &-t-#{$name} {      
+          border-top-left-radius: var(--radius-#{$name});
+          border-top-right-radius: var(--radius-#{$name});
+        }
+        // .radius-top
+        &-r-#{$name} {   
+          border-top-right-radius: var(--radius-#{$name});
+          border-bottom-right-radius: var(--radius-#{$name});
+        }
+        // .radius-right
+        &-b-#{$name} {      
+          border-bottom-right-radius: var(--radius-#{$name});
+          border-bottom-left-radius: var(--radius-#{$name});
+        }
+        // .radius-bottom
+        &-l-#{$name} {      
+          border-top-left-radius: var(--radius-#{$name});
+          border-bottom-left-radius: var(--radius-#{$name});
+        }
+        // .radius-left
+      }
+    }
+
+  }
+}
+
+// will genrate  radius-1 to radius-6 | radius-round
+// .radius-1 {border-radius:var(--radius-1);}

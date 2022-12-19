@@ -1,0 +1,254 @@
+@use "sass:map";
+// Allow fluid sizes
+$mbo-fluid: false !default;
+// List of colors that is used to generate utility classes, but also generate
+// CSS custom properties
+$mbo-colors: (
+    'primary': (
+        '100': #f5f3f7,
+        '200': #EAE9F2,
+        '300': #A199C2,
+        '400': #6855b4,
+        '450': #6855B499,
+        '500': #483981,
+        '600': #352281,
+        '700': #211551,
+        '800': #22135e,
+        '900': #150b3b,
+        'tint-100': #A199C21A,
+        'tint-200': #A199C226,
+        'tint-500': #A199C280,
+        'tint-600': #5e38ba,
+        ),
+    'secondary': (
+        '100': #D5F7FF,
+        '200': #00B7E0,
+        '300': #0095B8,
+        '400': #007F9C,
+        '500': #07677D,
+        '600': #00576B,
+        '700': #044655,
+        'tint-200': #D5F7FF33,
+        'tint-500': #D5F7FF80,
+        ),
+    'action':(
+        '100': #D6E3FF,
+        '200': #6697FF,
+        '300': #3270EB,
+        '400': #1559EA,
+        '500': #1350D3,
+        '600': #1046B8,
+        '700': #0B3BA4,
+        ),
+        'success':(
+            '100':#BAE3CD,
+            '200':#1ED773,
+            '500':#008C40,
+            '900':#026931
+        ),
+        'attention':(
+            '100': #F4D3BF,
+            '500': #F37026,
+            '900': #D9550A,
+        ),
+        'error':(
+            '100':#F3D6D6,
+            '300':#CA313E,
+            '900':#B41320
+        ),
+    'neutrals': (
+        '100': #F3F3F4,
+        '200': #B8B3BC,
+        '300': #06183E80,
+        '400': #575463,
+        '500': #100A27BF,
+        '900': #100A27,
+        'white-150': #FFFFFF26,
+        'white-300': #FFFFFF4D,
+        'white-600': #FFFFFF99,
+        'white-850': #FFFFFFD9,
+        'white-900': #FFFFFF,
+        )
+        
+        ) !default;
+
+// Sizing for font-sizes, padding, margin and gap
+$mbo-sizes:(
+    'px': 0.063,
+    '0': 0,
+    '0-5': 0.125, /* 2px */
+    '1': 0.25, /* 4px */
+    '1-5': 0.375,/* 6px */
+    '2': 0.5, /* 8px */
+    '2-5': 0.625, /* 10px */
+    '3': 0.75,/* 12px */
+    '3-5': 0.875,/* 14px */
+    '4': 1,/* 16px */
+    '4-5': 1.125,/* 18px */
+    '5': 1.25, /* 20px */
+    '6': 1.5, /* 24px */
+    '7': 1.75, /* 28px */
+    '8': 2, /* 32px */
+    '9': 2.25, /* 36px */
+    '10': 2.5, /* 40px */
+    '11': 2.75, /* 44px */
+    '12': 3, /* 48px */
+    '14': 3.5, /* 56px */
+    '16': 4, /* 64px */
+    '20': 5, /* 80px */
+    '24': 6, /* 96px */
+    '28': 7, /* 112px */
+    '32': 8, /* 128px */
+    '36': 9, /* 144px */
+    '40': 10, /* 160px */
+    '44': 11, /* 176px */
+    '48': 12, /* 192px */
+    '52': 13, /* 208px */
+    '56': 14, /* 224px */
+    '60': 15, /* 240px */
+    '64': 16, /* 256px */
+    '72': 18, /* 288px */
+    '80': 20, /* 320px */
+    '96': 24, /* 384px */
+) !default;
+$mbo-width-height:(
+    'auto': auto,
+    '1by2': 50%,
+    '1by3': 33.333333%,
+    '2by3': 66.666667%,
+    '1by4': 25%,
+    '2by4': 50%,
+    '3by4': 75%,
+    '1by5': 20%,
+    '2by5': 40%,
+    '3by5': 60%,
+    '4by5': 80%,
+    '1by6': 16.666667%,
+    '2by6': 33.333333%,
+    '3by6': 50%,
+    '4by6': 66.666667%,
+    '5by6': 83.333333%,
+    '1by12': 8.333333%,
+    '2by12': 16.666667%,
+    '3by12': 25%,
+    '4by12': 33.333333%,
+    '5by12': 41.666667%,
+    '6by12': 50%,
+    '7by12': 58.333333%,
+    '8by12': 66.666667%,
+    '9by12': 75%,
+    '10by12': 83.333333%,
+    '11by12': 91.666667%,
+    'full': 100%,
+    'screen': 100vh,
+    'min': min-content,
+    'max': max-content,
+    'fit': fit-content,
+) !default;
+$mbo-font-weights: ('100': 100,
+    '200': 200,
+    '300': 300,
+    '400': 400,
+    '500': 500,
+    '700': 700,
+    '900': 900,
+);
+$mbo-radius:(
+    'none':0px,
+    'rounded':0.25rem, /* 4px */
+    'sm': 0.125rem, /* 2px */
+    'md': 0.375rem, /* 6px */
+    'lg': 0.5rem, /* 8px */
+    'xl':  0.75rem, //12px
+    '2xl': 1rem, // 16px
+    '3xl': 1.5rem, // 24px
+    'full': 1e5px) !default;
+
+    
+    $mbo-opacity:(
+        '0	': 0,
+        '5	': 0.05,
+        '10	':  0.1,
+        '20	':  0.2,
+        '25	':  0.25,
+        '30	':  0.3,
+        '40	':  0.4,
+        '50	':  0.5,
+        '60	':  0.6,
+        '70	':  0.7,
+        '75	':  0.75,
+        '80	':  0.8,
+        '90	':  0.9,
+        '95	':  0.95,
+        '100':  1) !default;
+// Based on type-scale.com: scale 1.333
+
+// $mbo-sizes: ('none': 0,
+//     '000': 0.56,
+//     '00': 0.75,
+//     '0': 1,
+//     '1': 1.33,
+//     '2': 1.78,
+//     '3': 2.37,
+//     '4': 3.16,
+//     '5': 4.21,
+// ) !default;
+
+
+// Sizing for line-height, default same as sizes, but can be set separately
+// Based on type-scale.com: scale 1.333
+$mbo-lh: $mbo-sizes !default;
+
+
+// Breakpoint system. Default uses 20rem times $mbo-sizes
+$mbo-breakpoints: (
+    xs: 32rem,
+    sm: 48rem,
+    md: 64rem,
+    lg: 80rem,
+    xl: 90rem
+) !default;
+
+// Fill when no breakpoints are set
+@if (length($mbo-breakpoints)==0) {
+
+    @each $name,
+    $size in $mbo-sizes {
+        $mbo-breakpoints: map.set($mbo-breakpoints, $name, $size * 20rem);
+    }
+}
+
+// Basic setup for light and dark themes.
+$mbo-dark-theme: (
+    
+'primary': (
+        '600': #6855b4,
+        '700': #A199C2,
+        )
+    ) !default;
+
+$mbo-light-theme: () !default;
+
+// internal array used for generating all utility functions
+$_colors: $mbo-colors;
+
+@each $name,
+$color in $mbo-dark-theme {
+    $_colors: map.set($_colors, $name, var(--color-#{$name}));
+}
+
+@each $name,
+$color in $mbo-light-theme {
+    $_colors: map.set($_colors, $name, var(--color-#{$name}));
+}
+
+// Font families
+$mbo-font-families: (
+    museo300: "'Museo Slab 300', sans-serif",
+    museo500: "'Museo Slab 500', sans-serif",
+    roboto: "'Roboto', sans-serif",
+    monospace: "Inconsolata, Menlo, Monaco, Consolas, 'Courier New', monospace",
+    serif: 'ui-serif, Georgia, Cambria, serif',
+    sans-serif: "system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+) !default;
+

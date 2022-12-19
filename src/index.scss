@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./styles/mbo-style.scss";
+
+// TODO: need to use core SCSS file for all the MF
+
+@layer reset,
+defaults,
+framework,
+base,
+theme,
+patterns,
+components,
+utilities,
+overrides;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--fs-12);
+  font-weight: normal;
+  line-height: 1.5;
+  color: var(--color-neutrals-400);
+  margin: 0;
+  font-family: var(--roboto, "Roboto", sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:is(h1, h2, h3):has(+ :is(h2, h3, h4)) {
+  margin: 0 0 0.25rem 0;
+}
+
+svg {
+  fill: currentColor;
+}
+
+:is(svg.icon) {
+  aspect-ratio: 1 / 1;
+  height: 1em;
+  width: 1em;
+}
+
+h1 {
+  font-size: var(--fs-56);
+}
+
+h2 {
+  font-size: var(--fs-36);
+}
+
+h3 {
+  font-size: var(--fs-28);
+}
+
+h4 {
+  font-size: var(--fs-24);
+}
+
+h5 {
+  font-size: var(--fs-20);
+}
+
+h6 {
+  font-size: var(--fs-18);
+}
+
+.title:where(h1, h2, h3, h4, h5) {
+  font-family: var(--museo300);
+}
+
+/*:TODO  Need to grab the these custom props from design system */

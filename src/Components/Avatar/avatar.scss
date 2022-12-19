@@ -1,0 +1,97 @@
+@tailwind components;
+:root {
+  --avatar-size-default: theme('width.8'); // 32px;
+    --avatar-fs-default: theme('fontSize.xs'); // 12px
+    --avatar-size: var(--avatar-size-default);
+    --avatar-radi: theme('borderRadius.full');
+    --avatar-bg:var(--color-action-100);
+    --avatar-color: var(--color-primary-500);
+    --avatar-fs: var(--avatar-fs-default);
+    --avatar-size-sm: theme('width[6]'); // 24px
+    --avatar-fs-sm: theme('fontSize.xs'); // 12px;
+    --avatar-size-md: theme('width[8]'); // 24px
+    --avatar-fs-md: theme('fontSize.xs'); // 12px;
+    --avatar-size-lg: theme('width.10');  // 36px
+    --avatar-fs-lg: theme('fontSize.base');  // 16px;
+    --avatar-size-xl: theme('width.12');  // 40px;
+    --avatar-fs-xl: theme('fontSize.lg');  // 18px;
+
+}
+@layer components {
+
+  @mixin avatar-size($size) {
+    @if $size==sm {
+      --avatar-size: var(--avatar-size-sm);
+      --avatar-fs: var(--avatar-fs-sm);
+    }
+
+    @if $size==md {
+      --avatar-size: var(--avatar-size-md);
+      --avatar-fs: var(--avatar-fs-md);
+    }
+
+    @if $size==lg {
+      --avatar-size: var(--avatar-size-lg);
+      --avatar-fs: var(--avatar-fs-lg);
+    }
+
+    @if $size==xl {
+      --avatar-size: var(--avatar-size-xl);
+      --avatar-fs: var(--avatar-fs-xl);
+    }
+   
+  }
+
+  .avatar {
+    @apply flex items-center drop-shadow-md self-center gap-[.5em];
+    font-size: var(--avatar-fs);
+
+    > picture img, > &-media img {
+      @apply max-w-full object-cover shadow-2xl;
+      border-radius: var(--avatar-radi);
+      width: var(--avatar-size);
+    }
+
+    &:has(> picture, &-media) {
+      &[data-avatar]:before {
+        @apply hidden;
+      }
+    }
+    &-title {
+    }
+    &-desc {
+      font-size: .875em;
+    }
+
+    &[data-avatar]:before {
+      content: attr(data-avatar);
+      @apply place-content-center place-items-center aspect-square grid shadow-2xl;
+      border-radius: var(--avatar-radi);
+      background: var(--avatar-bg);
+      color: var(--avatar-color);
+      width: var(--avatar-size);
+    }
+
+    &.sm {
+      @include avatar-size(sm);
+    }
+
+    &.md {
+      @include avatar-size(md);
+    }
+
+    &.lg {
+      @include avatar-size(lg);
+    }
+
+    &.xl {
+      @include avatar-size(xl);
+    }
+
+    &.round {
+      --avatar-radi: theme('borderRadius.md');
+    }
+    
+
+  }
+}

@@ -1,0 +1,48 @@
+.flow > * + * {
+    margin-top: var(--flow-space, 1em);
+  }
+  
+  .switcher {
+    --threshold: 52rem;
+    --switcher-vertical-alignment: flex-end;
+    gap: var(--space);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: var(--switcher-vertical-alignment, flex-start);
+  
+    & > * {
+      flex-grow: 1;
+      flex-wrap: wrap;
+      flex-basis: calc((var(--threshold) - (100% - var(--space))) * 999);
+      /* ↓ Half the value to each element, combining to make the whole */
+    }
+  
+    /* .switcher > * end  */
+  }
+  
+  .cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--cluster-space, 1rem);
+    /* ↓ multiply by -1 to negate the halved value */
+  }
+  
+  /* stack utility start  */
+  .stack {
+    --stack-space: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  
+    & > * {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  
+    & > * + * {
+      margin-top: var(--stack-space);
+    }
+  }
+  
+  /* stack utility end */
+  

@@ -1,0 +1,299 @@
+// Initiate the flexbox
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+// grow/shrink
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+// wrap
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+// justify-content
+.justify {
+  &-content {
+    &-start {
+      justify-content: flex-start;
+    }
+
+    &-end {
+      justify-content: flex-end;
+    }
+
+    &-center {
+      justify-content: center;
+    }
+
+    &-between {
+      justify-content: space-between;
+    }
+
+    &-around {
+      justify-content: space-around;
+    }
+
+    &-evenly {
+      justify-content: space-evenly;
+    }
+  }
+
+  // .justify-content end 
+  // justify-items-start
+  &.items {
+    &-start {
+      justify-items: flex-start;
+    }
+
+    &-end {
+      justify-items: flex-end;
+    }
+
+    &-center {
+      justify-items: center;
+    }
+
+    &-stretch {
+      justify-items: stretch;
+    }
+  }
+
+  // justify-items end 
+  // justify-self start 
+  &-self {
+    &-auto {
+      justify-self: auto;
+    }
+
+    &-start {
+      justify-self: start;
+    }
+
+    &-end {
+      justify-self: end;
+    }
+
+    &-center {
+      justify-self: center;
+    }
+
+    &-stretch {
+      justify-self: stretch;
+    }
+  }
+
+  // justify-self end 
+}
+
+// .justify end 
+
+// align
+.align {
+
+  // align-content
+  &-content {
+    &-center {
+      align-content: center;
+    }
+
+    &-start {
+      align-content: flex-start;
+    }
+
+    &-end {
+      align-content: flex-end;
+    }
+
+    &-between {
+      align-content: space-between;
+    }
+
+    &-around {
+      align-content: space-around;
+    }
+
+    &-evenly {
+      align-content: space-evenly;
+    }
+
+    &-baseline {
+      align-content: space-evenly;
+    }
+  }
+
+  // .align-content end 
+  // align items
+  &-items {
+    &-start {
+      align-items: flex-start;
+    }
+
+    &-end {
+      align-items: flex-end;
+    }
+
+    &-center {
+      align-items: center;
+    }
+
+    &-baseline {
+      align-items: baseline;
+    }
+
+    &-stretch {
+      align-items: stretch;
+    }
+  }
+
+  // align-items end 
+
+  // align-self start 
+  &-self {
+    &-auto {
+      align-self: auto;
+    }
+
+    &-start {
+      align-self: flex-start;
+    }
+
+    &-end {
+      align-self: flex-end;
+    }
+
+    &-center {
+      align-self: center;
+    }
+
+    &-baseline {
+      align-self: baseline;
+    }
+
+    &-stretch {
+      align-self: stretch;
+    }
+  }
+
+  // align-self end 
+}
+
+// .align end 
+
+
+
+
+
+
+// place 
+.place {
+  // place content
+  &-content {
+    &-start {
+      place-content: flex-start;
+    }
+    &-end {
+      place-content: flex-end;
+    }
+    &-center {
+      place-content: center;
+    }
+    &-between {
+      place-content: space-between;
+
+    }
+    &-around {
+      place-content: space-around;
+
+    }
+    &-evenly {
+      place-content: space-evenly;
+
+    }
+    &-baseline {
+      place-content: baseline;
+
+    }
+    &-stretch {
+      place-content: stretch;
+    }
+
+  }// .place-content end 
+  
+  // place items
+  &-items {
+    &-start {
+      place-items: flex-start;
+    }
+    &-end {
+      place-items: flex-end;
+    }
+    &-center {
+      place-items: center;
+    }
+    &-baseline {
+      place-items: baseline;
+    }
+    &-stretch {
+      place-items: stretch;
+    }
+
+  }// .place-items end 
+
+  // place self
+  &-self {
+    &-auto {
+      place-self: auto;
+    }
+    &-start {
+      place-self: flex-start;
+    }
+    &-end {
+      place-self: flex-end;
+    }
+    &-center {
+      place-self: center;
+    }
+    &-stretch {
+      place-self: stretch;
+    }
+
+  }// .place-self end 
+
+}
+
+// place items

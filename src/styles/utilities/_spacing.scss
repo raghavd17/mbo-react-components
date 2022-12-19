@@ -1,0 +1,270 @@
+    
+// new code from here     
+    // TODO: need to work on the logical spacers
+    $logical-sides: 
+    inline,
+    inline-start,
+    inline-end,
+    block,
+    block-start,
+    block-end;
+    
+    
+    
+    // non looping classes 
+    .p {
+        &-auto {
+                padding:auto;
+            }
+        &x-auto {
+             padding-left:auto;
+            padding-right:auto;
+        }
+        &y-auto {
+             padding-top:auto;
+             padding-bottom:auto;
+        }
+        //  padding-inline style 
+        &-inline-auto {
+            padding-inline: auto;
+        }
+        &-inline-start-auto {
+            padding-inline-start: auto;
+        }
+        &-inline-end-auto {
+            padding-inline-end: auto;
+        }
+        //  padding-inline style end 
+         //  padding block style
+         &-block-auto {
+            padding-block: auto;
+        }
+        &-block-start-auto {
+            padding-block-start: auto;
+        }
+        &-block-end-auto {
+            padding-block-end: auto;
+        }
+        // padding block end 
+    }
+    // .p end non looping 
+    
+    
+    
+    
+    // .m non looping style end 
+    .m {
+        &-auto {
+                margin:auto;
+            }
+        &x-auto {
+             margin-left:auto;
+             margin-left:auto;
+        }
+        &y-auto {
+             margin-top:auto;
+             margin-bottom:auto;
+        }
+        &-inline-auto {
+            margin-inline: auto;
+        }
+        &-inline-start-auto {
+            margin-inline-start: auto;
+        }
+        &-inline-end-auto {
+            margin-inline-end: auto;
+        }
+        //  margin-inline style end 
+         //  margin block style
+         &-block-auto {
+            margin-block: auto;
+        }
+        &-block-start-auto {
+            margin-block-start: auto;
+        }
+        &-block-end-auto {
+            margin-block-end: auto;
+        }
+        // margin block end 
+    }
+    // margin non looing style end 
+    
+    // looping spacers 
+    @each $val,
+    $space in $mbo-sizes {
+    
+        .p {
+            &-#{$val} {
+                padding:var(--size-#{$val});
+            }
+            &t-#{$val} {
+                padding-top:var(--size-#{$val});
+            }
+            &r-#{$val} {
+                padding-right:var(--size-#{$val});
+            }
+            &b-#{$val} {
+                padding-bottom:var(--size-#{$val});
+            }
+            &l-#{$val} {
+                padding-left:var(--size-#{$val});
+            }
+            &x-#{$val} {
+                padding-left:var(--size-#{$val});
+                padding-right:var(--size-#{$val});
+            }
+            &y-#{$val} {
+                padding-top:var(--size-#{$val});
+                padding-bottom:var(--size-#{$val});
+            }
+    
+            @each $side in $logical-sides {
+                &-#{$side}-#{$val} {
+                    padding-#{$side}:var(--size-#{$val});
+                }
+            }
+        } 
+        // padding end 
+    
+        .m {
+            &-#{$val} {
+                margin:var(--size-#{$val});
+            }
+            &t-#{$val} {
+                margin-top:var(--size-#{$val});
+            }
+            &r-#{$val} {
+                margin-right:var(--size-#{$val});
+            }
+            &b-#{$val} {
+                margin-bottom:var(--size-#{$val});
+            }
+            &l-#{$val} {
+                margin-left:var(--size-#{$val});
+            }
+            &x-#{$val} {
+                margin-left:var(--size-#{$val});
+                margin-right:var(--size-#{$val});
+            }
+            &y-#{$val} {
+                margin-top:var(--size-#{$val});
+                margin-bottom:var(--size-#{$val});
+            }
+            // for logical spacer 
+            @each $side in $logical-sides {
+                &-#{$side}-#{$val} {
+                    margin-#{$side}:var(--size-#{$val});
+                }
+            }
+        } 
+        // margin end 
+    }
+    //   .padding & .margin loop end 
+    
+    @each $b-points,
+    $val in $mbo-breakpoints {
+    
+        @include breakpoint-up($b-points) {
+    
+            @each $val,
+            $space in $mbo-sizes {
+                .#{$b-points}\:p {
+                    &-#{$val} {
+                        padding: var(--size-#{$val});
+                    }
+                    &t-#{$val} {
+                        padding-top:var(--size-#{$val});
+                    }
+                    
+                    &r-#{$val} {
+                        padding-right:var(--size-#{$val});
+                    }
+                    
+                    &b-#{$val} {
+                        padding-bottom:var(--size-#{$val});
+                    }
+                    
+                    &l-#{$val} {
+                        padding-left:var(--size-#{$val});
+                    }
+                    
+                    &x-#{$val} {
+                        padding-left:var(--size-#{$val});
+                        padding-right:var(--size-#{$val});
+                    }
+                    
+                    &y-#{$val} {
+                        padding-top:var(--size-#{$val});
+                        padding-bottom:var(--size-#{$val});
+                    }
+    
+                }
+                // padding loop with break point end
+                // margin loop here 
+                .#{$b-points}\:m {
+                    &-#{$val} {
+                        margin: var(--size-#{$val});
+                    }
+                    &t-#{$val} {
+                        margin-top:var(--size-#{$val});
+                    }
+                    
+                    &r-#{$val} {
+                        margin-right:var(--size-#{$val});
+                    }
+                    
+                    &b-#{$val} {
+                        margin-bottom:var(--size-#{$val});
+                    }
+                    
+                    &l-#{$val} {
+                        margin-left:var(--size-#{$val});
+                    }
+                    
+                    &x-#{$val} {
+                        margin-left:var(--size-#{$val});
+                        margin-right:var(--size-#{$val});
+                    }
+                    
+                    &y-#{$val} {
+                        margin-top:var(--size-#{$val});
+                        margin-bottom:var(--size-#{$val});
+                    }
+                
+                }
+                // margin loop with break point end
+            }
+            
+            //  auto spacer with breakpoint 
+            .#{$b-points}\:p {
+                &-auto {
+                    padding:auto;
+                }
+                &x-auto {
+                    padding-left:auto;
+                    padding-right:auto;
+                }
+                &y-auto {
+                     padding-top:auto;
+                     padding-bottom:auto;
+                }
+            }
+            // padding auto breakpoints
+            
+            .#{$b-points}\:m {
+                &-auto {
+                    margin:auto;
+                }
+                &x-auto {
+                    margin-left:auto;
+                    margin-right:auto;
+                }
+                &y-auto {
+                     margin-top:auto;
+                     margin-bottom:auto;
+                }
+            }
+            // margin auto breakpoints end 
+        }
+        
+    }

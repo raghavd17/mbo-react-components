@@ -1,0 +1,69 @@
+// Utility classes for background colors and different pseudo-classes
+
+
+// @each $name, $color in $_colors {
+//     .bg-#{$name},
+//     .hover\:bg-#{$name}:hover,
+//     .focus\:bg-#{$name}:focus,
+//     .active\:bg-#{$name}:active,
+//     .checked\:bg-#{$name}:checked {
+//       background-color: var(--color-#{$name});
+//     }
+  
+//     .bg-ext-#{$name},
+//     .hover\:bg-ext-#{$name}:hover,
+//     .focus\:bg-ext-#{$name}:focus,
+//     .active\:bg-ext-#{$name}:active,
+//     .checked\:bg-ext-#{$name}:checked {
+//       border-image: conic-gradient(var(--color-#{$name}) 0 0) fill 1/0/0 50vw;
+//     }
+//   }
+@each $color-key,
+$color-value in $mbo-colors {
+
+  @each $tone-key,
+  $tone-value in $color-value {
+    @if $tone-key==base {
+
+      .bg-#{$color-key},
+      .hover\:bg-#{$color-key}:hover,
+      .focus\:bg-#{$color-key}:focus,
+      .active\:bg-#{$color-key}:active,
+      .checked\:bg-#{$color-key}:checked
+      {
+        background-color: var(--color-#{$color-key}-#{$tone-key});
+        // background-color: #{$tone-value};
+      }
+        .bg-ext-#{$color-key},
+        .hover\:bg-ext-#{$color-key}:hover,
+        .focus\:bg-ext-#{$color-key}:focus,
+        .active\:bg-ext-#{$color-key}:active,
+        .checked\:bg-ext-#{$color-key}:checked {
+          border-image: conic-gradient(var(--color-#{$color-key}-#{$tone-key}) 0 0) fill 1/0/0 50vw;
+        }
+    }
+
+    @else {
+      .bg-#{$color-key}-#{$tone-key},
+      .hover\:bg-#{$color-key}-#{$tone-key}:hover,
+      .focus\:bg-#{$color-key}-#{$tone-key}:focus,
+      .active\:bg-#{$color-key}-#{$tone-key}:active,
+      .checked\:bg-#{$color-key}-#{$tone-key}:checked
+      {
+        background-color: var(--color-#{$color-key}-#{$tone-key});
+        // background-color:#{$tone-value};
+    
+      }
+    //   ext
+    
+    .bg-ext-#{$color-key}-#{$tone-key},
+        .hover\:bg-ext-#{$color-key}-#{$tone-key}:hover,
+        .focus\:bg-ext-#{$color-key}-#{$tone-key}:focus,
+        .active\:bg-ext-#{$color-key}-#{$tone-key}:active,
+        .checked\:bg-ext-#{$color-key}-#{$tone-key}:checked {
+          border-image: conic-gradient(var(--color-#{$color-key}-#{$tone-key}) 0 0) fill 1/0/0 50vw;
+          border-image: conic-gradient(#{$tone-value} 0 0) fill 1/0/0 50vw;
+        }
+    }
+  }
+}
