@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import './button.scss';
+import './_button.scss';
 
 const Button = ({children, active, disabled, icon, round, size, type, dropdownToggle, split}) => {
 

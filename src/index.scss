@@ -2,6 +2,17 @@
 
 @import "./styles/mbo-style.scss";
 
+/*******
+* compositions classes
+*******/
+@import './styles/compositions/_compositions-dir';
+
+/*******
+* generative utility classes
+*******/
+@import './styles/utilities/_utilities-dir';  // all utilities in one scss file 
+
+
 // TODO: need to use core SCSS file for all the MF
 
 @layer reset,
@@ -19,7 +30,7 @@ overrides;
 }
 
 body {
-  font-size: var(--fs-12);
+  font-size: var(--fs-3);
   font-weight: normal;
   line-height: 1.5;
   color: var(--color-neutrals-400);
@@ -38,33 +49,33 @@ svg {
 }
 
 :is(svg.icon) {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: var(--ratio-square);
   height: 1em;
   width: 1em;
 }
 
 h1 {
-  font-size: var(--fs-56);
+  font-size: var(--fs-14);
 }
 
 h2 {
-  font-size: var(--fs-36);
+  font-size: var(--fs-9);
 }
 
 h3 {
-  font-size: var(--fs-28);
+  font-size: var(--fs-7);
 }
 
 h4 {
-  font-size: var(--fs-24);
+  font-size: var(--fs-6);
 }
 
 h5 {
-  font-size: var(--fs-20);
+  font-size: var(--fs-5);
 }
 
 h6 {
-  font-size: var(--fs-18);
+  font-size: var(--fs-4-5);
 }
 
 .title:where(h1, h2, h3, h4, h5) {

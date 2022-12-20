@@ -1,5 +1,5 @@
 import React from 'react';
-import './avatar.scss';
+import './_avatar.scss';
 
 function Avatar() {
   return (

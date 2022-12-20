@@ -1,0 +1,20 @@
+.hover {
+    &-effect {
+        transition: display .3s;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &--active {
+            -webkit-box-shadow: 0px 0px 0px 8px var(--color-primary-200);
+            box-shadow: 0px 0px 0px 8px var(--color-primary-200);
+            transition: .3s;
+            border-radius: 100%;
+            background: var(--color-primary-200);
+        }
+
+        //.hover-effect--active, .hover-effect:active, .hover-effect:focus end 
+    }
+
+    //.hover-effect end 
+}

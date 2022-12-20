@@ -32,6 +32,10 @@
     place-items: center;
     // @apply transition-all focus:outline-1 inline-flex place-content-center place-items-center gap-1;
     // @apply hover:shadow-md;
+    // width: 100%;
+    // @include breakpoint-up(sm) {
+    //   width: auto;
+    // }
 
     &:hover {
       box-shadow: var(--shadow-md);

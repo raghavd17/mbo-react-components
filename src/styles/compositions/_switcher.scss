@@ -2,17 +2,25 @@
 // Layout pattern that allows all to move from horizontal to vertical at a
 // specific breakpoint\\
 
-
-
 .switcher {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .switcher > * {
-    flex-basis: calc((var(--switcher-width, 0) * var(--switcher-amount, 1) - 100%) * 999);
+  --threshold: 52rem;
+  --switcher-vertical-alignment: flex-end;
+  gap: var(--space);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: var(--switcher-vertical-alignment, flex-start);
+
+  & > * {
     flex-grow: 1;
+    // flex-wrap: wrap;
+    flex-basis: calc((var(--switcher-width, 0) * var(--switcher-amount, 1) - 100%) * 999);
+    /* ↓ Half the value to each element, combining to make the whole */
   }
+
+  /* .switcher > * end  */
+}
+
+
   
   // Generate classes to set the switcher min-sizes
   @each $name, $size in $mbo-breakpoints {

@@ -1,16 +1,22 @@
+/* stack utility start  */
 .stack {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  // ensure it is non-recursive, by using > selector
-  .stack > * {
+  --stack-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  & > * {
     margin-block: 0;
   }
-  
-  .stack > * + * {
-    margin-block-start: var(--stack-gap, 0);
+
+  & > * + * {
+    margin-block-start: var(--stack-gap, 0.5rem);
+
   }
+}
+
+/* stack utility end */
+
   
   // allows you to break the stack and fill the avaiable space above the applied
   // element
