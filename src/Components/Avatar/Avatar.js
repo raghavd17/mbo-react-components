@@ -8,7 +8,8 @@ function Avatar() {
         <div className='stack'>
           <h1 className='text-2xl text-neutral-800 mb-3'>Avatar with Name</h1>
           <div className='cluster'>
-            <div data-avatar="sm" class="avatar sm">
+            <div data-avatar="sm" class="avatar sm avatar-status">
+              <span className='visually-hidden'>Status</span>
               <div className='avatar-title'>Avatar Name</div>
             </div>
             <div data-avatar="md" class="avatar md">
@@ -161,12 +162,14 @@ function Avatar() {
               </picture>
               <div className='avatar-title'>Avatar Name</div>
             </div>
-            <div data-avatar="md" class="avatar md round">
-              <picture className='avatar-media'>
+            <div class="avatar md round">
+              <div className='avatar-media' data-avatar="md">
+              <picture >
                 <source media="(min-width:650px)" srcset="https://i.pravatar.cc/300" />
                 <source media="(min-width:465px)" srcset="https://i.pravatar.cc/300" />
                 <img src='https://i.pravatar.cc/300' alt='random profile' />
               </picture>
+              </div>
               <div className='avatar-title'>Avatar Name</div>
             </div>
             <div data-avatar="sm" class="avatar sm round">

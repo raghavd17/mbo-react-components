@@ -1,20 +1,20 @@
-@tailwind components;
+
 :root {
-  --avatar-size-default: theme('width.8'); // 32px;
-    --avatar-fs-default: theme('fontSize.xs'); // 12px
+    --avatar-size-default: var(--size-8); // 32px;
+    --avatar-fs-default: var(--fs-3); // 12px
     --avatar-size: var(--avatar-size-default);
-    --avatar-radi: theme('borderRadius.full');
+    --avatar-radi: var(--radius-full);
     --avatar-bg:var(--color-action-100);
     --avatar-color: var(--color-primary-500);
     --avatar-fs: var(--avatar-fs-default);
-    --avatar-size-sm: theme('width[6]'); // 24px
-    --avatar-fs-sm: theme('fontSize.xs'); // 12px;
-    --avatar-size-md: theme('width[8]'); // 24px
-    --avatar-fs-md: theme('fontSize.xs'); // 12px;
-    --avatar-size-lg: theme('width.10');  // 36px
-    --avatar-fs-lg: theme('fontSize.base');  // 16px;
-    --avatar-size-xl: theme('width.12');  // 40px;
-    --avatar-fs-xl: theme('fontSize.lg');  // 18px;
+    --avatar-size-sm: var(--size-8); // 24px
+    --avatar-fs-sm: var(--fs-3); // 12px;
+    --avatar-size-md: var(--size-8); // 24px
+    --avatar-fs-md: var(--fs-3); // 12px;
+    --avatar-size-lg: var(--size-9);  // 36px
+    --avatar-fs-lg: var(--fs-4);  // 16px;
+    --avatar-size-xl: var(--size-10);  // 40px;
+    --avatar-fs-xl: var(--fs-4-5);  // 18px;
 
 }
 @layer components {
@@ -43,21 +43,40 @@
   }
 
   .avatar {
-    @apply flex items-center drop-shadow-md self-center gap-[.5em];
+    
+    display: flex;
+    align-items: center;
+    align-self: center;
+    gap: var(--size-2);
     font-size: var(--avatar-fs);
+    position: relative;
 
     > picture img, > &-media img {
-      @apply max-w-full object-cover shadow-2xl;
+      
+      max-width: var(--size-full);
+      object-fit: cover;
       border-radius: var(--avatar-radi);
       width: var(--avatar-size);
     }
 
     &:has(> picture, &-media) {
       &[data-avatar]:before {
-        @apply hidden;
+        // @apply hidden;
+        display: none;
       }
     }
     &-title {
+    }
+    &-status {
+      &::after{
+        inline-size: var(--size-2);
+        aspect-ratio: var(--ratio-square);
+        border-radius: var(--radius-full);
+        background-color: red;
+        position: absolute;
+        right: 0;
+        top: 10%;
+      }
     }
     &-desc {
       font-size: .875em;
@@ -65,7 +84,12 @@
 
     &[data-avatar]:before {
       content: attr(data-avatar);
-      @apply place-content-center place-items-center aspect-square grid shadow-2xl;
+      // @apply place-content-center place-items-center aspect-square grid shadow-2xl;
+      display: grid;
+      place-content: center;
+      place-items: center;
+      aspect-ratio: var(--ratio-square);
+      box-shadow: var(--shadow-xxl);
       border-radius: var(--avatar-radi);
       background: var(--avatar-bg);
       color: var(--avatar-color);
@@ -89,7 +113,7 @@
     }
 
     &.round {
-      --avatar-radi: theme('borderRadius.md');
+      --avatar-radi: var(--radius-md);
     }
     
 

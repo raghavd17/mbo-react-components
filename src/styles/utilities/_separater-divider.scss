@@ -1,0 +1,75 @@
+:root {
+    --space-separater: 0.25rem;
+    --symbol: "|";
+    --space-divider: 0.5rem;
+  }
+  
+  // separated | separater style here
+  :where(.separated > * + *, .separater) {
+    --color-separater: var(--color-neutrals-200); // define color for separater
+    --color: var(--color-separater, #b8b3bc);
+  
+    &:before {
+      color: var(--color);
+      content: var(--symbol, "|");
+      margin-inline: var(--space-separater);
+    }
+  }
+  
+  // for custom symbols
+  :is(.separated, .separater) {
+    &.bullet {
+      --symbol: "•";
+    }
+  
+    &.dash {
+      --symbol: "/";
+    }
+  }
+  
+  // separated | separater style here end
+  
+  // divide-x | divide-y | divider style
+  :where(.divide-x, .divider-x, .divide-y, .divider-y) {
+    --border-color: var(
+      --color-neutrals-200,
+      #b8b3bc
+    ); // define color for divider
+    --border-width: 1px;
+    --border-style: solid;
+  }
+  
+  :where(.divide-x > * + *, .divider-x) {
+    display: inherit;
+  
+    &:before {
+      border-left: var(--border-width) var(--border-style, solid)
+        var(--border-color);
+      content: "";
+      margin-inline: var(--space-divider);
+    }
+  }
+  
+  :where(.divide-y > * + *, .divider-y) {
+    &:before {
+      display: block;
+      border-top: var(--border-width) var(--border-style, solid)
+        var(--border-color);
+      content: "";
+      margin-block: var(--space-divider);
+    }
+  }
+  
+  // for custom divider
+  :is(.divide-x, .divider-x, .divide-y, .divider-y) {
+    &.dashed {
+      --border-style: dashed;
+    }
+  
+    &.dotted {
+      --border-style: dotted;
+    }
+  }
+  
+  // divide-x | divide-y | divider style end
+  

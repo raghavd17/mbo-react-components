@@ -141,7 +141,7 @@ $mbo-width-height:(
     '10by12': 83.333333%,
     '11by12': 91.666667%,
     'full': 100%,
-    'screen': 100vh,
+    // 'screen': 100vh, | 100vw  // TODO: need more workhere 
     'min': min-content,
     'max': max-content,
     'fit': fit-content,
