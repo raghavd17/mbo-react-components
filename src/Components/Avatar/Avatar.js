@@ -162,14 +162,13 @@ function Avatar() {
               </picture>
               <div className='avatar-title'>Avatar Name</div>
             </div>
-            <div class="avatar md round">
-              <div className='avatar-media' data-avatar="md">
-              <picture >
+            <div className="avatar md round" data-avatar="md">
+              <picture className='avatar-media'>
                 <source media="(min-width:650px)" srcset="https://i.pravatar.cc/300" />
                 <source media="(min-width:465px)" srcset="https://i.pravatar.cc/300" />
                 <img src='https://i.pravatar.cc/300' alt='random profile' />
               </picture>
-              </div>
+              
               <div className='avatar-title'>Avatar Name</div>
             </div>
             <div data-avatar="sm" class="avatar sm round">
