@@ -1,20 +1,33 @@
-@tailwind components;
 
-@layer components {
+
+
     .list {
-        @apply p-2 grid gap-2;
+        // @apply p-2 grid gap-2;
+        padding: var(--size-2);
+        gap: var(--size-2);
 
         &-item {
             &:is(.group) {
-                --gap: theme('spacing.2');
+                --gap: var(--size-2);
                 gap: var(--gap);
-                @apply flex items-center gap-2 justify-between;
+                // @apply flex items-center gap-2 justify-between;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--size-2);
             }
 
-            @apply p-2 px-3 hover:bg-primary-200 rounded;
+            // @apply p-2 px-3 hover:bg-primary-200 rounded;
+            padding: var(--size-2);
+            padding-inline: var(--size-3);
+            border-radius: var(--radius-rounded);
+            &:hover {
+                background-color: var(--color-primary-200);
+            }
 
             &[data-state="active"] {
-                @apply bg-primary-100;
+                // @apply bg-primary-100;
+                background-color: var(--color-primary-100);
             }
 
             &:hover {
@@ -29,18 +42,26 @@
 
         // list-item
         &-divider {
-            @apply border-b;
+            // @apply border-b;
+            border-bottom: 1px solid;
             border-color: var(--color-border, initial);
         }
 
         &-title {
-            @apply text-ellipsis overflow-hidden whitespace-nowrap;
+            // @apply text-ellipsis overflow-hidden whitespace-nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
         }
 
 
         &-label {
-            --gap: theme('spacing.1');
-            @apply text-[.875em] p-1 flex;
+            --gap: var(--size-1);
+            // @apply text-[.875em] p-1 flex;
+            font-size: var(--size-3-5);
+            padding: var(--size-1);
+            display: flex;
         }
 
 
@@ -50,7 +71,11 @@
     // .list end 
     .item {
         &-link {
-            @apply block hover:text-primary-500;
+            // @apply block hover:text-primary-500;
+            display: block;
+            &:hover {
+                color: var(--color-primary-500);
+            }
         }
 
         // item-link end 
@@ -62,15 +87,23 @@
             color: var(--color);
 
             &:has(svg) {
-                @apply aspect-square;
+                // @apply aspect-square;
+                aspect-ratio: var(--ratio-square);
 
                 & svg {
-                    @apply  text-[rgba(255,255,255,.25)] ;
+                    // @apply  text-[rgba(255,255,255,.25)] ;
+                    color: rgba(255,255,255,.25);
                 }
             }
 
 
-            @apply min-w-[1.5em] w-fit grid rounded place-content-center place-items-center;
+            // @apply min-w-[1.5em] w-fit grid rounded place-content-center place-items-center;
+            min-width: 1.5em;
+            width: fit-content;
+            display: grid;
+            border-radius: var(--radius-rounded);
+            place-content: center;
+            place-items: center;
 
             &:hover {
                 --bg: var(--color-primary-500);
@@ -82,7 +115,8 @@
                 --color: var(--color-white);
 
                 & svg {
-                    @apply text-inherit;
+                    // @apply text-inherit;
+                    color: inherit;
                 }
             }
         }
@@ -90,6 +124,3 @@
 
 
     // .item-checkbox
-
-
-}
