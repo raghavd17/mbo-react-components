@@ -13,7 +13,7 @@ const Date = () => {
         <span>14</span>
         <span>2022</span>		
       </div>
-      <div class="separater bullet">
+      <div class="separator bullet">
         
       </div>
       <div class="separated">
