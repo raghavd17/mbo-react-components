@@ -8,7 +8,6 @@ const ButtonPage = () => {
   
   return (
     <section className='p-6'>
-        
         <section className='grid grid-cols-2 border-b-2 border-b-neutral-400 py-5'>
           <div className='stack'>
             <h1 className='text-2xl text-neutral-800 mb-3'>Button Default</h1>
@@ -43,6 +42,40 @@ const ButtonPage = () => {
         </section>
         
 {/* Button Default end  */}
+        <section className='grid grid-cols-2 border-b-2 border-b-neutral-400 py-5'>
+          <div className='stack'>
+            <h1 className='text-2xl text-neutral-800 mb-3'>Button Default</h1>
+            <div className='cluster items-center'>
+                <Button type="alpha">Button</Button>
+                <Button type="alpha"><IconSearch className="icon" /> Icon Before</Button>
+                <Button type="alpha">Icon After <IconSearch className="icon" /></Button>
+                <Button type="alpha" active>Active</Button>
+                <Button type="alpha" disabled>Disabled</Button>
+                
+                <Button type="alpha" round icon><IconSearch className="icon" /></Button>
+
+            </div>
+          </div>
+          <div className='stack'>
+            <h1 className='text-2xl text-neutral-800 mb-3'>Button Sizes </h1>
+            <div className='cluster items-center'>
+               
+                <Button type="alpha" size="sm">sm</Button>
+                <Button type="alpha" size="md">md</Button>
+                <Button type="alpha" size="lg">lg</Button>
+                <Button type="alpha" size="xl">xl</Button>
+                <Button type="alpha" icon size="xl"><IconSearch className="icon" /></Button>
+                <Button type="alpha" icon size="lg"><IconSearch className="icon" /></Button>
+                <Button type="alpha" icon size="md"><IconSearch className="icon" /></Button>
+                <Button type="alpha" icon size="sm"><IconSearch className="icon" /></Button>
+                
+                
+                
+            </div>
+          </div>
+        </section>
+        
+{/* Button Alpha end  */}
         
         <section className='grid grid-cols-2 border-b-2 border-b-neutral-400 py-5'>
           <div className='stack'>
