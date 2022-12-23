@@ -164,6 +164,20 @@
     }
 
     // .primary style end 
+    &.alpha {
+      --btn-bg: var(--color-neutrals-white-150);
+      --btn-color: var(--color-neutrals-400);
+
+      &:hover {
+        --btn-bg: var(--color-neutrals-white-850);
+      }
+
+      &:where(&:active, &.active, &:focus),
+      &[data-dropdown='open'] {
+        --btn-bg: var(--color-neutrals-white-850);
+      }
+    }
+    // alpha 
 
     &.action {
       --btn-bg: var(--color-action-400);

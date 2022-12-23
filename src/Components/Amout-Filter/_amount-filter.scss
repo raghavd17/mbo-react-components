@@ -1,5 +1,4 @@
 // TODO: Need to work on the component and styling both with new approch 
-@tailwind components;
 
 @layer components {
 
@@ -13,38 +12,88 @@
 
     // mbo-amt__dropdown-menu
     &__filter {
-
-      @apply m-4 flex flex-col;
+      margin: var(--size-4);
+      display: flex;
+      flex-direction: column;
+      // @apply m-4 flex flex-col;
 
       & .filter {
         &__title {
-          @apply text-primary-600 mb-4 text-xs font-semibold;
+          // @apply text-primary-600 mb-4 text-xs font-semibold;
+          color: var(--color-primary-600);
+          margin-block-end: var(--size-4);
+          font-size: var(--fs-3);
+          font-weight: 400;
         }
 
         &__range {
-          @apply flex mb-4;
+          // @apply flex mb-4;
+          display: flex;
+          margin-block-end: var(--size-4);
+          gap: var(--size-2);
         }
 
         &__value {
-          @apply flex-grow w-1/2 py-2 px-0 text-center bg-primary-200 rounded-md text-xs first:mr-2;
-
+          
+          // @apply flex-grow w-1/2 py-2 px-0 text-center bg-primary-200 rounded-md text-xs;
+          flex-grow: 1;
+          width: 50%;
+          padding-block:var(--size-2);
+          text-align: center;
+          background-color: var(--color-primary-200);
+          border-radius: var(--radius-md);
+          font-size: var(--fs-3);
 
 
           &--error {
-            @apply bg-white shadow shadow-error-500;
+            // @apply bg-white shadow shadow-error-500;
+            background-color: var(--color-white);
+            --shadow-color: 355 61% 49%;
+            box-shadow: var(--shadow-sm);
           }
         }
 
         &__input {
-          @apply bg-transparent border-0 py-0 px-3 text-center w-1/2 text-xs text-action-500 outline-none font-medium focus:outline-none;
+          // @apply bg-transparent border-0 py-0 px-3 text-center w-1/2 text-xs text-action-500 outline-none font-medium focus:outline-none;
+          background-color: transparent;
+          border: 0;
+          padding-block: 0;
+          padding-inline: var(--size-3);
+          text-align: center;
+          width: 50%;
+          color: var(--color-action-500);
+          outline: none;
+          font-size: var(--fs-3-5);
+          &:focus {
+            outline: none;
+          }
         }
 
         // filter__input end
         &__slider_handle {
-          @apply outline-none h-6 relative bg-neutral-100 border border-neutral-200 border-none rounded shadow-2xl shadow-neutral-500 cursor-pointer aspect-square w-6 transition-all;
+          // @apply outline-none h-6 relative bg-neutral-100 border border-neutral-200 border-none rounded shadow-2xl shadow-neutral-500 cursor-pointer aspect-square w-6 transition-all;
+          outline: none;
+          width: var(--size-6);
+          height: var(--size-6);
+          position: relative;
+          background-color: var(--color-neutral-100);
+          // border: 1px solid;
+          // border-color: var(--color-neutral-200);
+          border: 0;
+          border-radius: var(--radius-rounded);
+          box-shadow: var(--shadow-xxl);
+          --shadow-color :252%, 59% 10%;
+          cursor: pointer;
+          aspect-ratio: var(--ratio-square);
+          transition: all;
           pointer-events: all;
-
           @apply hover:bg-action-300 focus:bg-action-600 active:bg-action-600;
+          &:hover {
+            background-color: var(--color-action-300);
+          }
+          :is(&:focus, &:active) {
+            background-color: var(--color-action-600);
+          }
 
           &:before {
             content: "";
@@ -55,9 +104,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            aspect-ratio: theme('aspectRatio.square');
-            background: theme('colors.action.600');
-            border-radius: theme('borderRadius.full');
+            aspect-ratio: var(--ratio-square);
+            background: var(--colors-action-600);
+            border-radius: var(--radius-full);
           }
 
 
@@ -65,26 +114,21 @@
 
           // before end
           &:hover {
-            background: theme('colors.action.400');
-            ;
+            background: var(--colors-action-400);
 
             &:before {
-              background: theme('colors.white');
-              ;
+              background: var(--colors-white);
             }
           }
 
           &:focus,
           &:active,
           &.active {
-            background: theme('colors.action.600');
-            ;
+            background: var(--colors-action-600);
 
 
             &:before {
-              background: theme('colors.white');
-              ;
-
+              background: var(--colors-white);
             }
           }
         }
@@ -93,14 +137,22 @@
 
         &__track {
           @apply inline-block h-px w-[90%] rounded-sm my-0 mx-3;
+          display: inline-block;
+          height: var(--size-px);
+          width: 90%;
+          border-radius: var(--radius-sm);
+          margin-block: 0;
+          margin-inline: var(--size-3);
         }
 
         &__progress_bar {
 
-          @apply h-full bg-primary-100;
+          // @apply h-full bg-primary-100;
+          height: var(--size-full);
+          background-color: var(--color-primary-100);
 
           &:nth-child(2) {
-            background-color: theme('colors.action.600');
+            background-color: var(--colors-action-600);
             ;
 
           }
@@ -110,13 +162,38 @@
       // filter end here
 
       .alert.alert-danger {
-        @apply mt-5 bg-error-500 text-white gap-2 p-2 text-xs;
-        @apply place-items-center place-content-center -mx-6 -mb-8 border-0 flex rounded-t-none font-normal;
+        // @apply mt-5 bg-error-500 text-white gap-2 p-2 text-xs;
+        margin-block-start: var(--size-5);
+        background-color: var(--color-error-900);
+        color: var(--color-white);
+        gap: var(--size-2);
+        padding: var(--size-2);
+        font-size: va(--fs-3-5);
+        // @apply place-items-center place-content-center -mx-6 -mb-8 border-0 flex rounded-t-none font-normal;
+        
+        place-items: center;
+        place-content: center;
+        border: 0;
+        display: flex;
+        font-weight: normal;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-inline: calc(var(--size-6) * -1);
+        margin-block-end: calc(var(--size-8) * -1);
 
       }
 
       .alert-indicator {
-        @apply rounded-full font-semibold grid place-items-center place-content-center aspect-square w-5 bg-white text-error-500;
+        // @apply rounded-full font-semibold grid place-items-center place-content-center aspect-square w-5 bg-white text-error-500;
+        border-radius: var(--radius-full);
+        font-weight: 600;
+        display: grid;
+        place-items: center;
+        place-content: center;
+        aspect-ratio: var(--ratio-square);
+        width: var(--size-5);
+        background-color: var(--color-white);
+        color: var(--color-error-900);
 
       }
     }

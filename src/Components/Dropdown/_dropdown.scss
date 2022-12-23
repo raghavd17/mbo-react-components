@@ -4,14 +4,16 @@
 
     .dropdown {
         &[data-state="open"] {
-           @apply outline outline-neutral-100; 
+        //    @apply outline outline-neutral-100; 
+           outline: solid;
+           outline-color: var(--color-neutral-100);
         }
         --top: 100%;
         --right: auto;
         --min-width: 14rem;
         --bg: theme('colors.white');
         --radius: theme('borderRadius.sm');  
-        @apply relative;
+        position: relative;
         
         &>&-menu {
             top: var(--top, initial);
@@ -20,19 +22,35 @@
             left: var(--left, initial);
             min-width: var(--min-width);
             background: var(--bg);
-            @apply absolute border border-neutral-100 shadow-xl p-2 py-4 rounded hidden z-50;
+            // @apply absolute border border-neutral-100 shadow-xl p-2 py-4 rounded hidden z-50;
+            position: absolute;
+            border: 1px solid;
+            border-color: var(--color-neutral-100);
+            box-shadow: var(--shadow-xl);
+            padding: var(--size-2);
+            padding-block: var(--size-4);
+            border-radius: var(--radius-rounded);
+            display: none;
+            z-index: var(--index-50);
 
         }
         &-toggle {
             &:has( svg ) {
-                @apply flex gap-1 items-center;
+                // @apply flex gap-1 items-center;
+                display: flex;
+                gap: var(--size-1);
+                align-items: center;
                 &[data-dropdown='open']{
-                    @apply shadow-md;
+                    // @apply shadow-md;
+                    box-shadow: var(--shadow-md);
                     > svg {
-                        @apply origin-center rotate-180;         
+                        transform-origin: center;
+                        transform: rotate(180deg);
+                        // @apply origin-center rotate-180;         
                     }
                     + .dropdown-menu  {
-                        @apply block;
+                        // @apply block;
+                        display: block;
                     }
                 }
                 // data-dropdown='open' end
