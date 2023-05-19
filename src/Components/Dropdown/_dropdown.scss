@@ -7,7 +7,8 @@
            outline-color: var(--color-neutrals-100);
         }
         --top: 100%;
-        --right: auto;
+        --left:auto;
+        
         --dropdown-width: 15rem;
         --dropdown-bg: var(--color-white);
         --dropdown-radius: var(--radius-md); 
@@ -28,9 +29,8 @@
         }
         &>&-menu {
             top: var(--top, initial);
-            // right: var(--right, initial);
-            // bottom: var(--bottom, initial);
-            // left: var(--left, initial);
+            left: var(--left-dropdown-position, initial);
+            right: var(--right-dropdown-position, initial);
             min-width: var(--dropdown-width);
             background: var(--dropdown-bg);
             position: absolute;
@@ -42,15 +42,12 @@
             border-radius: var(--dropdown-radius);
             display: none;
             z-index: var(--index-50);
-            transform:translate(var(--dropdown-position), 12px);
+            transform:translateX(var(--dropdown-position)) translateY(12px);
             
             
             &:after {
-                --arrow-left-position:1rem;
-                --arrow-right-position:initial;
                 height:var(--dropdown-arrow-size);
                 aspect-ratio: var(--ratio-square);
-                transform: rotate(45deg);
                 border:1px solid var(--dropdown-border);
                 border-right: transparent; 
                 border-bottom: transparent; 
@@ -60,22 +57,37 @@
                 display: block;
                 position: absolute;
                 z-index: 1;
-                left: var(--arrow-left-position);
+                left: var(--left-arrow-position);
+                right: var(--right-arrow-position, auto);
                 bottom: calc(100% - 8px);
-                right: var(--arrow-right-position);
+                transform:translate((var(--arrow-position, initial)), 0);
+                rotate: 45deg;
                 }
+                &[data-align="start"] {
+                    --dropdown-position:0%;
+                    --left-arrow-position:1rem;
+                    --right-arrow-position:auto;
+                }
+                // data-align="start" end
+                &[data-align="center"] {
+                    --dropdown-position:-50%; 
+                    --left-arrow-position:calc(50% - (var(--dropdown-arrow-size) / 2));
+                    --left-dropdown-position:50%;
+                }
+                // data-align="center" end
                 &[data-align="end"] {
-                    --dropdown-position:calc( -1 * (var(--dropdown-width)/2 - 0.5rem)); 
-                    &:after {
-                        --arrow-left-position:initial;
-                        --arrow-right-position:1rem;
-                    }
+                    --dropdown-position:0%;
+                    --right-arrow-position:1rem;
+                    --right-dropdown-position:0;
+                    --left-arrow-position:auto;
                 }
+                // data-align="end" end
+               
+                
 
         }
         &-toggle {
             &:has( svg ) {
-                // @apply flex gap-1 items-center;
                 display: flex;
                 gap: var(--size-1);
                 align-items: center;
