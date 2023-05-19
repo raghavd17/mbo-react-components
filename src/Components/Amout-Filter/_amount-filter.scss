@@ -22,7 +22,7 @@
           // @apply text-primary-600 mb-4 text-xs font-semibold;
           color: var(--color-primary-600);
           margin-block-end: var(--size-4);
-          font-size: var(--fs-3);
+          font-size: var(--fs-20);
           font-weight: 400;
         }
 
@@ -42,7 +42,7 @@
           text-align: center;
           background-color: var(--color-primary-200);
           border-radius: var(--radius-md);
-          font-size: var(--fs-3);
+          font-size: var(--fs-20);
 
 
           &--error {
@@ -63,7 +63,7 @@
           width: 50%;
           color: var(--color-action-500);
           outline: none;
-          font-size: var(--fs-3-5);
+          font-size: var(--fs-14);
           &:focus {
             outline: none;
           }
@@ -71,14 +71,13 @@
 
         // filter__input end
         &__slider_handle {
-          // @apply outline-none h-6 relative bg-neutral-100 border border-neutral-200 border-none rounded shadow-2xl shadow-neutral-500 cursor-pointer aspect-square w-6 transition-all;
           outline: none;
           width: var(--size-6);
           height: var(--size-6);
           position: relative;
-          background-color: var(--color-neutral-100);
+          background-color: var(--color-neutrals-100);
           // border: 1px solid;
-          // border-color: var(--color-neutral-200);
+          // border-color: var(--color-neutrals-200);
           border: 0;
           border-radius: var(--radius-rounded);
           box-shadow: var(--shadow-xxl);
@@ -87,7 +86,6 @@
           aspect-ratio: var(--ratio-square);
           transition: all;
           pointer-events: all;
-          @apply hover:bg-action-300 focus:bg-action-600 active:bg-action-600;
           &:hover {
             background-color: var(--color-action-300);
           }
@@ -136,7 +134,6 @@
         // slider__slider_handle
 
         &__track {
-          @apply inline-block h-px w-[90%] rounded-sm my-0 mx-3;
           display: inline-block;
           height: var(--size-px);
           width: 90%;
@@ -147,7 +144,6 @@
 
         &__progress_bar {
 
-          // @apply h-full bg-primary-100;
           height: var(--size-full);
           background-color: var(--color-primary-100);
 
@@ -162,14 +158,12 @@
       // filter end here
 
       .alert.alert-danger {
-        // @apply mt-5 bg-error-500 text-white gap-2 p-2 text-xs;
         margin-block-start: var(--size-5);
         background-color: var(--color-error-900);
         color: var(--color-white);
         gap: var(--size-2);
         padding: var(--size-2);
         font-size: va(--fs-3-5);
-        // @apply place-items-center place-content-center -mx-6 -mb-8 border-0 flex rounded-t-none font-normal;
         
         place-items: center;
         place-content: center;
@@ -184,7 +178,6 @@
       }
 
       .alert-indicator {
-        // @apply rounded-full font-semibold grid place-items-center place-content-center aspect-square w-5 bg-white text-error-500;
         border-radius: var(--radius-full);
         font-weight: 600;
         display: grid;

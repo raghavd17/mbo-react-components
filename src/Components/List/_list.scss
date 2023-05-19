@@ -2,22 +2,11 @@
 
 
     .list {
-        // @apply p-2 grid gap-2;
         padding: var(--size-2);
         gap: var(--size-2);
 
-        &-item {
-            &:is(.group) {
-                --gap: var(--size-2);
-                gap: var(--gap);
-                // @apply flex items-center gap-2 justify-between;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: var(--size-2);
-            }
-
-            // @apply p-2 px-3 hover:bg-primary-200 rounded;
+        &_item {
+           
             padding: var(--size-2);
             padding-inline: var(--size-3);
             border-radius: var(--radius-rounded);
@@ -26,7 +15,6 @@
             }
 
             &[data-state="active"] {
-                // @apply bg-primary-100;
                 background-color: var(--color-primary-100);
             }
 
@@ -40,7 +28,7 @@
         }
 
 
-        // list-item
+        // list_item
         &-divider {
             // @apply border-b;
             border-bottom: 1px solid;

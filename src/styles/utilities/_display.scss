@@ -18,7 +18,8 @@ grid,
 inline-grid,
 contents,
 list-item,
-hidden;
+hidden,
+visible;
 
 
 
@@ -27,6 +28,11 @@ hidden;
     @if $prop==hidden {
         .#{$prop} {
             display: none;
+        }
+    }
+    @if $prop==visible {
+        .#{$prop} {
+            display: block;
         }
     }
 
@@ -45,6 +51,11 @@ hidden;
             @if $prop==hidden {
                 .#{$b-points}\:#{$prop} {
                     display: none;
+                }
+            }
+            @if $prop==visible {
+                .#{$b-points}\:#{$prop} {
+                    display: block;
                 }
             }
 

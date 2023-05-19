@@ -3,46 +3,35 @@ import IconCheckmark from '../../Icons/IconCheckmark';
 import { NavLink } from 'react-router-dom';
 import './_dropdown.scss';
 import IconsCaretDown from '../../Icons/IconsCaretDown';
+import Button from '../Button/Button';
 
 const Dropdown = () => {
 
   const [isVisible, setIsVisible] = useState(false)
   return (
     
-<main className='p-4'>
+<main className='p-8'>
     
-    <h2 className='text-red-500 mb-4 text-5xl'>Dropdowns</h2>
-    <div className='dropdown test'>
-    <button className='btn danger dropdown-toggle'  data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}>
-      <span>Open Dropdown</span>
-    <IconsCaretDown />
-    </button>
-    {/* <button className='dropdown-toggle'  data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}>
-      <span>Open Dropdown</span>
-    <IconsCaretDown />
-    </button> */}
-      {/* <div className='dropdown-menu' data-state={`${isVisible?"open": ""}`}> */}
+    <h2 className='text-red-500 mb-16 text-5xl'>Dropdowns</h2>
+    <p className='mb-16'>Dropdowns are used to display a list of options, typically in an overlay that appears below a button or other control. They are used to group related items and allow users to select an option from the list. </p>
+    <div className='mx-32 repel'>
+    <div className='dropdown btn-group'>
+      <button className='btn danger dropdown-toggle' data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}>
+        <IconsCaretDown />
+        <span>Open Dropdown</span>
+      </button>
       <div className='dropdown-menu'>
         <ul className="list">
-          <li className="list-item" tabIndex={1}>
+          <li className="list_item" tabIndex={1}>
             <NavLink key={1}  className="item-link"> Link item here </NavLink>
 
             
           </li>
-          <li className="list-item group" tabIndex={2}>
+          <li className="list_item repel" tabIndex={2} data-itemID=''>
               <div className="list-title"> Inactive Data Group item </div>
-            <div>
-              <span> 
-              <div className="item-checkbox" data-state="">
-                <div>
-                  <IconCheckmark />
-                  </div>
-                  </div>
-                  </span>
-            </div>
           </li>
 
-          <li className="list-item group" data-state="" tabIndex={3}>
+          <li className="list_item repel" data-state="active" tabIndex={3}>
             <div className="list-title">Active data-item
             </div>
             <div>
@@ -54,7 +43,64 @@ const Dropdown = () => {
             </div>
           </li>
     
-          <li className="list-item group" data-state="" tabIndex={4}> 
+          <li className="list_item repel" data-state="" tabIndex={4}> 
+            <div className="list-title">Title here
+              </div>
+            <div className="item-checkbox group">
+              <div className="list-label">
+              <span>A</span>  -- <span>Z</span>
+              </div>
+            </div>
+          </li>
+          <li className="list_item repel" data-state="inactive" tabIndex={5}> 
+            <div  className="list-title">Title here
+              </div>
+            <div className="item-checkbox" data-state="active">
+              <div className="list-label">
+              <span>A</span>  -- <span>Z</span>
+              </div>
+            </div>
+          </li>
+      
+        </ul>
+      </div>
+    </div>
+    {/* dropdown 1 end  */}
+    <div className='dropdown btn-group'>
+      <button className='btn action dropdown-toggle' data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}>
+        <span> Dropdown 2</span>
+      <IconsCaretDown />
+      </button>
+      {/* <div className='btn-group round' role="group">
+                  <Button type="alpha">Button Split</Button>
+                  <Button type="action-success" icon split className="dropdown-toggle" data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}> <IconsCaretDown className="icon" /></Button>        
+      </div> */}
+      
+      <div className='dropdown-menu' data-align='end'>
+        <ul className="list">
+          <li className="list_item" tabIndex={1}>
+            <NavLink key={1}  className="item-link"> Link item here </NavLink>
+
+            
+          </li>
+          <li className="list_item repel" tabIndex={2}>
+              <div className="list-title"> Inactive Data Group item </div>
+            
+          </li>
+
+          <li className="list_item repel" data-state="" tabIndex={3}>
+            <div className="list-title">Active data-item
+            </div>
+            <div>
+              <div className="item-checkbox" data-state="active">
+                <div>
+                <IconCheckmark />
+                </div>
+              </div>
+            </div>
+          </li>
+    
+          <li className="list_item repel" data-state="" tabIndex={4}> 
             <div className="list-title">Title here
               </div>
             <div className="item-checkbox group" data-state="">
@@ -63,7 +109,7 @@ const Dropdown = () => {
               </div>
             </div>
           </li>
-          <li className="list-item group" data-state="" tabIndex={5}> 
+          <li className="list_item repel" data-state="" tabIndex={5}> 
             <div  className="list-title">Title here
               </div>
             <div className="item-checkbox" data-state="">
@@ -76,6 +122,9 @@ const Dropdown = () => {
         </ul>
       </div>
     </div>
+    {/* dropdown 2 end  */}
+    </div>
+    
     <div>Some other text </div>
   </main>
   )

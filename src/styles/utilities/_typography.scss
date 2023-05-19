@@ -56,14 +56,14 @@ $size in $mbo-sizes {
 @each $name,
 $size in $mbo-font-families {
   .ff-#{$name} {
-    font-family: var(--#{$name});
+    font-family: var(--ff-#{$name});
   }
 }
 
 @each $name,
 $weight in $mbo-font-weights {
   .fw-#{$name} {
-    font-weight: $weight;
+    font-weight: var(--fw-#{$name});
   }
 }
 

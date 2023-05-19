@@ -1,18 +1,18 @@
 @each $name,
-$space in $mbo-sizes {
+$space in $mbo-spacer-sizes {
   .gap {
     &-#{$name} {
-      gap: var(--size-#{$name});
+      gap: var(--space-#{$name});
     }
 
     // .gap end 
     &-x-#{$name} {
-      column-gap: var(--size-#{$name});
+      column-gap: var(--space-#{$name});
     }
 
     // column-gap 
     &-y-#{$name} {
-      row-gap: var(--size-#{$name});
+      row-gap: var(--space-#{$name});
     }
 
     // row-gap 
@@ -30,17 +30,17 @@ $val in $mbo-breakpoints {
     $space in $mbo-sizes {
       .#{$b-points}\:gap {
         &-#{$name} {
-          gap: var(--size-#{$name});
+          gap: var(--space-#{$name});
         }
 
         // .gap end 
         &-x-#{$name} {
-          column-gap: var(--size-#{$name});
+          column-gap: var(--space-#{$name});
         }
 
         // column-gap 
         &-y-#{$name} {
-          row-gap: var(--size-#{$name});
+          row-gap: var(--space-#{$name});
         }
 
       }

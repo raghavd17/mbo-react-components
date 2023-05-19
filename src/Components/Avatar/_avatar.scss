@@ -1,20 +1,20 @@
 
 :root {
     --avatar-size-default: var(--size-8); // 32px;
-    --avatar-fs-default: var(--fs-3); // 12px
+    --avatar-fs-default: var(--fs-12); // 12px
     --avatar-size: var(--avatar-size-default);
     --avatar-radi: var(--radius-full);
     --avatar-bg:var(--color-action-100);
     --avatar-color: var(--color-primary-500);
     --avatar-fs: var(--avatar-fs-default);
     --avatar-size-sm: var(--size-8); // 24px
-    --avatar-fs-sm: var(--fs-3); // 12px;
+    --avatar-fs-sm: var(--fs-12); // 12px;
     --avatar-size-md: var(--size-8); // 24px
-    --avatar-fs-md: var(--fs-3); // 12px;
+    --avatar-fs-md: var(--fs-12); // 12px;
     --avatar-size-lg: var(--size-9);  // 36px
-    --avatar-fs-lg: var(--fs-4);  // 16px;
+    --avatar-fs-lg: var(--fs-base);  // 16px;
     --avatar-size-xl: var(--size-10);  // 40px;
-    --avatar-fs-xl: var(--fs-4-5);  // 18px;
+    --avatar-fs-xl: var(--fs-18);  // 18px;
 
 }
 @layer components {

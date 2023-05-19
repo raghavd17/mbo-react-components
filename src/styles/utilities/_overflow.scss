@@ -1,0 +1,57 @@
+.overflow {
+  &-auto {
+    overflow: auto;
+  }
+
+  &-hidden {
+    overflow: hidden;
+  }
+
+  &-visible {
+    overflow: visible;
+  }
+
+  &-scroll {
+    overflow: scroll;
+  }
+
+  &-x-auto {
+    overflow-x: auto;
+  }
+
+  &-x-hidden {
+    overflow-x: hidden;
+  }
+
+  &-x-visible {
+    overflow-x: visible;
+  }
+
+  &-x-scroll {
+    overflow-x: scroll;
+  }
+
+  &-y-auto {
+    overflow-y: auto;
+  }
+
+  &-y-hidden {
+    overflow-y: hidden;
+  }
+
+  &-y-visible {
+    overflow-y: visible;
+  }
+
+  &-y-scroll {
+    overflow-y: scroll;
+  }
+}
+
+.momentum-scrolling {
+  -webkit-overflow-scrolling: touch;
+}
+
+.overscroll-contain {
+  overscroll-behavior: contain;
+}
