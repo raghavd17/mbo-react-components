@@ -17,7 +17,7 @@ const Dropdown = () => {
     <div className='mx-40 repel'>
     <div className='dropdown btn-group'>
       <button className='btn danger dropdown-toggle' data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}>
-        <IconsCaretDown />
+        <IconsCaretDown className="dropdown-icon" />
         <span>Open Dropdown</span>
       </button>
       <div className='dropdown-menu' data-align='start'>
@@ -69,7 +69,7 @@ const Dropdown = () => {
 
     <div className='dropdown btn-group'>
       <button className='btn danger dropdown-toggle' data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}>
-        <IconsCaretDown />
+        <IconsCaretDown className="dropdown-icon" />
         <span> Dropdown Center</span>
       </button>
       <div className='dropdown-menu' data-align='center'>

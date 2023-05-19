@@ -87,22 +87,22 @@
 
         }
         &-toggle {
-            &:has( svg ) {
-                display: flex;
-                gap: var(--size-1);
-                align-items: center;
-                &[data-dropdown='open']{
+            &[data-dropdown='open']{
+                &:has( svg ) {
+                    display: flex;
+                    gap: var(--size-1);
+                    align-items: center;
                     box-shadow: var(--shadow-md);
-                    > svg {
-                        transform-origin: center;
-                        transform: rotate(180deg);
+                        > svg.dropdown-icon {
+                            transform-origin: center;
+                            transform: rotate(180deg);
+                        }   
                     }
                     + .dropdown-menu  {
                         display: block;
                     }
-                }
-                // data-dropdown='open' end
-          }
+            }
+            // data-dropdown='open' end
          }
         //  .dropdown-toggle end 
     }
