@@ -79,7 +79,9 @@ $grid-columns: 12 !default;
   .grid-cols-#{$i}  { grid-template-columns: repeat(#{$i}, minmax(0, 1fr)); }
 }
 
-@include breakpoint-up(xs) {
+// @media (min-width: 32rem)
+@include breakpoint-up(xs)
+{
   .xs\:grid-auto-xs { --col-min-width: 8rem; }
   .xs\:grid-auto-sm { --col-min-width: 10rem; }
   .xs\:grid-auto-md { --col-min-width: 15rem; }
@@ -100,7 +102,9 @@ $grid-columns: 12 !default;
   .xs\:col-end-auto { grid-column-end: auto; }
 }
 
-@include breakpoint-up(sm) {
+//@media (min-width: 48rem) 
+@include breakpoint-up(sm)
+{
   .sm\:grid-auto-xs { --col-min-width: 8rem; }
   .sm\:grid-auto-sm { --col-min-width: 10rem; }
   .sm\:grid-auto-md { --col-min-width: 15rem; }
@@ -119,8 +123,9 @@ $grid-columns: 12 !default;
   .sm\:col-start-auto { grid-column-start: auto; }
   .sm\:col-end-auto { grid-column-end: auto; }
 }
-
-@include breakpoint-up(md) {
+// @media (min-width: 64rem)
+@include breakpoint-up(md)
+{
   .md\:grid-auto-xs { --col-min-width: 8rem; }
   .md\:grid-auto-sm { --col-min-width: 10rem; }
   .md\:grid-auto-md { --col-min-width: 15rem; }
@@ -139,7 +144,7 @@ $grid-columns: 12 !default;
   .md\:col-start-auto { grid-column-start: auto; }
   .md\:col-end-auto { grid-column-end: auto; }
 }
-
+//@media (min-width: 80rem)
 @include breakpoint-up(lg) {
   .lg\:grid-auto-xs { --col-min-width: 8rem; }
   .lg\:grid-auto-sm { --col-min-width: 10rem; }
@@ -159,7 +164,7 @@ $grid-columns: 12 !default;
   .lg\:col-start-auto { grid-column-start: auto; }
   .lg\:col-end-auto { grid-column-end: auto; }
 }
-
+// @media (min-width: 90rem)
 @include breakpoint-up(xl) {
   .xl\:grid-auto-xs { --col-min-width: 8rem; }
   .xl\:grid-auto-sm { --col-min-width: 10rem; }
@@ -180,4 +185,3 @@ $grid-columns: 12 !default;
   .xl\:col-start-auto { grid-column-start: auto; }
   .xl\:col-end-auto { grid-column-end: auto; }
 }
-

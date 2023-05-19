@@ -38,7 +38,11 @@
   --border-width: 1px;
   --border-style: solid;
 }
-
+.grid{
+	:where(.divide-x > * + *, .divider-x) {
+		display:flex;
+	}
+}
 :where(.divide-x > * + *, .divider-x) {
   display: inherit;
 

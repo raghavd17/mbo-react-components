@@ -1,0 +1,71 @@
+// Configuration
+
+// Property	Default             value	                    Description
+// --reel-item-width	        33.333% (one third)	        This defines the size of each child element.
+
+// Exceptions
+// Exception	                        Description
+// .reel[data-scroll='snap']	        Enables scroll snapping
+
+.reel {
+    --reel-space: 2rem;
+    display: flex;
+    height: auto;
+    max-width: 100%;
+    margin-inline: auto;
+    padding: .5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    >* {
+        flex-basis: var(--reel-item-width, calc(33.333% - var(--reel-space)));
+        flex-shrink: 0;
+
+        +* {
+            margin-inline-start: var(--reel-space);
+        }
+
+        // .reel > * + * end here
+    }
+
+    // .reel > * end here
+    // 
+    &.scrollbar {
+        padding-block-end: clamp(1.375rem, 1.2rem + 0.89vw, 2rem);
+    }
+
+    // .reel.scrollbar end here
+    &[data-scroll=snap] {
+        scroll-snap-type: x mandatory;
+
+        &>* {
+            scroll-snap-align: start;
+        }
+    }
+
+    // .reel[data-scroll=snap] end here 
+}
+
+// .reel end 
+
+// EX
+/*
+<h2>Reel with scrollbar</h2> 
+<div class="reel scrollbar">
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+</div>
+
+
+<h2>Reel with snap</h2> 
+<div class="reel" data-scroll='snap'>
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+  <div>Item</div>
+</div>
+*/

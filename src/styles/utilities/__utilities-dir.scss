@@ -11,24 +11,26 @@
 /*******
 * generative utility classes
 *******/
-@import './animate';
-@import './background';
-@import './border';
-@import './click-area';
-@import './display';
-@import './flexbox';
-@import './flow';
-@import './full-bleed';
-@import './gap';
-@import './hidden';
-@import './position';
-@import './radius';
-@import './separator-divider';
-@import './spacing';
-@import './typography';
-@import './width-height';
-@import './wrapper';
+@import "./all-center";
+@import "./animate";
+@import "./background";
+@import "./border";
+@import "./click-area";
+@import "./display";
+@import "./flexbox";
+@import "./flow";
+@import "./full-bleed";
+@import "./gap";
+@import "./hidden";
+@import "./overflow";
+@import "./position";
+@import "./radius";
+@import "./region";
+@import "./separator-divider";
+@import "./spacing";
+@import "./typography";
+@import "./width-height";
+// @import "./wrapper"; //wrapper is already styled in footer.scss
 
-
-// @import './transition'; // TODO: need to add this utilities 
-// @import './dimensions';  // TODO: need to add 
+// @import './transition'; // TODO: need to add this utilities
+// @import './dimensions';  // TODO: need to add

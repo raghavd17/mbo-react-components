@@ -17,33 +17,12 @@
                 padding:auto;
             }
         &x-auto {
-             padding-left:auto;
-            padding-right:auto;
+             padding-inline-start:auto;
+            padding-inline-end:auto;
         }
         &y-auto {
-             padding-top:auto;
-             padding-bottom:auto;
-        }
-        //  padding-inline style 
-        &-inline-auto {
-            padding-inline: auto;
-        }
-        &-inline-start-auto {
-            padding-inline-start: auto;
-        }
-        &-inline-end-auto {
-            padding-inline-end: auto;
-        }
-        //  padding-inline style end 
-         //  padding block style
-         &-block-auto {
-            padding-block: auto;
-        }
-        &-block-start-auto {
-            padding-block-start: auto;
-        }
-        &-block-end-auto {
-            padding-block-end: auto;
+             padding-block-start:auto;
+             padding-block-end:auto;
         }
         // padding block end 
     }
@@ -58,69 +37,46 @@
                 margin:auto;
             }
         &x-auto {
-             margin-left:auto;
-             margin-left:auto;
+             margin-inline:auto;
         }
         &y-auto {
-             margin-top:auto;
-             margin-bottom:auto;
+             margin-block:auto;
         }
-        &-inline-auto {
-            margin-inline: auto;
-        }
-        &-inline-start-auto {
-            margin-inline-start: auto;
-        }
-        &-inline-end-auto {
-            margin-inline-end: auto;
-        }
-        //  margin-inline style end 
-         //  margin block style
-         &-block-auto {
-            margin-block: auto;
-        }
-        &-block-start-auto {
-            margin-block-start: auto;
-        }
-        &-block-end-auto {
-            margin-block-end: auto;
-        }
-        // margin block end 
     }
     // margin non looing style end 
     
     // looping spacers 
     @each $val,
-    $space in $mbo-sizes {
+    $space in $mbo-spacer-sizes {
     
         .p {
             &-#{$val} {
-                padding:var(--size-#{$val});
+                padding:var(--space-#{$val});
             }
             &t-#{$val} {
-                padding-top:var(--size-#{$val});
+                padding-block-start:var(--space-#{$val});
             }
             &r-#{$val} {
-                padding-right:var(--size-#{$val});
+                padding-inline-end:var(--space-#{$val});
             }
             &b-#{$val} {
-                padding-bottom:var(--size-#{$val});
+                padding-block-end:var(--space-#{$val});
             }
             &l-#{$val} {
-                padding-left:var(--size-#{$val});
+                padding-inline-start:var(--space-#{$val});
             }
             &x-#{$val} {
-                padding-left:var(--size-#{$val});
-                padding-right:var(--size-#{$val});
+                padding-inline-start:var(--space-#{$val});
+                padding-inline-end:var(--space-#{$val});
             }
             &y-#{$val} {
-                padding-top:var(--size-#{$val});
-                padding-bottom:var(--size-#{$val});
+                padding-block-start:var(--space-#{$val});
+                padding-block-end:var(--space-#{$val});
             }
     
             @each $side in $logical-sides {
                 &-#{$side}-#{$val} {
-                    padding-#{$side}:var(--size-#{$val});
+                    padding-#{$side}:var(--space-#{$val});
                 }
             }
         } 
@@ -128,32 +84,32 @@
     
         .m {
             &-#{$val} {
-                margin:var(--size-#{$val});
+                margin:var(--space-#{$val});
             }
             &t-#{$val} {
-                margin-top:var(--size-#{$val});
+                margin-top:var(--space-#{$val});
             }
             &r-#{$val} {
-                margin-right:var(--size-#{$val});
+                margin-right:var(--space-#{$val});
             }
             &b-#{$val} {
-                margin-bottom:var(--size-#{$val});
+                margin-bottom:var(--space-#{$val});
             }
             &l-#{$val} {
-                margin-left:var(--size-#{$val});
+                margin-inline-start:var(--space-#{$val});
             }
             &x-#{$val} {
-                margin-left:var(--size-#{$val});
-                margin-right:var(--size-#{$val});
+                margin-inline-start:var(--space-#{$val});
+                margin-right:var(--space-#{$val});
             }
             &y-#{$val} {
-                margin-top:var(--size-#{$val});
-                margin-bottom:var(--size-#{$val});
+                margin-top:var(--space-#{$val});
+                margin-bottom:var(--space-#{$val});
             }
             // for logical spacer 
             @each $side in $logical-sides {
                 &-#{$side}-#{$val} {
-                    margin-#{$side}:var(--size-#{$val});
+                    margin-#{$side}:var(--space-#{$val});
                 }
             }
         } 
@@ -167,35 +123,35 @@
         @include breakpoint-up($b-points) {
     
             @each $val,
-            $space in $mbo-sizes {
+            $space in $mbo-spacer-sizes {
                 .#{$b-points}\:p {
                     &-#{$val} {
-                        padding: var(--size-#{$val});
+                        padding: var(--space-#{$val});
                     }
                     &t-#{$val} {
-                        padding-top:var(--size-#{$val});
+                        padding-block-start:var(--space-#{$val});
                     }
                     
                     &r-#{$val} {
-                        padding-right:var(--size-#{$val});
+                        padding-inline-end:var(--space-#{$val});
                     }
                     
                     &b-#{$val} {
-                        padding-bottom:var(--size-#{$val});
+                        padding-block-end:var(--space-#{$val});
                     }
                     
                     &l-#{$val} {
-                        padding-left:var(--size-#{$val});
+                        padding-inline-start:var(--space-#{$val});
                     }
                     
                     &x-#{$val} {
-                        padding-left:var(--size-#{$val});
-                        padding-right:var(--size-#{$val});
+                        padding-inline-start:var(--space-#{$val});
+                        padding-inline-end:var(--space-#{$val});
                     }
                     
                     &y-#{$val} {
-                        padding-top:var(--size-#{$val});
-                        padding-bottom:var(--size-#{$val});
+                        padding-block-start:var(--space-#{$val});
+                        padding-block-end:var(--space-#{$val});
                     }
     
                 }
@@ -203,32 +159,32 @@
                 // margin loop here 
                 .#{$b-points}\:m {
                     &-#{$val} {
-                        margin: var(--size-#{$val});
+                        margin: var(--space-#{$val});
                     }
                     &t-#{$val} {
-                        margin-top:var(--size-#{$val});
+                        margin-top:var(--space-#{$val});
                     }
                     
                     &r-#{$val} {
-                        margin-right:var(--size-#{$val});
+                        margin-right:var(--space-#{$val});
                     }
                     
                     &b-#{$val} {
-                        margin-bottom:var(--size-#{$val});
+                        margin-bottom:var(--space-#{$val});
                     }
                     
                     &l-#{$val} {
-                        margin-left:var(--size-#{$val});
+                        margin-inline-start:var(--space-#{$val});
                     }
                     
                     &x-#{$val} {
-                        margin-left:var(--size-#{$val});
-                        margin-right:var(--size-#{$val});
+                        margin-inline-start:var(--space-#{$val});
+                        margin-right:var(--space-#{$val});
                     }
                     
                     &y-#{$val} {
-                        margin-top:var(--size-#{$val});
-                        margin-bottom:var(--size-#{$val});
+                        margin-top:var(--space-#{$val});
+                        margin-bottom:var(--space-#{$val});
                     }
                 
                 }
@@ -241,12 +197,12 @@
                     padding:auto;
                 }
                 &x-auto {
-                    padding-left:auto;
-                    padding-right:auto;
+                    padding-inline-start:auto;
+                    padding-inline-end:auto;
                 }
                 &y-auto {
-                     padding-top:auto;
-                     padding-bottom:auto;
+                     padding-block-start:auto;
+                     padding-block-end:auto;
                 }
             }
             // padding auto breakpoints
@@ -256,7 +212,7 @@
                     margin:auto;
                 }
                 &x-auto {
-                    margin-left:auto;
+                    margin-inline-start:auto;
                     margin-right:auto;
                 }
                 &y-auto {

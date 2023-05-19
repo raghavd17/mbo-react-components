@@ -1,0 +1,20 @@
+// Property	                    Default value	      Description
+// --gutter	                    $global-gutter	      This defines the space between items.
+// --repel-vertical-alignment	20rem	              How items should align vertically. Can be any acceptable flexbox alignment value..
+
+.repel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: var(--repel-vertical-alignment, center);
+    gap: var(--gutter, clamp(1.375rem, 1.2rem + 0.89vw, 1rem))
+}
+
+// EX:
+/*
+<div class="repel">
+  <div>Item 1 repels item 2</div>
+  <div>Item 2 repels item 1</div>
+  <div>Item 3 repels item 1</div>
+</div>
+*/
