@@ -7,6 +7,7 @@ import Dropdown from './Components/Dropdown/Dropdown';
 import Date from './Components/Date/Date';
 import Search from './Components/Search/Search';
 import Avatar from './Components/Avatar/Avatar';
+import Radio from './Components/Radio/Radio';
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/Date" element={<Date />} />
           <Route path="/Search" element={<Search />} />
           <Route path="/Avatar" element={<Avatar />} />
+          <Route path="/Radio" element={<Radio />} />
 
             
 

@@ -13,6 +13,7 @@ const Nav = () => {
       <NavLink to={'/Dropdown'} key={2}className="border-b-2 border-primary-300"> Dropdown </NavLink>
       <NavLink to={'/Date'} key={3} className="border-b-2 border-primary-300"> Date </NavLink>
       <NavLink to={'/Search'} key={3} className="border-b-2 border-primary-300"> Search </NavLink>
+      <NavLink to={'/Radio'} key={3} className="border-b-2 border-primary-300"> Radio </NavLink>
       <NavLink to={'/Avatar'} key={3} className="border-b-2 border-primary-300"> Avatar </NavLink>
     </ul>
     <Outlet />
