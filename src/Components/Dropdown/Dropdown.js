@@ -3,7 +3,6 @@ import IconCheckmark from '../../Icons/IconCheckmark';
 import { NavLink } from 'react-router-dom';
 import './_dropdown.scss';
 import IconsCaretDown from '../../Icons/IconsCaretDown';
-import Button from '../Button/Button';
 
 const Dropdown = () => {
 
@@ -13,6 +12,53 @@ const Dropdown = () => {
 <main className='p-12'>
     
     <h2 className='text-red-500 mb-16 text-5xl'>Dropdowns</h2>
+
+    <div className='dropdown-menu' data-arrow='true' data-align='start'>
+        <ul className="list">
+          <li className="list_item" tabIndex={1}>
+            <NavLink key={1}  className="item-link"> Link item here </NavLink>
+
+            
+          </li>
+          <li className="list_item repel" tabIndex={2} data-itemID=''>
+              <div className="list-title"> Inactive Data Group item </div>
+          </li>
+
+          <li className="list_item repel" data-state="active" tabIndex={3}>
+            <div className="list-title">Active data-item
+            </div>
+            <div>
+              <div className="item-checkbox" data-state="active">
+                <div>
+                <IconCheckmark />
+                </div>
+              </div>
+            </div>
+          </li>
+    
+          <li className="list_item repel" data-state="" tabIndex={4}> 
+            <div className="list-title">Title here
+              </div>
+            <div className="item-checkbox group">
+              <div className="list-label">
+              <span>A</span>  -- <span>Z</span>
+              </div>
+            </div>
+          </li>
+          <li className="list_item repel" data-state="inactive" tabIndex={5}> 
+            <div  className="list-title">Title here
+              </div>
+            <div className="item-checkbox" data-state="active">
+              <div className="list-label">
+              <span>A</span>  -- <span>Z</span>
+              </div>
+            </div>
+          </li>
+      
+        </ul>
+      </div>
+
+    
     <p className='mb-16'>Dropdowns are used to display a list of options, typically in an overlay that appears below a button or other control. They are used to group related items and allow users to select an option from the list. </p>
     <div className='mx-40 repel'>
     <div className='dropdown btn-group'>
@@ -20,7 +66,7 @@ const Dropdown = () => {
         <IconsCaretDown className="dropdown-icon" />
         <span>Open Dropdown</span>
       </button>
-      <div className='dropdown-menu' data-align='start'>
+      <div className='dropdown-menu' data-arrow='true' data-align='start'>
         <ul className="list">
           <li className="list_item" tabIndex={1}>
             <NavLink key={1}  className="item-link"> Link item here </NavLink>
@@ -72,7 +118,7 @@ const Dropdown = () => {
         <IconsCaretDown className="dropdown-icon" />
         <span> Dropdown Center</span>
       </button>
-      <div className='dropdown-menu' data-align='center'>
+      <div className='dropdown-menu' data-arrow='true' data-align='center'>
         <ul className="list">
           <li className="list_item" tabIndex={1}>
             <NavLink key={1}  className="item-link"> Link item here </NavLink>
@@ -128,7 +174,7 @@ const Dropdown = () => {
                   <Button type="action-success" icon split className="dropdown-toggle" data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}> <IconsCaretDown className="icon" /></Button>        
       </div> */}
       
-      <div className='dropdown-menu' data-align='end'>
+      <div className='dropdown-menu' data-arrow='true' data-align='end'>
         <ul className="list">
           <li className="list_item" tabIndex={1}>
             <NavLink key={1}  className="item-link"> Link item here </NavLink>
