@@ -1,5 +1,7 @@
+@use './../tokens' as *;
+
 @each $color-key,
-$color-value in $mbo-colors {
+$color-value in $token-colors {
 
     @each $tone-key,
     $tone-value in $color-value {

@@ -8,7 +8,7 @@ const List = () => {
     
 <main className='p-4'>
     
-    <h2 className='text-red-500 mb-4 text-5xl'>List Items </h2>
+    <h5 className='text-red-500 mb-4 text-5xl'>List Items </h5>
     <ul className="list">
       <li className="list_item repel" tabIndex={1}>
         <NavLink className="item-link">  Nav Link here </NavLink>

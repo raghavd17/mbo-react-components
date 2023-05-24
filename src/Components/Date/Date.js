@@ -6,7 +6,7 @@ const Date = () => {
     
 <main className='p-4'>
     
-    <h2 className='text-red-500 mb-4 text-5xl'>Date Component </h2>
+    <h5 className='text-red-500 mb-4 text-5xl'>Date Component </h5>
       <div className='cluster'>
       <div class="separated">
         <span>Feb</span>

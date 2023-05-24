@@ -11,7 +11,7 @@
   }
   
   // Generate classes to set the tile min-sizes
-  @each $name, $size in $mbo-breakpoints {
+  @each $name, $size in $token-breakpoints {
     .tiles-w-#{$name} {
       --tiles-width: var(--bp-#{$name});
     }

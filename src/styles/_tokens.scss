@@ -1,10 +1,10 @@
 @use "sass:map";
 $font_path: "./fonts";
 // Allow fluid sizes
-$mbo-fluid: false !default;
+$token-fluid: false !default;
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
-$mbo-colors: (
+$token-colors: (
   "primary": (
     "100": #f5f3f7,
     "200": #eae9f2,
@@ -73,7 +73,7 @@ $mbo-colors: (
 ) !default;
 
 // Sizing 
-$mbo-sizes: (
+$token-sizes: (
   "px": 0.063,
   "0": 0,
   "0-5": 0.125, // 2px  
@@ -111,7 +111,7 @@ $mbo-sizes: (
   "80": 20, // 320px 
   "96": 24, // 384px 
 ) !default;
-$mbo-width-height: (
+$token-width-height: (
   "auto": auto,
   "1by2": 50%,
   "1by3": 33.333333%,
@@ -144,7 +144,7 @@ $mbo-width-height: (
   "max": max-content,
   "fit": fit-content,
 ) !default;
-$mbo-font-weights: (
+$token-font-weights: (
   "100": 100,
   "200": 200,
   "300": 300,
@@ -154,7 +154,7 @@ $mbo-font-weights: (
   "900": 900,
 );
 // spacer for margin / padding & gap
-$mbo-spacer-sizes: (
+$token-spacer-sizes: (
   "px": 0.063,
   "0": 0,
   "4": 0.25, // 4px  
@@ -175,7 +175,7 @@ $mbo-spacer-sizes: (
 // spacer size end 
 
 
-$mbo-font-sizes: (
+$token-font-sizes: (
   "px": 0.063,
   "0": 0,
   "2": 0.125, // 2px 
@@ -200,7 +200,7 @@ $mbo-font-sizes: (
  ) !default;
 // font size end
 
-$mbo-radius: (
+$token-radius: (
   "none": 0px,
   "rounded": 0.25rem, // 4px 
   "sm": 0.125rem, // 2px 
@@ -212,7 +212,7 @@ $mbo-radius: (
   "full": 1e5px,
 ) !default;
 
-$mbo-opacity: (
+$token-opacity: (
   "0	": 0,
   "5	": 0.05,
   "10	": 0.1,
@@ -231,7 +231,7 @@ $mbo-opacity: (
 ) !default;
 // Based on type-scale.com: scale 1.333
 
-// $mbo-sizes: ('none': 0,
+// $token-sizes: ('none': 0,
 //     '000': 0.56,
 //     '00': 0.75,
 //     '0': 1,
@@ -244,8 +244,8 @@ $mbo-opacity: (
 
 // Sizing for line-height, default same as sizes, but can be set separately
 // Based on type-scale.com: scale 1.333
-$mbo-lh: $mbo-sizes !default;
-$mbo-index: (
+$token-lh: $token-sizes !default;
+$token-index: (
   "10": 10,
   "20": 20,
   "30": 30,
@@ -258,8 +258,8 @@ $mbo-index: (
   "100": 100,
 );
 
-// Breakpoint system. Default uses 20rem times $mbo-sizes
-$mbo-breakpoints: (
+// Breakpoint system. Default uses 20rem times $token-sizes
+$token-breakpoints: (
   xs: 32rem,
   sm: 48rem,
   md: 64rem,
@@ -268,35 +268,35 @@ $mbo-breakpoints: (
 ) !default;
 
 // Fill when no breakpoints are set
-@if (length($mbo-breakpoints) ==0) {
-  @each $name, $size in $mbo-sizes {
-    $mbo-breakpoints: map.set($mbo-breakpoints, $name, $size * 20rem);
+@if (length($token-breakpoints) ==0) {
+  @each $name, $size in $token-sizes {
+    $token-breakpoints: map.set($token-breakpoints, $name, $size * 20rem);
   }
 }
 
 // Basic setup for light and dark themes.
-$mbo-dark-theme: (
+$token-dark-theme: (
   "primary": (
     "600": #6855b4,
     "700": #a199c2,
   ),
 ) !default;
 
-$mbo-light-theme: () !default;
+$token-light-theme: () !default;
 
 // internal array used for generating all utility functions
-$_colors: $mbo-colors;
+$_colors: $token-colors;
 
-@each $name, $color in $mbo-dark-theme {
+@each $name, $color in $token-dark-theme {
   $_colors: map.set($_colors, $name, var(--color-#{$name}));
 }
 
-@each $name, $color in $mbo-light-theme {
+@each $name, $color in $token-light-theme {
   $_colors: map.set($_colors, $name, var(--color-#{$name}));
 }
 
 // Font families
-$mbo-font-families: (
+$token-font-families: (
   museo300: "'Museo Slab 300', sans-serif",
   museo500: "'Museo Slab 500', sans-serif",
   roboto: "'Roboto', sans-serif",

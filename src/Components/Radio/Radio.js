@@ -6,7 +6,7 @@ const Radio = () => {
     
 <main className='p-4'>
     
-    <h2 className='text-red-500 mb-4 text-5xl'>Radio Component </h2>
+    <h5 className='text-red-500 mb-4 text-5xl'>Radio Component </h5>
      {/* <div className="radio">
         <input
           className={labelPlacement}

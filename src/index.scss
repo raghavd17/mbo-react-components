@@ -1,16 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "./styles/style.scss";
+@use "./styles/style.scss" as *;
 
 /*******
 * compositions classes
 *******/
-@import './styles/compositions/_compositions-dir';
+@use './styles/compositions/_compositions-dir' as *;
 
 /*******
 * generative utility classes
 *******/
-@import './styles/utilities/_utilities-dir';  // all utilities in one scss file 
+@use './styles/utilities/_utilities-dir' as *;  // all utilities in one scss file 
 
 
 // TODO: need to use core SCSS file for all the MF
@@ -55,27 +55,27 @@ svg {
 }
 
 h1 {
-  font-size: var(--fs-14);
+  font-size: var(--fs-56);
 }
 
 h2 {
-  font-size: var(--fs-9);
+  font-size: var(--fs-36);
 }
 
 h3 {
-  font-size: var(--fs-7);
+  font-size: var(--fs-28);
 }
 
 h4 {
-  font-size: var(--fs-6);
+  font-size: var(--fs-24);
 }
 
 h5 {
-  font-size: var(--fs-5);
+  font-size: var(--fs-20);
 }
 
 h6 {
-  font-size: var(--fs-4-5);
+  font-size: var(--fs-18);
 }
 
 .title:where(h1, h2, h3, h4, h5) {

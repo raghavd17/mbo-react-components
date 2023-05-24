@@ -1,8 +1,8 @@
-// @import 'flow';
-// @import "radius";
-// @import "spacer";
-// @import "visually-hidden";
-// @import "grid";
+// @forward 'flow';
+// @forward "radius";
+// @forward "spacer";
+// @forward "visually-hidden";
+// @forward "grid";
 
 /*******
 * static utility classes
@@ -11,26 +11,26 @@
 /*******
 * generative utility classes
 *******/
-@import "./all-center";
-@import "./animate";
-@import "./background";
-@import "./border";
-@import "./click-area";
-@import "./display";
-@import "./flexbox";
-@import "./flow";
-@import "./full-bleed";
-@import "./gap";
-@import "./hidden";
-@import "./overflow";
-@import "./position";
-@import "./radius";
-@import "./region";
-@import "./separator-divider";
-@import "./spacing";
-@import "./typography";
-@import "./width-height";
-// @import "./wrapper"; //wrapper is already styled in footer.scss
+@forward "./all-center";
+@forward "./animate";
+@forward "./background";
+@forward "./border";
+@forward "./click-area";
+@forward "./display";
+@forward "./flexbox";
+@forward "./flow";
+@forward "./full-bleed";
+@forward "./gap";
+@forward "./hidden";
+@forward "./overflow";
+@forward "./position";
+@forward "./radius";
+@forward "./region";
+@forward "./separator-divider";
+@forward "./spacing";
+@forward "./typography";
+@forward "./width-height";
+// @forward "./wrapper"; //wrapper is already styled in footer.scss
 
-// @import './transition'; // TODO: need to add this utilities
-// @import './dimensions';  // TODO: need to add
+// @forward './transition'; // TODO: need to add this utilities
+// @forward './dimensions';  // TODO: need to add

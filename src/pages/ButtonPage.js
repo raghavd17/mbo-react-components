@@ -10,7 +10,7 @@ const ButtonPage = () => {
     <section className='p-6'>
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Default</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Default</h4>
             <div className='cluster items-center'>
                 <Button>Button</Button>
                 <Button><IconSearch className="icon" /> Icon Before</Button>
@@ -23,7 +23,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Sizes </h4>
             <div className='cluster items-center'>
                
                 <Button size="sm">sm</Button>
@@ -44,7 +44,7 @@ const ButtonPage = () => {
 {/* Button Default end  */}
         <section className='grid grid-cols-2 border-b-neutrals-900 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Alpha</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Alpha</h4>
             <div className='cluster items-center'>
                 <Button type="alpha">Button</Button>
                 <Button type="alpha"><IconSearch className="icon" /> Icon Before</Button>
@@ -57,7 +57,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Alpha Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Alpha Sizes </h4>
             <div className='cluster items-center'>
                
                 <Button type="alpha" size="sm">sm</Button>
@@ -79,7 +79,7 @@ const ButtonPage = () => {
         
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Success</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Success</h4>
             <div className='cluster items-center'>
                 <Button type="success">Button</Button>
                 <Button type="success"><IconSearch className="icon" /> Icon Before </Button>
@@ -92,7 +92,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Success Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Success Sizes </h4>
             <div className='cluster items-center'>
                 <Button type="success" size="sm">sm</Button>
                 <Button type="success" size="md">md</Button>
@@ -112,7 +112,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Warning</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Warning</h4>
             <div className='cluster items-center'>
                 <Button type="warning">Button</Button>
                 <Button type="warning"><IconSearch className="icon" /> Icon Before </Button>
@@ -125,7 +125,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Warning Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Warning Sizes </h4>
             <div className='cluster items-center'>
                 <Button type="warning" size="sm">sm</Button>
                 <Button type="warning" size="md">md</Button>
@@ -146,7 +146,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Danger</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Danger</h4>
             <div className='cluster items-center'>
                  <Button type="danger">Button</Button>
                 <Button type="danger"><IconSearch className="icon" /> Icon Before </Button>
@@ -159,7 +159,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Danger Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Danger Sizes </h4>
             <div className='cluster items-center'>
                 <Button type="danger" size="sm">sm</Button>
                 <Button type="danger" size="md">md</Button>
@@ -180,7 +180,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Link</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link</h4>
             <div className='cluster items-center'>
                 <Button type="link">Button</Button>
                 <Button type="link"><IconSearch className="icon" /> Icon Before </Button>
@@ -192,7 +192,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Link Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Sizes </h4>
             <div className='cluster items-center'>
                 <Button type="link" size="sm">sm</Button>
                 <Button type="link" size="md">md</Button>
@@ -213,7 +213,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Link Success</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Success</h4>
             <div className='cluster items-center'>
                 <Button type="link-success">Button</Button>
                 <Button type="link-success"><IconSearch className="icon" /> Icon Before </Button>
@@ -225,7 +225,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Link Success Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Success Sizes </h4>
             <div className='cluster items-center'>
                 <Button type="link-success" size="sm">sm</Button>
                 <Button type="link-success" size="md">md</Button>
@@ -246,7 +246,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Link Warning</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Warning</h4>
             <div className='cluster items-center'>
                 <Button type="link-warning">Button</Button>
                 <Button type="link-warning"><IconSearch className="icon" /> Icon Before </Button>
@@ -257,7 +257,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Link Warning Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Warning Sizes </h4>
             <div className='cluster items-center'>
                 <Button type="link-warning" size="sm">sm</Button>
                 <Button type="link-warning" size="md">md</Button>
@@ -277,7 +277,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Link Danger</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Danger</h4>
             <div className='cluster items-center'>
                 <Button type="link-danger">Button</Button>
                 <Button type="link-danger"><IconSearch className="icon" /> Icon Before </Button>
@@ -289,7 +289,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Link Danger Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Danger Sizes </h4>
             <div className='cluster items-center'>
 
                 <Button type="link-danger" size="sm">sm</Button>
@@ -311,7 +311,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Round Primary</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Round Primary</h4>
             <div className='cluster items-center'>
                 <Button type="primary" round>Button</Button>
                 <Button type="primary" round><IconSearch className="icon" /> Icon Before</Button>
@@ -323,7 +323,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Primary Button Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Primary Button Sizes </h4>
             <div className='cluster items-center'>
                 <Button type="primary" round size="sm">sm</Button>
                 <Button type="primary" round size="md">md</Button>
@@ -342,7 +342,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Primary</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Primary</h4>
             <div className='cluster items-center'>
                  <Button type="primary">Button</Button>
                 <Button type="primary"><IconSearch className="icon" /> Icon Before</Button>
@@ -354,7 +354,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Primary Button Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Primary Button Sizes </h4>
             <div className='cluster items-center'>
                 <Button type="primary"  size="sm">sm</Button>
                 <Button type="primary" size="md">md</Button>
@@ -374,7 +374,7 @@ const ButtonPage = () => {
         {/* Primary Buttons end  */}
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Action</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Action</h4>
             <div className='cluster items-center'>
                 <Button type="action" >Button</Button>
                 <Button type="action"><IconSearch className="icon" /> Icon Before</Button>
@@ -386,7 +386,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Action Button Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Action Button Sizes </h4>
             <div className='cluster items-center'>
 
                 <Button type="action"  size="sm">sm</Button>
@@ -406,7 +406,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack  divide-slate-600'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Action Success Button</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Action Success Button</h4>
             <div className='cluster items-center'>
                 <Button type="action-success" >Button</Button>
                 <Button type="action-success"><IconSearch className="icon" /> Icon Before</Button>
@@ -420,7 +420,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Action Success Button Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Action Success Button Sizes </h4>
             <div className='cluster items-center'>
                 <Button type="action-success"  size="sm">sm</Button>
                 <Button type="action-success" size="md">md</Button>
@@ -441,7 +441,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Action Warning</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Action Warning</h4>
             <div className='cluster items-center'>
                 <Button type="action-warning">Button</Button>
                 <Button type="action-warning"><IconSearch className="icon" /> Icon Before</Button>
@@ -452,7 +452,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Action Warning Button Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Action Warning Button Sizes </h4>
             <div className='cluster items-center'>
                  <Button type="action-warning" size="sm">sm</Button>
                 <Button type="action-warning" size="md">md</Button>
@@ -471,7 +471,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Action Danger</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Action Danger</h4>
             <div className='cluster items-center'>
                 <Button type="action-danger">Button</Button>
                 <Button type="action-danger"><IconSearch className="icon" /> Icon Before</Button>
@@ -484,7 +484,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Action Danger Button Sizes </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Action Danger Button Sizes </h4>
             <div className='cluster items-center'>
 
                  <Button type="action-danger" size="sm">sm</Button>
@@ -503,7 +503,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Group</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Group</h4>
             <div class="cluster">
             <div className='btn-group' role="group">
                 <Button type="primary">Button </Button>
@@ -515,7 +515,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Group Size & Round  </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Group Size & Round  </h4>
             <div className='stack'>
             <div className='cluster'>
               <div className='btn-group sm' role="group">
@@ -568,7 +568,7 @@ const ButtonPage = () => {
         {/* Group Buttons end  */}
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Group With Icon</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Group With Icon</h4>
             <div className='btn-group' role="group">
                 <Button type="primary" icon><IconSearch className="icon" /></Button>    
                 <Button type="primary">Button Left</Button>
@@ -578,7 +578,7 @@ const ButtonPage = () => {
             </div>
           </div>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Group Size Round with Icon </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Group Size Round with Icon </h4>
             <div className='cluster'>
               <div className='btn-group sm' role="group">
                   <Button type="primary" icon split><IconSearch className="icon" /></Button> 
@@ -630,7 +630,7 @@ const ButtonPage = () => {
 
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Group With Split</h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Group With Split</h4>
             <div className='stack'>
             <div className='cluster'>
               <div className='btn-group' role="group">
@@ -646,7 +646,7 @@ const ButtonPage = () => {
           </div>
           <div>
           
-            <h1 className='text-2xl text-neutrals-800 mb-20'>Button Group Size & Round Split </h1>
+            <h4 className='text-2xl text-neutrals-800 mb-20'>Button Group Size & Round Split </h4>
             <div className='stack'>
             <div className='cluster'>
               <div className='btn-group sm' role="group">

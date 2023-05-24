@@ -1,5 +1,5 @@
 @use "sass:map";
-
+@use './../tokens' as *;
 // Generate utility classes around colors
 // @each $name, $color in $_colors {
 //     .text-#{$name},
@@ -15,7 +15,7 @@
 // Generate utility classes around colors
 
 @each $color-key,
-$color-value in $mbo-colors {
+$color-value in $token-colors {
 
   @each $tone-key,
   $tone-value in $color-value {
@@ -46,7 +46,7 @@ $color-value in $mbo-colors {
 
 // Generate utility classes around font-size
 @each $name,
-$size in $mbo-sizes {
+$size in $token-sizes {
   .fs-#{$name} {
     font-size: var(--size-#{$name});
   }
@@ -54,14 +54,14 @@ $size in $mbo-sizes {
 
 // Generate utility classes around font-families
 @each $name,
-$size in $mbo-font-families {
+$size in $token-font-families {
   .ff-#{$name} {
     font-family: var(--ff-#{$name});
   }
 }
 
 @each $name,
-$weight in $mbo-font-weights {
+$weight in $token-font-weights {
   .fw-#{$name} {
     font-weight: var(--fw-#{$name});
   }
@@ -107,7 +107,7 @@ a.no-decoration>* {
 
 // line-height classes
 @each $name,
-$size in $mbo-lh {
+$size in $token-lh {
   .line-height-#{$name} {
     line-height: var(--lh-#{$name});
   }

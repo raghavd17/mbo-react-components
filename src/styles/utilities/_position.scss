@@ -1,3 +1,4 @@
+@use './../tokens' as *;
 $position:relative,
 absolute,
 fixed,
@@ -21,7 +22,7 @@ left;
 ;
 
 @each $val,
-$space in $mbo-sizes {
+$space in $token-sizes {
   @each $prop in $inset {
     .#{$prop}-#{$val} {
       #{$prop}:var(--size-#{$val});
