@@ -3,6 +3,12 @@
 @use "./styles/style.scss" as *;
 
 /*******
+* mixins dir
+*******/
+@use './styles/mixin/_mixin-dir' as *;
+
+
+/*******
 * compositions classes
 *******/
 @use './styles/compositions/_compositions-dir' as *;
@@ -30,12 +36,12 @@ overrides;
 }
 
 body {
-  font-size: var(--fs-14);
+  font-size: var(--fs-12);
   font-weight: normal;
   line-height: 1.5;
   color: var(--color-neutrals-400);
   margin: 0;
-  font-family: var(--roboto, "Roboto", sans-serif);
+  font-family: var(--ff-roboto, "Roboto", sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -79,7 +85,7 @@ h6 {
 }
 
 .title:where(h1, h2, h3, h4, h5) {
-  font-family: var(--museo300);
+  font-family: var(--ff-museo300);
 }
 
 /*:TODO  Need to grab the these custom props from design system */
