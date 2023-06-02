@@ -14,7 +14,7 @@ const List = () => {
         <NavLink className="item-link">  Nav Link here </NavLink>
         <NavLink className="item-link">  Nav Link here </NavLink>
       </li>
-      <li className="list_item repel " tabIndex={1}>
+      <li className="list_item cluster" tabIndex={1}>
           <div className="list-title"> Inactive Data Group item </div>
         <div>
          
@@ -37,7 +37,7 @@ const List = () => {
         </div>
       </li>
     
-      <li className="list_item repel" data-state="" tabIndex={3}> 
+      <li className="list_item cluster" data-state="" tabIndex={3}> 
         <div className="list-title">Title here
           </div>
         <div className="item-checkbox group" data-state="acctive">
