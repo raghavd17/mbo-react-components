@@ -55,6 +55,12 @@
                 --dropdown-position:0%;
                 --left-arrow-position:1rem;
                 --right-arrow-position:auto;
+                .icon.xl + & {
+                    --left-arrow-position:1rem;
+                }
+                .icon + & {
+                    --left-arrow-position:0.5rem;
+                }
             }
             // data-align="start" end
             &[data-align="center"] {
@@ -68,6 +74,12 @@
                 --right-arrow-position:1rem;
                 --right-dropdown-position:0;
                 --left-arrow-position:auto;
+                .icon.xl + &  {
+                    --right-arrow-position:1rem;
+                }
+                .icon + &  {
+                    --right-arrow-position:0.5rem;
+                }
             }
             // data-align="end" end
             // dropdown arrow style
