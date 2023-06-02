@@ -316,8 +316,6 @@
         --btn-color: var(--color-primary-600);
         --btn-border-color: var(--color-primary-400);
       }
-
-      // @apply shadow-none border-b rounded-none p-1 py-0;
       
 
     }
@@ -400,7 +398,6 @@
       min-width: 1.6667em;
       place-content: center;
       place-items: center;
-      // @apply aspect-square w-fit min-w-[1.6667em] place-content-center place-items-center;
       padding: var(--btn-padding);
     }
 
