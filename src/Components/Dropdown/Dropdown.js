@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import IconCheckmark from '../../Icons/IconCheckmark';
 import { NavLink } from 'react-router-dom';
 import './_dropdown.scss';
 import IconsCaretDown from '../../Icons/IconsCaretDown';
@@ -27,13 +26,13 @@ const Dropdown = () => {
           <li className="list_item repel" data-state="active" tabIndex={3}>
             <div className="list-title">Active data-item
             </div>
-            <div>
-              <div className="item-checkbox" data-state="active">
-                <div>
-                <IconCheckmark />
-                </div>
-              </div>
-            </div>
+            <div className="form-checkbox">
+            <input
+              className="checkobox"
+              type="Checkbox"
+              name="Checkbox" 
+            />
+          </div>
           </li>
     
           <li className="list_item repel" data-state="" tabIndex={4}> 
@@ -81,10 +80,12 @@ const Dropdown = () => {
             <div className="list-title">Active data-item
             </div>
             <div>
-              <div className="item-checkbox" data-state="active">
-                <div>
-                <IconCheckmark />
-                </div>
+              <div className="form-checkbox">
+                <input
+                  className="checkobox"
+                  type="Checkbox"
+                  name="Checkbox" 
+                />
               </div>
             </div>
           </li>
@@ -133,10 +134,12 @@ const Dropdown = () => {
             <div className="list-title">Active data-item
             </div>
             <div>
-              <div className="item-checkbox" data-state="active">
-                <div>
-                <IconCheckmark />
-                </div>
+              <div className="form-checkbox">
+                <input
+                  className="checkobox"
+                  type="Checkbox"
+                  name="Checkbox" 
+                />
               </div>
             </div>
           </li>
@@ -190,11 +193,13 @@ const Dropdown = () => {
             <div className="list-title">Active data-item
             </div>
             <div>
-              <div className="item-checkbox" data-state="active">
-                <div>
-                <IconCheckmark />
-                </div>
-              </div>
+              <div className="form-checkbox">
+                <input
+                  className="checkobox"
+                  type="Checkbox"
+                  name="Checkbox" 
+                />
+            </div>
             </div>
           </li>
     

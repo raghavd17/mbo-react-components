@@ -1,5 +1,5 @@
 import React from 'react'
-import './_radio.scss';
+import './_input-radio.scss';
 
 const Radio = () => {
   return (
@@ -7,7 +7,7 @@ const Radio = () => {
 <main className='p-4'>
     
     <h5 className='text-red-500 mb-4 text-5xl'>Radio Component </h5>
-     {/* <div className="radio">
+     {/* <div className="cluster">
         <input
           className={labelPlacement}
           type="radio"
@@ -19,8 +19,9 @@ const Radio = () => {
         />
         <label>{value}</label> 
       </div> */}
-
-    <div className="radio">
+  <div className='grid-auto-cols'>
+    
+    <div className="form-checkbox cluster">
       
       <input
         className="radio"
@@ -29,8 +30,27 @@ const Radio = () => {
       />
         <label>Radio</label>
     </div>
+    <div className="form-checkbox cluster">
+    <input
+        className="radio"
+        type="radio"
+        name="Radio" 
+        Checked
+      />
+        <label>Radio</label>
+    </div>
 
-    <div className="radio">
+    <div className="form-checkbox  cluster">
+      
+      <input
+        className="radio"
+        type="radio"
+        name="Radio"
+        disabled="disabled"
+      />
+        <label>Disabled Radio</label>
+    </div>
+    <div className="form-checkbox  cluster">
       
       <input
         className="radio"
@@ -41,16 +61,8 @@ const Radio = () => {
       />
         <label>Disabled Radio</label>
     </div>
-
-    <div className="radio">
-      
-      <input
-        className="switch"
-        type="radio"
-        name="Radio"
-      />
-        <label>On</label>
     </div>
+  
 </main>
   )
 }
