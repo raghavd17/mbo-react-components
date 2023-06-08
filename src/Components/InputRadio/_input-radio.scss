@@ -1,14 +1,17 @@
 .form-checkbox {
   // Label 
   --label-color: var(--color-neutrals-400);
-  --label-color-hover: var(--color-primary-400);
+  --label-color-hover: var(--color-primary-500);
   --label-color-active: var(--color-neutrals-900);  
   
   --radio-bg: var(--color-neutrals-white-900);
   --radio-bg-active: var(--color-primary-900);
   --radio-bg-hover: var(--color-primary-500);
   --radio-border: var(--color-primary-300);
- 
+  --radio-border-hover: var(--color-primary-500);
+  // shadow 
+  --radio-shadow:none;
+  --radio-shadow-hover:var(--shadow-xxl);
 }
 
 input[type="radio"] {
@@ -28,6 +31,7 @@ input[type="radio"] {
   border: 1px solid var(--radio-border);
   background: var(--radio-bg);
   transition: background 0.3s ease, border 0.3s ease;
+  box-shadow: var(--radio-shadow);
   & ~ label {
     color: var(--label-color);
   }
@@ -62,7 +66,8 @@ input[type="radio"] {
     opacity: 0.5;
   }
   &:hover:not(:checked):not(:disabled) {
-    --radio-bg:var(--radio-bg-hover);
+    --radio-border:var(--radio-border-hover);
+    --radio-shadow: var(--radio-shadow-hover);
     & ~ label {
       --label-color:var(--label-color-hover);
     }
