@@ -9,7 +9,9 @@
   --radio-bg-hover: var(--color-primary-500);
   --radio-border: var(--color-primary-300);
   --radio-border-hover: var(--color-primary-500);
- 
+  // shadow 
+  --radio-shadow:none;
+  --radio-shadow-hover:var(--shadow-xxl);
 }
 
 input[type="radio"] {
@@ -29,6 +31,7 @@ input[type="radio"] {
   border: 1px solid var(--radio-border);
   background: var(--radio-bg);
   transition: background 0.3s ease, border 0.3s ease;
+  box-shadow: var(--radio-shadow);
   & ~ label {
     color: var(--label-color);
   }
@@ -64,6 +67,7 @@ input[type="radio"] {
   }
   &:hover:not(:checked):not(:disabled) {
     --radio-border:var(--radio-border-hover);
+    --radio-shadow: var(--radio-shadow-hover);
     & ~ label {
       --label-color:var(--label-color-hover);
     }
