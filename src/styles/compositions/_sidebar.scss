@@ -24,7 +24,7 @@
 }
 
 // Generate classes to set the min-width of each half of .sidebar-lr
-@each $name, $size in $mbo-breakpoints {
+@each $name, $size in $token-breakpoints {
   .sidebar-w-#{$name} {
     --sidebar-width: var(--bp-#{$name});
   }

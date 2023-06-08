@@ -1,4 +1,5 @@
-    
+@use './../tokens' as *;
+@use './../mixin/_mixin-dir' as *;    
 // new code from here     
     // TODO: need to work on the logical spacers
     $logical-sides: 
@@ -47,7 +48,7 @@
     
     // looping spacers 
     @each $val,
-    $space in $mbo-spacer-sizes {
+    $space in $token-spacer-sizes {
     
         .p {
             &-#{$val} {
@@ -118,12 +119,12 @@
     //   .padding & .margin loop end 
     
     @each $b-points,
-    $val in $mbo-breakpoints {
+    $val in $token-breakpoints {
     
         @include breakpoint-up($b-points) {
     
             @each $val,
-            $space in $mbo-spacer-sizes {
+            $space in $token-spacer-sizes {
                 .#{$b-points}\:p {
                     &-#{$val} {
                         padding: var(--space-#{$val});

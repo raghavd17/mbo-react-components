@@ -1,6 +1,8 @@
 // Generate utility classes around radius
+@use './../tokens' as *;
+@use './../mixin/_mixin-dir' as *;
 @each $name,
-$radius in $mbo-radius {
+$radius in $token-radius {
 
   .radius {
     &-#{$name} {
@@ -33,12 +35,12 @@ $radius in $mbo-radius {
 
 // responsive border-radius 
 @each $b-points,
-$val in $mbo-breakpoints {
+$val in $token-breakpoints {
 
   @include breakpoint-up($b-points) {
 
     @each $name,
-    $radius in $mbo-radius {
+    $radius in $token-radius {
       .#{$b-points}\:radius {
         &-#{$name} {
           border-radius:var(--radius-#{$name});

@@ -1,53 +1,53 @@
-
-
-
     .list {
-        padding: var(--size-2);
-        gap: var(--size-2);
+        --list-padding:var(--size-2);
+        --list-gap:var(--size-2);
+        padding: var(--list-padding);
+        gap: var(--list-gap);
 
         &_item {
-           
-            padding: var(--size-2);
-            padding-inline: var(--size-3);
-            border-radius: var(--radius-rounded);
+            --list-divider-space:var(--size-2);
+            --list-divider-color:var(--color-border) ;
+            --list-item-padding: var(--size-2);
+            --list-item-padding-inline:var(--size-3) ;
+            --list-item-padding-block: ;
+            --list-item-radius: var(--radius-rounded);
+            --list-item-bg: none;
+            --list-item-bg-hover: var(--color-primary-200) ;
+            --list-item-bg-active: var(--color-primary-100);
+            padding: var(--list-item-padding);
+            padding-inline: var(--list-item-padding-inline);
+            border-radius: var(--list-item-radius);
+            background-color: var(--list-item-bg);
             &:hover {
-                background-color: var(--color-primary-200);
+                --list-item-bg:var(--list-item-bg-hover);
             }
 
-            &[data-state="active"] {
-                background-color: var(--color-primary-100);
+            &:where(.active, [data-state="active"]) {
+                --list-item-bg:var(--list-item-bg-active);
             }
 
-            &:hover {
-                .item-checkbox:not([data-state='active']) {
-                    --bg: var(--color-primary-500);
-                    --color: var(--color-white);
-                }
-            }
 
         }
 
 
         // list_item
         &-divider {
-            // @apply border-b;
             border-bottom: 1px solid;
-            border-color: var(--color-border, initial);
+            border-color: var(--list-divider-color, initial);
+            margin-block: var(--list-divider-space);
         }
 
         &-title {
-            // @apply text-ellipsis overflow-hidden whitespace-nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
 
         }
 
-
+        // this needs to move as indipendant component
         &-label {
             --gap: var(--size-1);
-            // @apply text-[.875em] p-1 flex;
-            font-size: var(--size-3-5);
+            font-size: var(--fs-10);
             padding: var(--size-1);
             display: flex;
         }
@@ -59,7 +59,6 @@
     // .list end 
     .item {
         &-link {
-            // @apply block hover:text-primary-500;
             display: block;
             &:hover {
                 color: var(--color-primary-500);
@@ -67,48 +66,4 @@
         }
 
         // item-link end 
-
-        &-checkbox {
-            --bg: var(--color-primary-200);
-            --color: var(--color-primary-600);
-            background: var(--bg);
-            color: var(--color);
-
-            &:has(svg) {
-                // @apply aspect-square;
-                aspect-ratio: var(--ratio-square);
-
-                & svg {
-                    // @apply  text-[rgba(255,255,255,.25)] ;
-                    color: rgba(255,255,255,.25);
-                }
-            }
-
-
-            // @apply min-w-[1.5em] w-fit grid rounded place-content-center place-items-center;
-            min-width: 1.5em;
-            width: fit-content;
-            display: grid;
-            border-radius: var(--radius-rounded);
-            place-content: center;
-            place-items: center;
-
-            &:hover {
-                --bg: var(--color-primary-500);
-                --color: var(--color-white);
-            }
-
-            &[data-state='active'] {
-                --bg: var(--color-primary-900);
-                --color: var(--color-white);
-
-                & svg {
-                    // @apply text-inherit;
-                    color: inherit;
-                }
-            }
-        }
     }
-
-
-    // .item-checkbox

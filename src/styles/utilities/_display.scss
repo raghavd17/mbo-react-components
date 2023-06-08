@@ -1,3 +1,6 @@
+@use './../tokens' as *;
+@use './../mixin/_mixin-dir' as *;
+
 $display: block,
 inline-block,
 inline,
@@ -45,7 +48,7 @@ visible;
 
 // Utilities to remove something completely from the screen based on breakpoints
     @each $b-points,
-    $val in $mbo-breakpoints {
+    $val in $token-breakpoints {
         @include breakpoint-up($b-points) {
         
             @if $prop==hidden {

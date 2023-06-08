@@ -1,3 +1,5 @@
+@use './../tokens' as *;
+@use './../mixin/_mixin-dir' as *;
 :where(html){
   --grid-auto-cols:20rem;
 }

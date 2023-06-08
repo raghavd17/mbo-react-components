@@ -1,13 +1,12 @@
 @use "sass:list";
-@import "./tokens"; // design tokens
-@import "./reset"; // CSS reset
-@import "./mixin/_mixin-dir"; // Mixin Dir
+@use "./tokens" as *; // design tokens
+@use "./reset" as *; // CSS reset
 
 // @import 'open-props/__open-props.scss';  // open-props variables
 // @import 'open-props/__normalize.scss';  // to get the normalize styles from open-props
 // Typography system (golden ratio)
 @function size($size) {
-  @if $mbo-fluid {
+  @if $token-fluid {
     $reducer: if($size <= 1, 1.1, 0.9);
     $min: $reducer * $size;
     @return clamp(#{$min}rem, #{$size} * 2vw, #{$size} * 1.2rem);
@@ -21,7 +20,7 @@
 *******/
 :root {
   // colors with nested loops
-  @each $name, $shades in $mbo-colors {
+  @each $name, $shades in $token-colors {
     @each $shade, $value in $shades {
       --color-#{$name}-#{$shade}: #{$value};
     }
@@ -30,15 +29,15 @@
   --color-white: #fff;
   --color-black: #000;
   // create CSS variables around radius
-  @each $name, $radius in $mbo-radius {
+  @each $name, $radius in $token-radius {
     --radius-#{$name}: #{$radius};
   }
   // create CSS variables around opacity
-  @each $name, $opacity in $mbo-opacity {
+  @each $name, $opacity in $token-opacity {
     --opacity-#{$name}: #{$opacity};
   }
   // create CSS variables around ratio
-  // @each $name, $ratio in $mbo-ratio {
+  // @each $name, $ratio in $token-ratio {
   //   --ratio-#{$name}: #{$ratio};
   // }
   //TODO: need to make it autogenrated
@@ -127,16 +126,16 @@
 
   // create CSS variables around spacing, font-sizes etc.
   // z-index
-  @each $name, $size in $mbo-index {
+  @each $name, $size in $token-index {
     --index-#{$name}: #{$size};
   }
   // genrate the sizes variables
-  @each $name, $size in $mbo-sizes {
+  @each $name, $size in $token-sizes {
     --size-#{$name}: #{size($size)};
   }
 
   // genrate the width-height variables
-  @each $name, $width in $mbo-width-height {
+  @each $name, $width in $token-width-height {
     --size-#{$name}: #{$width};
   }
   // genrate the line-height variables
@@ -145,26 +144,26 @@
   }
 
   // create CSS variables around breakpoints
-  @each $name, $bp in $mbo-breakpoints {
+  @each $name, $bp in $token-breakpoints {
     --bp-#{$name}: #{$bp};
   }
 
   // font families
-  @each $name, $value in $mbo-font-families {
+  @each $name, $value in $token-font-families {
     --ff-#{$name}: #{$value};
   }
    // font size variables
-   @each $name, $size in $mbo-font-sizes {
+   @each $name, $size in $token-font-sizes {
     --fs-#{$name}: #{size($size)};
   }
   
   // space size variables for mardin and padding
-  @each $name, $size in $mbo-spacer-sizes {
+  @each $name, $size in $token-spacer-sizes {
     --space-#{$name}: #{size($size)};
   }
   
   // font weight
-  @each $name, $value in $mbo-font-weights {
+  @each $name, $value in $token-font-weights {
     --fw-#{$name}: #{$value};
   }
   
@@ -185,7 +184,7 @@
 
     // new
 
-    @each $name, $shades in $mbo-dark-theme {
+    @each $name, $shades in $token-dark-theme {
       @each $shade, $value in $shades {
         --color-#{$name}-#{$shade}: #{$value};
       }
@@ -198,7 +197,7 @@
   :root {
     color-scheme: light;
 
-    @each $color, $shades in $mbo-light-theme {
+    @each $color, $shades in $token-light-theme {
       @each $shade, $value in $shades {
         --color-#{$name}-#{$shade}: #{$value};
       }
@@ -209,7 +208,7 @@
 // :root {
 //     [data-theme="light"] {
 //     color-scheme: light;
-//     @each $name, $color in $mbo-light-theme {
+//     @each $name, $color in $token-light-theme {
 //       --color-#{$name}: var(--color-#{$color});
 //     }
 //   }
@@ -219,9 +218,9 @@
 // /*******
 // * compositions classes
 // *******/
-@import './compositions/_compositions-dir';
+// @import './compositions/_compositions-dir';
 
-// /*******
-// * generative utility classes
-// *******/
-@import './utilities/_utilities-dir';  // all utilities in one scss file
+// // /*******
+// // * generative utility classes
+// // *******/
+// @import './utilities/_utilities-dir';  // all utilities in one scss file

@@ -1,5 +1,7 @@
+@use './../tokens' as *;
+@use './../mixin/_mixin-dir' as *;
 @each $name,
-$space in $mbo-spacer-sizes {
+$space in $token-spacer-sizes {
   .gap {
     &-#{$name} {
       gap: var(--space-#{$name});
@@ -22,12 +24,12 @@ $space in $mbo-spacer-sizes {
 
 // responsive border-radius 
 @each $b-points,
-$val in $mbo-breakpoints {
+$val in $token-breakpoints {
 
   @include breakpoint-up($b-points) {
 
     @each $name,
-    $space in $mbo-sizes {
+    $space in $token-sizes {
       .#{$b-points}\:gap {
         &-#{$name} {
           gap: var(--space-#{$name});

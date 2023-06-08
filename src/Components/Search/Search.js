@@ -9,11 +9,11 @@ const Search = () => {
     
 <main className='p-4'>
     
-    <h2 className='text-red-500 mb-4 text-5xl'>Search </h2>
+    <h5 className='text-red-500 mb-4 text-5xl'>Search </h5>
     <div className="search">
       <div className='search__bar'>
       <input class="search__input" placeholder="Name, category or role" type="text" />
-        <button type="button" class="btn icon search__btn" dat>
+        <button type="button" class="btn icon search__btn">
           <IconSearch />
         </button>
       </div>

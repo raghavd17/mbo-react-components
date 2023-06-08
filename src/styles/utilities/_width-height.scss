@@ -1,7 +1,8 @@
 @use "sass:map";
-
+@use './../tokens' as *;
+@use './../mixin/_mixin-dir' as *;
 @each $val,
-$width in $mbo-width-height {
+$width in $token-width-height {
     .w {
         &-#{$val} {
             width:var(--size-#{$val});
@@ -51,7 +52,7 @@ $width in $mbo-width-height {
 //TODO: need to work on these 
 // looping spacers 
 @each $val,
-$space in $mbo-sizes {
+$space in $token-sizes {
 
     .w {
         &-#{$val} {
@@ -96,12 +97,12 @@ $space in $mbo-sizes {
 }
 
 @each $b-points,
-$val in $mbo-breakpoints {
+$val in $token-breakpoints {
 
     @include breakpoint-up($b-points) {
 
         @each $val,
-        $space in $mbo-sizes {
+        $space in $token-sizes {
 
             // xs\:
             .#{$b-points}\:w {
@@ -152,7 +153,7 @@ $val in $mbo-breakpoints {
 
         // width and height % loop 
         @each $val,
-        $width in $mbo-width-height {
+        $width in $token-width-height {
             .#{$b-points}\:w {
                 &-#{$val} {
                     // width:#{$val};
