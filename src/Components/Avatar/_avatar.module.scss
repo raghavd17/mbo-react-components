@@ -1,5 +1,5 @@
 
-:root {
+:root .avatar {
     --avatar-size-default: var(--size-8); // 32px;
     --avatar-fs-default: var(--fs-12); // 12px
     --avatar-size: var(--avatar-size-default);
@@ -64,7 +64,7 @@
       --status-color:var(--color-error-900);
     }
 
-    &-media {
+    &__media {
       position: relative;
       picture img, img {
         max-width: var(--size-full);
@@ -107,13 +107,16 @@
     }
     
     
-
-    
-    &-title {
+    &__content {
+      
     }
     
-    &-desc {
-      font-size: .875em;
+    &__title {
+      
+    }
+    
+    &__desc {
+      font-size: var(--fs-14);
     }
 
     
