@@ -52,6 +52,7 @@
       box-sizing: content-box;
       outline:  1px solid var(--checkbox-border);
       outline-offset: -1px;
+      border-radius: 2px;
       & ~ label {
         color: var(--label-color);
       }
@@ -99,7 +100,7 @@
 
       
       &:not(.switch, .square) {
-        border-radius: 2px;
+        
         &:after {
           opacity: 0;
         }
@@ -111,7 +112,7 @@
       }
 
       &:not(.switch, .square) {
-        
+        border-radius: 2px;
         &:after {
           width: calc(var(--checkbox-size) / 2);
           aspect-ratio: var(--ratio-widescreen);
@@ -141,6 +142,7 @@
             border: none;
             transform: rotate(0deg) scale(1);
             transform-origin: center;
+            border-radius: 2px;
           }
         }
         &:disabled {
