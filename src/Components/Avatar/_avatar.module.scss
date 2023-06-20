@@ -1,5 +1,7 @@
 
-:root .avatar {
+
+@layer components {
+  :root {
     --avatar-size-default: var(--size-8); // 32px;
     --avatar-fs-default: var(--fs-12); // 12px
     --avatar-size: var(--avatar-size-default);
@@ -17,8 +19,6 @@
     --avatar-fs-xl: var(--fs-18);  // 18px;
 
 }
-@layer components {
-
   @mixin avatar-size($size) {
     @if $size==sm {
       --avatar-size: var(--avatar-size-sm);

@@ -9,13 +9,14 @@ function Avatar() {
         <div className='stack'>
           <div className='text-2xl text-neutral-800 mb-32'>Avatar with Name</div>
           <div className='cluster'>
-            <div className={`${style.avatar} ${style.sm} ${style.online}`}>
-              <div className={`${style.avatar_media}`} data-indicator="online" data-avatar="sm" >
+            <div className={`${style.avatar} ${style.sm} ${style.offline}`}>
+              <div className={`${style.avatar__media}`} data-indicator="online" data-avatar="sm" >
               </div>
               <div className={`${style.avatar__content}`}>
-                <div className={`${style.avatar__title}`}>Avatar Name</div>
+                <div className={`${style.avatar__title}`}>Testing sm </div>
               </div>
             </div>
+
             <div className={`${style.avatar} ${style.md} ${style.offline}`}>
               <div className={`${style.avatar__media}`} data-indicator="offline" data-avatar="md" >
               </div>
