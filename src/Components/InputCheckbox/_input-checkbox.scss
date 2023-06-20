@@ -12,6 +12,7 @@
       --checkbox-square-border-active: var(--color-primary-900);
       --checkbox-bg-disabled: var(--color-primary-tint-100);
       --checkbox-border-disabled: var(--color-neutrals-200);
+      --checkbox-radi:2px;
 
       
       // switch 
@@ -112,7 +113,7 @@
       }
 
       &:not(.switch, .square) {
-        border-radius: 2px;
+        border-radius: var(--checkbox-radi);
         &:after {
           width: calc(var(--checkbox-size) / 2);
           aspect-ratio: var(--ratio-widescreen);
@@ -142,7 +143,7 @@
             border: none;
             transform: rotate(0deg) scale(1);
             transform-origin: center;
-            border-radius: 2px;
+            border-radius: var(--checkbox-radi);
           }
         }
         &:disabled {
