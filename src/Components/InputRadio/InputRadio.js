@@ -40,7 +40,7 @@ const Radio = () => {
         <label>Radio</label>
     </div>
 
-    <div className="form-checkbox  cluster">
+    <div className="form-checkbox">
       
       <input
         className="radio"
@@ -50,7 +50,7 @@ const Radio = () => {
       />
         <label>Disabled Radio</label>
     </div>
-    <div className="form-checkbox  cluster">
+    <div className="form-checkbox">
       
       <input
         className="radio"

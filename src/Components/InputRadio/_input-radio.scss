@@ -12,10 +12,17 @@
   // shadow 
   --radio-shadow:none;
   --radio-shadow-hover:var(--shadow-xxl);
+  --radio-size: 1.375rem; //22px
+  --radio-size: 1.25rem; //20px
+  --radio-size: 1.5rem; //24px
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: var(--size-2);
+      align-items: center;
+  
 }
 
 input[type="radio"] {
-  --radio-size: 1.375rem; //22px
   border-radius: var(--radius-full);
   outline: none;
   position: relative;
@@ -32,15 +39,16 @@ input[type="radio"] {
   background: var(--radio-bg);
   transition: background 0.3s ease, border 0.3s ease;
   box-shadow: var(--radio-shadow);
+  box-sizing: content-box;
   & ~ label {
     color: var(--label-color);
   }
   &:after {
-    width: 20px;
+    width: calc(var(--radio-size));
     aspect-ratio: 1;
     border-radius: var(--radius-full);
     background: var(--radio-bg);
-    transform: scale(0.7);
+    transform: scale(0.75);
     content: "";
     display: block;
     left: 0;
