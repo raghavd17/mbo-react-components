@@ -504,7 +504,7 @@ const ButtonPage = () => {
         <section className='grid grid-cols-2 border-b-neutrals-400 py-48'>
           <div className='stack'>
             <h4 className='text-2xl text-neutrals-800 mb-20'>Button Group</h4>
-            <div class="cluster">
+            <div className="cluster">
             <div className='btn-group' role="group">
                 <Button type="primary">Button </Button>
                 <Button type="primary">Button </Button>
