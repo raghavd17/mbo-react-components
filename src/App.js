@@ -5,6 +5,7 @@ import Button from './pages/ButtonPage';
 import List from './Components/List/List';
 import Dropdown from './Components/Dropdown/Dropdown';
 import Date from './Components/Date/Date';
+// import Label from './Components/Label/Label';
 import Search from './Components/Search/Search';
 import Avatar from './Components/Avatar/Avatar';
 import InputRadio from './Components/Form/InputRadio/InputRadio';
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/list" element={<List />} />
           <Route path="/Dropdown" element={<Dropdown />} />
           <Route path="/Date" element={<Date />} />
+          {/* <Route path="/Label" element={<Label />} /> */}
           <Route path="/Search" element={<Search />} />
           <Route path="/Avatar" element={<Avatar />} />
           <Route path="/InputRadio" element={<InputRadio />} />
