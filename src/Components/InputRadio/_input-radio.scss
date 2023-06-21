@@ -12,13 +12,7 @@
   // shadow 
   --radio-shadow:none;
   --radio-shadow-hover:var(--shadow-xxl);
-  --radio-size: 1.375rem; //22px
-  --radio-size: 1.25rem; //20px
   --radio-size: 1.5rem; //24px
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: var(--size-2);
-      align-items: center;
   
 }
 
@@ -35,7 +29,8 @@ input[type="radio"] {
   cursor: pointer;
   height: var(--radio-size);
   aspect-ratio: 1;
-  border: 1px solid var(--radio-border);
+  border: none;
+  outline: calc(var(--radio-size) / 20) solid var(--radio-border);
   background: var(--radio-bg);
   transition: background 0.3s ease, border 0.3s ease;
   box-shadow: var(--radio-shadow);
@@ -58,7 +53,7 @@ input[type="radio"] {
   }
   &:checked {
     background: var(--radio-bg);
-    border-color: var(--radio-bg-active);
+    outline-color: var(--radio-bg-active);
     & ~ label {
       --label-color:var(--label-color-active);
     }
