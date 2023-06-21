@@ -1,0 +1,56 @@
+.form-checkbox {
+  
+  // Common style for radio and checkbox 
+  // label
+  --label-color: var(--color-neutrals-400);
+  --label-color-hover: var(--color-primary-500);
+  --label-color-active: var(--color-neutrals-900);
+  
+  // Size 
+  --checkbox-size: 1.5rem; //24px
+  --radio-size: 1.5rem; //24px
+
+  // shadow
+  --checkbox-shadow: none;
+  --radio-shadow: none;
+  --checkbox-shadow-hover: var(--shadow-xxl);
+  --radio-shadow-hover: var(--shadow-xxl);
+  
+// Common style for radio and checkbox end 
+  // Checkbox styles
+  --checkbox-bg: var(--color-neutrals-white-300);
+  --checkbox-bg-hover: var(--color-primary-500);
+  --checkbox-bg-active: var(--color-primary-900);
+  --checkbox-square-bg: var(--color-neutrals-white-900);
+  --checkbox-square-border-active: var(--color-primary-900);
+  --checkbox-bg-disabled: var(--color-primary-tint-100);
+  --checkbox-border-disabled: var(--color-neutrals-200);
+  --checkbox-radi: 2px;
+
+  
+  // switch
+  --checkbox-switch-bg: var(--color-primary-200);
+  --switch-btn-bg: var(--color-primary-300);
+  --switch-btn-bg-active: var(--color-primary-200);
+  --checkbox-border: var(--color-primary-300);
+  --checkbox-border-hover: var(--color-primary-500);
+  --checkbox-border-active: var(--color-primary-900);
+  
+
+  // Radio styles
+  --radio-bg: var(--color-neutrals-white-900);
+  --radio-bg-hover: var(--color-primary-500);
+  --radio-bg-active: var(--color-primary-900);
+  --radio-border: var(--color-primary-300);
+  --radio-border-hover: var(--color-primary-500);
+  
+
+  // Layout styles
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--size-2);
+  align-items: center;
+}
+
+.form-checkbox {
+}

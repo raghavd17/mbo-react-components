@@ -7,8 +7,8 @@ import Dropdown from './Components/Dropdown/Dropdown';
 import Date from './Components/Date/Date';
 import Search from './Components/Search/Search';
 import Avatar from './Components/Avatar/Avatar';
-import InputRadio from './Components/InputRadio/InputRadio';
-import InputCheckbox from './Components/InputCheckbox/InputCheckbox';
+import InputRadio from './Components/Form/InputRadio/InputRadio';
+import InputCheckbox from './Components/Form/InputCheckbox/InputCheckbox';
 
 
 
