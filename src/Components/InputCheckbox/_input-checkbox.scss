@@ -1,38 +1,38 @@
 .form-checkbox {
-// label
+  // label
     --label-color: var(--color-neutrals-400);
     --label-color-hover: var(--color-primary-500);
     --label-color-active: var(--color-neutrals-900);  
     
 
     --checkbox-bg: var(--color-neutrals-white-300);
-      --checkbox-bg-hover: var(--color-primary-500);
-      --checkbox-bg-active: var(--color-primary-900);
-      --checkbox-square-bg: var(--color-neutrals-white-900);
-      --checkbox-square-border-active: var(--color-primary-900);
-      --checkbox-bg-disabled: var(--color-primary-tint-100);
-      --checkbox-border-disabled: var(--color-neutrals-200);
-      --checkbox-radi:2px;
+    --checkbox-bg-hover: var(--color-primary-500);
+    --checkbox-bg-active: var(--color-primary-900);
+    --checkbox-square-bg: var(--color-neutrals-white-900);
+    --checkbox-square-border-active: var(--color-primary-900);
+    --checkbox-bg-disabled: var(--color-primary-tint-100);
+    --checkbox-border-disabled: var(--color-neutrals-200);
+    --checkbox-radi:2px;
 
-      
-      // switch 
-      --checkbox-switch-bg:var(--color-primary-200);
-      --switch-btn-bg:var(--color-primary-300);
-      --switch-btn-bg-active:var(--color-primary-200);
-      --checkbox-border: var(--color-primary-300);
-      --checkbox-border-hover: var(--color-primary-500);
-      --checkbox-border-active: var(--color-primary-900);
-      --checkbox-size:1.375rem; //22px
-      --checkbox-size:1.25rem; //20px
-      --checkbox-size:1.5rem; //24px
+    
+    // switch 
+    --checkbox-switch-bg:var(--color-primary-200);
+    --switch-btn-bg:var(--color-primary-300);
+    --switch-btn-bg-active:var(--color-primary-200);
+    --checkbox-border: var(--color-primary-300);
+    --checkbox-border-hover: var(--color-primary-500);
+    --checkbox-border-active: var(--color-primary-900);
+    --checkbox-size:1.375rem; //22px
+    --checkbox-size:1.25rem; //20px
+    --checkbox-size:1.5rem; //24px
 
-      // shadow 
-      --checkbox-shadow:none;
-      --checkbox-shadow-hover:var(--shadow-xxl);
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: var(--size-2);
-      align-items: center;
+    // shadow 
+    --checkbox-shadow:none;
+    --checkbox-shadow-hover:var(--shadow-xxl);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--size-2);
+    align-items: center;
 }
     input[type="checkbox"] {
       
