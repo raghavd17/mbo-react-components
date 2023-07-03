@@ -13,6 +13,7 @@ const Nav = () => {
       <NavLink to={'/Dropdown'} key={3}className="border-b-2 border-primary-300"> Dropdown </NavLink>
       <NavLink to={'/Date'} key={4} className="border-b-2 border-primary-300"> Date </NavLink>
       <NavLink to={'/Label'} key={5} className="border-b-2 border-primary-300"> Label </NavLink>
+      <NavLink to={'/InputText'} key={5} className="border-b-2 border-primary-300"> InputText </NavLink>
       <NavLink to={'/Search'} key={6} className="border-b-2 border-primary-300"> Search </NavLink>
       <NavLink to={'/InputRadio'} key={7} className="border-b-2 border-primary-300"> Input Radio </NavLink>
       <NavLink to={'/InputCheckbox'} key={8} className="border-b-2 border-primary-300"> Input Checkbox </NavLink>

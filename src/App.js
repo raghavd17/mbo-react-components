@@ -6,6 +6,7 @@ import List from './Components/List/List';
 import Dropdown from './Components/Dropdown/Dropdown';
 import Date from './Components/Date/Date';
 import Label from './Components/Form/Label/Label';
+import InputText from './Components/Form/InputText/InputText';
 import Search from './Components/Search/Search';
 import Avatar from './Components/Avatar/Avatar';
 import InputRadio from './Components/Form/InputRadio/InputRadio';
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/Dropdown" element={<Dropdown />} />
           <Route path="/Date" element={<Date />} />
           <Route path="/Label" element={<Label />} />
+          <Route path="/InputText" element={<InputText />} />
           <Route path="/Search" element={<Search />} />
           <Route path="/Avatar" element={<Avatar />} />
           <Route path="/InputRadio" element={<InputRadio />} />
