@@ -71,7 +71,7 @@
 
   &.error {
     --bg-color: var(--color-neutrals-white-900);
-    --border-color: var(--color-error-300);
+    --border-color: var(--color-error-500);
   }
 }
 
@@ -79,6 +79,7 @@
   display: flex;
   border-bottom: var(--size-0-5) solid;
   border-bottom-color: var(--border-color);
+  align-items: center;
 }
 
 .form_field__icon {
@@ -95,11 +96,9 @@
   color: var(--input-color);
   display: block;
   font-size: var(--label-size-md);
-  margin-top: var(--size-6);
   outline: 0;
-  padding: var(--size-0) var(--size-3) var(--size-2-5) var(--size-3);
+  padding: var(--size-6) var(--size-3) var(--size-2-5) var(--size-3);
   width: var(--size-full);
-  z-index: 10;
 }
 
 .form_field__label {
@@ -120,6 +119,7 @@
   line-height: var(--size-3);
   padding: var(--size-1);
   display: flex;
+  line-height: 1.125;
   gap: var(--size-1);
   align-items: center;
   background: transparent;
