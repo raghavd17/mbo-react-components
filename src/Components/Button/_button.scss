@@ -221,7 +221,7 @@
 
     &.action-danger {
 
-      --btn-bg: var(--color-error-300);
+      --btn-bg: var(--color-error-500);
       --btn-color: var(--color-white);
 
       &:hover {
@@ -302,13 +302,14 @@
       padding: var(--size-1);
       padding-block:0;
       border: 0;
-      border-bottom-style: solid;
+      // border-bottom-style: solid;
       
 
       &:hover, &:focus, &:active, &.active {
         --btn-color: var(--color-primary-400);
         --btn-border-color: var(--color-primary-400);
-          border-bottom: solid;
+          border-bottom: solid 1px;
+          margin-block-end:-1px;
       }
 
       &:where(&:active, &.active, &:focus),
