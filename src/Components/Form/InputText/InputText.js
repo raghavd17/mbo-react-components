@@ -18,6 +18,7 @@ const Checkbox = () => {
                   // value={value}
                   // onChange={onChange}
                   placeholder=" "
+                  required
                   // {...(disabled ? { disabled } : {})}
                 />
                 {/* {dispRightIcon && rightIcon === "arrow" && (
@@ -40,7 +41,7 @@ const Checkbox = () => {
           {/* items */}
           <h2>Error example </h2>
           <div className={`${style.form_field}`}>
-            <div className={`${style.form_field__control} ${style.filled} ${style.error}`}>
+            <div className={`${style.form_field__control} ${style.error}`}>
               <div className={`${style.form_field__input_wrapper}`}>
                 <input
                   id="inputField"
@@ -49,6 +50,7 @@ const Checkbox = () => {
                   // value={value}
                   // onChange={onChange}
                   placeholder=" "
+                  required
                   // {...(disabled ? { disabled } : {})}
                 />
                 {/* {dispRightIcon && rightIcon === "arrow" && (

@@ -1,5 +1,13 @@
+@mixin label-inactive() {
+  transform: translateY(0);
+}
 
-:root {
+@mixin label-active() {
+  font-size: var(--label-size-sm);
+  transform: translateY(calc(-1 * var(--size-2-5)));
+}
+
+.form_field {
   --bg-color: var(--color-neutrals-white-600);
   --label-color: var(--color-neutrals-400);
   --border-color: var(--color-primary-300);
@@ -13,23 +21,10 @@
   --font-family: var(--ff-roboto);
 
   --error-color: var(--color-error-900);
-}
-
-@mixin label-inactive() {
-  transform: translateY(0);
-}
-
-@mixin label-active() {
-  font-size: var(--label-size-sm);
-  transform: translateY(-14px);
-}
-
-.form_field {
   display: block;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: var(--fw-400, 400);
-  margin-bottom: var(--size-4);
 
   &:has(.form_field__input:not(:placeholder-shown)),
   &:has(.form_field__input:focus) {
@@ -44,6 +39,7 @@
 }
 
 .form_field__control {
+  --bg-color: var(--color-neutrals-white-600);
   background: var(--bg-color);
   border-radius: var(--size-0-5);
   overflow: hidden;
@@ -56,12 +52,6 @@
     transition: all var(--animation-duration);
   }
 
-  &.filled {
-    --bg-color: var(--color-primary-200, #6855b414);
-    --border-color: var(--color-primary-900);
-    --input-color: var(--color-primary-800);
-  }
-
   &.disabled {
     --bg-color: var(--color-neutrals-100);
     --border-color: var(--color-neutrals-200);
@@ -72,6 +62,12 @@
   &.error {
     --bg-color: var(--color-neutrals-white-900);
     --border-color: var(--color-error-500);
+  }
+  &:has(.form_field__input:valid):not(.error),
+  &.filled {
+    --bg-color: var(--color-primary-200, #6855b414);
+    --border-color: var(--color-primary-900);
+    --input-color: var(--color-primary-800);
   }
 }
 
@@ -97,15 +93,15 @@
   display: block;
   font-size: var(--label-size-md);
   outline: 0;
-  padding: var(--size-6) var(--size-3) var(--size-2-5) var(--size-3);
+  padding: var(--size-5) var(--size-2) var(--size-2) var(--size-2);
   width: var(--size-full);
 }
 
 .form_field__label {
   // @include label-active();
   display: block;
-  left: 0.75rem;
-  top: 1.125rem;
+  left: var(--size-2);
+  top: var(--size-3);
   margin: 0;
   position: absolute;
   transition: all var(--animation-duration);
@@ -117,7 +113,7 @@
   color: var(--error-color);
   font-size: var(--fs-12);
   line-height: var(--size-3);
-  padding: var(--size-1);
+  padding: var(--size-2);
   display: flex;
   line-height: 1.125;
   gap: var(--size-1);
