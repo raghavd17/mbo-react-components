@@ -170,76 +170,7 @@
     }
     // alpha 
 
-    &.action {
-      --btn-bg: var(--color-action-400);
-      --btn-color: var(--color-white);
-
-      &:hover {
-        --btn-bg: var(--color-action-300);
-      }
-
-      &:where(&:active, &.active, &:focus),
-      &[data-dropdown='open'] {
-        --btn-bg: var(--color-action-600);
-      }
-
-      // varints 
-
-      &-success {
-        --btn-bg: var(--color-success-500);
-        --btn-color: var(--color-white);
-  
-        &:hover {
-          --btn-bg: var(--color-success-900);
-        }
-  
-        &:where(&:active, &.active, &:focus),
-        &[data-dropdown='open'] {
-          --btn-bg: var(--color-success-900);
-        }
-  
-      }
-  
-      // .btn.action-success end 
-      &-warning {
-        --btn-bg: var(--color-attention-500);
-        --btn-color: var(--color-white);
-  
-        &:hover {
-          --btn-bg: var(--color-attention-900);
-        }
-  
-        &:where(&:active, &.active, &:focus),
-        &[data-dropdown='open'] {
-          --btn-bg: var(--color-attention-900);
-        }
-  
-      }
-  
-      // .btn.action-warning end 
-  
-      &-danger {
-  
-        --btn-bg: var(--color-error-500);
-        --btn-color: var(--color-white);
-  
-        &:hover {
-          --btn-bg: var(--color-error-900);
-        }
-  
-        &:where(&:active, &.active, &:focus),
-        &[data-dropdown='open'] {
-          --btn-bg: var(--color-error-900);
-        }
-  
-  
-      }
-  
-      // .btn.action-danger end 
-    }
-
-    // .btn.action end 
-
+   
    
 
 
@@ -312,6 +243,7 @@
       &:hover, &:focus, &:active, &.active {
         --btn-color: var(--color-primary-400);
         --btn-border-color: var(--color-primary-400);
+        --btn-bg: var(--color-transparent);
           border-bottom: solid 1px;
           margin-block-end:-1px;
       }
@@ -323,8 +255,7 @@
       }
       
       // varints 
-
-      &-danger {
+      &.danger {
         --btn-color: var(--color-error-500);
   
         &:hover, &:focus, &:active, &.active {
@@ -342,7 +273,7 @@
   
       // .btn.link-danger end 
   
-      &-success {
+      &.success {
   
         --btn-color: var(--color-success-500);
   
@@ -360,7 +291,7 @@
   
       }
   
-      &-warning {
+      &.warning {
   
         --btn-color: var(--color-attention-500);
   
@@ -380,7 +311,76 @@
 
     // .btn.link end 
 
-    
+    &.action {
+      --btn-bg: var(--color-action-400);
+      --btn-color: var(--color-white);
+
+      &:hover {
+        --btn-bg: var(--color-action-300);
+      }
+
+      &:where(&:active, &.active, &:focus),
+      &[data-dropdown='open'] {
+        --btn-bg: var(--color-action-600);
+      }
+
+      // varints 
+
+      &.success {
+        --btn-bg: var(--color-success-500);
+        --btn-color: var(--color-white);
+  
+        &:hover {
+          --btn-bg: var(--color-success-900);
+        }
+  
+        &:where(&:active, &.active, &:focus),
+        &[data-dropdown='open'] {
+          --btn-bg: var(--color-success-900);
+        }
+  
+      }
+  
+      // .btn.action-success end 
+      &.warning {
+        --btn-bg: var(--color-attention-500);
+        --btn-color: var(--color-white);
+  
+        &:hover {
+          --btn-bg: var(--color-attention-900);
+        }
+  
+        &:where(&:active, &.active, &:focus),
+        &[data-dropdown='open'] {
+          --btn-bg: var(--color-attention-900);
+        }
+  
+      }
+  
+      // .btn.action-warning end 
+  
+      &.danger {
+  
+        --btn-bg: var(--color-error-500);
+        --btn-color: var(--color-white);
+  
+        &:hover {
+          --btn-bg: var(--color-error-900);
+        }
+  
+        &:where(&:active, &.active, &:focus),
+        &[data-dropdown='open'] {
+          --btn-bg: var(--color-error-900);
+        }
+  
+  
+      }
+  
+      // .btn.action-danger end 
+    }
+
+    // .btn.action end 
+
 
     &.sm {
       @include btn-size(sm);
