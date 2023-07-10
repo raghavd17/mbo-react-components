@@ -45,6 +45,7 @@
   overflow: hidden;
   position: relative;
 
+
   &:hover {
     --bg-color: var(--color-neutrals-white-900);
     --border-color: var(--color-primary-400);
@@ -76,6 +77,8 @@
   border-bottom: var(--size-0-5) solid;
   border-bottom-color: var(--border-color);
   align-items: center;
+  padding-inline: var(--size-2);
+  gap: var(--size-2);
 }
 
 .form_field__icon {
@@ -93,7 +96,7 @@
   display: block;
   font-size: var(--label-size-md);
   outline: 0;
-  padding: var(--size-5) var(--size-2) var(--size-2) var(--size-2);
+  padding: var(--size-5) 0 var(--size-2) 0;
   width: var(--size-full);
 }
 

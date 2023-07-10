@@ -215,26 +215,26 @@ const ButtonPage = () => {
           <div className='stack'>
             <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Success</h4>
             <div className='cluster items-center'>
-                <Button type="link-success">Button</Button>
-                <Button type="link-success"><IconSearch className="icon" /> Icon Before </Button>
-                <Button type="link-success">Icon After <IconSearch className="icon" /></Button>
-                <Button type="link-success" active>Active</Button>
-                <Button type="link-success" disabled>Disabled</Button>
-                <Button type="link-success" round icon><IconSearch className="icon" /></Button>
+                <Button type="link link-success">Button</Button>
+                <Button type="link link-success"><IconSearch className="icon" /> Icon Before </Button>
+                <Button type="link link-success">Icon After <IconSearch className="icon" /></Button>
+                <Button type="link link-success" active>Active</Button>
+                <Button type="link link-success" disabled>Disabled</Button>
+                <Button type="link link-success" round icon><IconSearch className="icon" /></Button>
                
             </div>
           </div>
           <div className='stack'>
             <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Success Sizes </h4>
             <div className='cluster items-center'>
-                <Button type="link-success" size="sm">sm</Button>
-                <Button type="link-success" size="md">md</Button>
-                <Button type="link-success" size="lg">lg</Button>
-                <Button type="link-success" size="xl">xl</Button>
-                <Button type="link-success" icon size="xl"><IconSearch className="icon" /></Button>
-                <Button type="link-success" icon size="lg"><IconSearch className="icon" /></Button>
-                <Button type="link-success" icon size="md"><IconSearch className="icon" /></Button>
-                <Button type="link-success" icon size="sm"><IconSearch className="icon" /></Button>
+                <Button type="link link-success" size="sm">sm</Button>
+                <Button type="link link-success" size="md">md</Button>
+                <Button type="link link-success" size="lg">lg</Button>
+                <Button type="link link-success" size="xl">xl</Button>
+                <Button type="link link-success" icon size="xl"><IconSearch className="icon" /></Button>
+                <Button type="link link-success" icon size="lg"><IconSearch className="icon" /></Button>
+                <Button type="link link-success" icon size="md"><IconSearch className="icon" /></Button>
+                <Button type="link link-success" icon size="sm"><IconSearch className="icon" /></Button>
                 
                 
                 
@@ -248,25 +248,25 @@ const ButtonPage = () => {
           <div className='stack'>
             <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Warning</h4>
             <div className='cluster items-center'>
-                <Button type="link-warning">Button</Button>
-                <Button type="link-warning"><IconSearch className="icon" /> Icon Before </Button>
-                <Button type="link-warning">Icon After <IconSearch className="icon" /></Button>
-                <Button type="link-warning" active>Active</Button>
-                <Button type="link-warning" disabled>Disabled</Button>
-                <Button type="link-warning" round icon><IconSearch className="icon" /></Button>
+                <Button type="link link-warning">Button</Button>
+                <Button type="link link-warning"><IconSearch className="icon" /> Icon Before </Button>
+                <Button type="link link-warning">Icon After <IconSearch className="icon" /></Button>
+                <Button type="link link-warning" active>Active</Button>
+                <Button type="link link-warning" disabled>Disabled</Button>
+                <Button type="link link-warning" round icon><IconSearch className="icon" /></Button>
             </div>
           </div>
           <div className='stack'>
             <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Warning Sizes </h4>
             <div className='cluster items-center'>
-                <Button type="link-warning" size="sm">sm</Button>
-                <Button type="link-warning" size="md">md</Button>
-                <Button type="link-warning" size="lg">lg</Button>
-                <Button type="link-warning" size="xl">xl</Button>
-                <Button type="link-warning" icon size="xl"><IconSearch className="icon" /></Button>
-                <Button type="link-warning" icon size="lg"><IconSearch className="icon" /></Button>
-                <Button type="link-warning" icon size="md"><IconSearch className="icon" /></Button>
-                <Button type="link-warning" icon size="sm"><IconSearch className="icon" /></Button>
+                <Button type="link link-warning" size="sm">sm</Button>
+                <Button type="link link-warning" size="md">md</Button>
+                <Button type="link link-warning" size="lg">lg</Button>
+                <Button type="link link-warning" size="xl">xl</Button>
+                <Button type="link link-warning" icon size="xl"><IconSearch className="icon" /></Button>
+                <Button type="link link-warning" icon size="lg"><IconSearch className="icon" /></Button>
+                <Button type="link link-warning" icon size="md"><IconSearch className="icon" /></Button>
+                <Button type="link link-warning" icon size="sm"><IconSearch className="icon" /></Button>
                 
                 
             </div>
@@ -279,12 +279,12 @@ const ButtonPage = () => {
           <div className='stack'>
             <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Danger</h4>
             <div className='cluster items-center'>
-                <Button type="link-danger">Button</Button>
-                <Button type="link-danger"><IconSearch className="icon" /> Icon Before </Button>
-                <Button type="link-danger">Icon After <IconSearch className="icon" /></Button>
-                <Button type="link-danger" active>Active</Button>
-                <Button type="link-danger" disabled>Disabled</Button>
-                <Button type="link-danger" round icon><IconSearch className="icon" /></Button>
+                <Button type="link link-danger">Button</Button>
+                <Button type="link link-danger"><IconSearch className="icon" /> Icon Before </Button>
+                <Button type="link link-danger">Icon After <IconSearch className="icon" /></Button>
+                <Button type="link link-danger" active>Active</Button>
+                <Button type="link link-danger" disabled>Disabled</Button>
+                <Button type="link link-danger" round icon><IconSearch className="icon" /></Button>
 
             </div>
           </div>
@@ -292,14 +292,14 @@ const ButtonPage = () => {
             <h4 className='text-2xl text-neutrals-800 mb-20'>Button Link Danger Sizes </h4>
             <div className='cluster items-center'>
 
-                <Button type="link-danger" size="sm">sm</Button>
-                <Button type="link-danger" size="md">md</Button>
-                <Button type="link-danger" size="lg">lg</Button>
-                <Button type="link-danger" size="xl">xl</Button>
-                <Button type="link-danger" icon size="xl"><IconSearch className="icon" /></Button>
-                <Button type="link-danger" icon size="lg"><IconSearch className="icon" /></Button>
-                <Button type="link-danger" icon size="md"><IconSearch className="icon" /></Button>
-                <Button type="link-danger" icon size="sm"><IconSearch className="icon" /></Button>
+                <Button type="link link-danger" size="sm">sm</Button>
+                <Button type="link link-danger" size="md">md</Button>
+                <Button type="link link-danger" size="lg">lg</Button>
+                <Button type="link link-danger" size="xl">xl</Button>
+                <Button type="link link-danger" icon size="xl"><IconSearch className="icon" /></Button>
+                <Button type="link link-danger" icon size="lg"><IconSearch className="icon" /></Button>
+                <Button type="link link-danger" icon size="md"><IconSearch className="icon" /></Button>
+                <Button type="link link-danger" icon size="sm"><IconSearch className="icon" /></Button>
                 
                 
                 
@@ -408,13 +408,13 @@ const ButtonPage = () => {
           <div className='stack  divide-slate-600'>
             <h4 className='text-2xl text-neutrals-800 mb-20'>Action Success Button</h4>
             <div className='cluster items-center'>
-                <Button type="action-success" >Button</Button>
-                <Button type="action-success"><IconSearch className="icon" /> Icon Before</Button>
-                <Button type="action-success">Icon After <IconSearch className="icon" /></Button>
-                <Button type="action-success" active>Active</Button>
-                <Button type="action-success" disabled>Disabled</Button>
+                <Button type="action action-success" >Button</Button>
+                <Button type="action action-success"><IconSearch className="icon" /> Icon Before</Button>
+                <Button type="action action-success">Icon After <IconSearch className="icon" /></Button>
+                <Button type="action action-success" active>Active</Button>
+                <Button type="action action-success" disabled>Disabled</Button>
                 
-                <Button type="action-success" round icon><IconSearch className="icon" /></Button>
+                <Button type="action action-success" round icon><IconSearch className="icon" /></Button>
 
                 
             </div>
@@ -422,14 +422,14 @@ const ButtonPage = () => {
           <div className='stack'>
             <h4 className='text-2xl text-neutrals-800 mb-20'>Action Success Button Sizes </h4>
             <div className='cluster items-center'>
-                <Button type="action-success"  size="sm">sm</Button>
-                <Button type="action-success" size="md">md</Button>
-                <Button type="action-success" size="lg">lg</Button>
-                <Button type="action-success" size="xl">xl</Button>
-                <Button type="action-success" icon size="xl"><IconSearch className="icon" /></Button>
-                <Button type="action-success" icon size="lg"><IconSearch className="icon" /></Button>
-                <Button type="action-success" icon size="md"><IconSearch className="icon" /></Button>
-                <Button type="action-success" icon size="sm"><IconSearch className="icon" /></Button>
+                <Button type="action action-success"  size="sm">sm</Button>
+                <Button type="action action-success" size="md">md</Button>
+                <Button type="action action-success" size="lg">lg</Button>
+                <Button type="action action-success" size="xl">xl</Button>
+                <Button type="action action-success" icon size="xl"><IconSearch className="icon" /></Button>
+                <Button type="action action-success" icon size="lg"><IconSearch className="icon" /></Button>
+                <Button type="action action-success" icon size="md"><IconSearch className="icon" /></Button>
+                <Button type="action action-success" icon size="sm"><IconSearch className="icon" /></Button>
                 
                 
 
@@ -443,25 +443,25 @@ const ButtonPage = () => {
           <div className='stack'>
             <h4 className='text-2xl text-neutrals-800 mb-20'>Button Action Warning</h4>
             <div className='cluster items-center'>
-                <Button type="action-warning">Button</Button>
-                <Button type="action-warning"><IconSearch className="icon" /> Icon Before</Button>
-                <Button type="action-warning">Icon After <IconSearch className="icon" /></Button>
-                <Button type="action-warning" active>Active</Button>
-                <Button type="action-warning" disabled>Disabled</Button>
-                <Button type="action-warning" round icon><IconSearch className="icon" /></Button>
+                <Button type="action action-warning">Button</Button>
+                <Button type="action action-warning"><IconSearch className="icon" /> Icon Before</Button>
+                <Button type="action action-warning">Icon After <IconSearch className="icon" /></Button>
+                <Button type="action action-warning" active>Active</Button>
+                <Button type="action action-warning" disabled>Disabled</Button>
+                <Button type="action action-warning" round icon><IconSearch className="icon" /></Button>
             </div>
           </div>
           <div className='stack'>
             <h4 className='text-2xl text-neutrals-800 mb-20'>Action Warning Button Sizes </h4>
             <div className='cluster items-center'>
-                 <Button type="action-warning" size="sm">sm</Button>
-                <Button type="action-warning" size="md">md</Button>
-                <Button type="action-warning" size="lg">lg</Button>
-                <Button type="action-warning" size="xl">xl</Button>
-                <Button type="action-warning" icon size="xl"><IconSearch className="icon" /></Button>
-                <Button type="action-warning" icon size="lg"><IconSearch className="icon" /></Button>
-                <Button type="action-warning" icon size="md"><IconSearch className="icon" /></Button>
-                <Button type="action-warning" icon size="sm"><IconSearch className="icon" /></Button>
+                 <Button type="action action-warning" size="sm">sm</Button>
+                <Button type="action action-warning" size="md">md</Button>
+                <Button type="action action-warning" size="lg">lg</Button>
+                <Button type="action action-warning" size="xl">xl</Button>
+                <Button type="action action-warning" icon size="xl"><IconSearch className="icon" /></Button>
+                <Button type="action action-warning" icon size="lg"><IconSearch className="icon" /></Button>
+                <Button type="action action-warning" icon size="md"><IconSearch className="icon" /></Button>
+                <Button type="action action-warning" icon size="sm"><IconSearch className="icon" /></Button>
                 
                 
             </div>
@@ -473,12 +473,12 @@ const ButtonPage = () => {
           <div className='stack'>
             <h4 className='text-2xl text-neutrals-800 mb-20'>Action Danger</h4>
             <div className='cluster items-center'>
-                <Button type="action-danger">Button</Button>
-                <Button type="action-danger"><IconSearch className="icon" /> Icon Before</Button>
-                <Button type="action-danger">Icon After <IconSearch className="icon" /></Button>
-                <Button type="action-danger" active>Active</Button>
-                <Button type="action-danger" disabled>Disabled</Button>
-                <Button type="action-danger" round icon><IconSearch className="icon" /></Button>
+                <Button type="action action-danger">Button</Button>
+                <Button type="action action-danger"><IconSearch className="icon" /> Icon Before</Button>
+                <Button type="action action-danger">Icon After <IconSearch className="icon" /></Button>
+                <Button type="action action-danger" active>Active</Button>
+                <Button type="action action-danger" disabled>Disabled</Button>
+                <Button type="action action-danger" round icon><IconSearch className="icon" /></Button>
 
                
             </div>
@@ -487,14 +487,14 @@ const ButtonPage = () => {
             <h4 className='text-2xl text-neutrals-800 mb-20'>Action Danger Button Sizes </h4>
             <div className='cluster items-center'>
 
-                 <Button type="action-danger" size="sm">sm</Button>
-                <Button type="action-danger" size="md">md</Button>
-                <Button type="action-danger" size="lg">lg</Button>
-                <Button type="action-danger" size="xl">xl</Button>
-                <Button type="action-danger" icon size="xl"><IconSearch className="icon" /></Button>
-                <Button type="action-danger" icon size="lg"><IconSearch className="icon" /></Button>
-                <Button type="action-danger" icon size="md"><IconSearch className="icon" /></Button>
-                <Button type="action-danger" icon size="sm"><IconSearch className="icon" /></Button>
+                 <Button type="action action-danger" size="sm">sm</Button>
+                <Button type="action action-danger" size="md">md</Button>
+                <Button type="action action-danger" size="lg">lg</Button>
+                <Button type="action action-danger" size="xl">xl</Button>
+                <Button type="action action-danger" icon size="xl"><IconSearch className="icon" /></Button>
+                <Button type="action action-danger" icon size="lg"><IconSearch className="icon" /></Button>
+                <Button type="action action-danger" icon size="md"><IconSearch className="icon" /></Button>
+                <Button type="action action-danger" icon size="sm"><IconSearch className="icon" /></Button>
             
             </div>
           </div>
