@@ -38,14 +38,14 @@ const Label = () => {
         <sections className="mt-24"> 
         <h5 className="mb-4">Label with Variants</h5>
           <div className="cluster" >
-          <label className={`${style.label} ${style.label_bg}`}>Label Default</label>
-          <label className={`${style.label} ${style.label_bg} ${style.primary}`}>Label Primary</label>
-          <label className={`${style.label} ${style.label_bg} ${style.secondary}`}>Label Secondary</label>
-          <label className={`${style.label} ${style.label_bg} ${style.success}`}>Label Success</label>
-          <label className={`${style.label} ${style.label_bg} ${style.warning}`}>Label Warning</label>
-          <label className={`${style.label} ${style.label_bg} ${style.error}`}>Label Warning</label>
-          <label className={`${style.label} ${style.label_bg} ${style.dark}`}>Label Dark</label>
-          <label className={`${style.label} ${style.label_bg} ${style.light}`}>Label Light</label>
+          <label className={`${style.label} ${style.tag}`}>Label Default</label>
+          <label className={`${style.label} ${style.tag} ${style.primary}`}>Label Primary</label>
+          <label className={`${style.label} ${style.tag} ${style.secondary}`}>Label Secondary</label>
+          <label className={`${style.label} ${style.tag} ${style.success}`}>Label Success</label>
+          <label className={`${style.label} ${style.tag} ${style.warning}`}>Label Warning</label>
+          <label className={`${style.label} ${style.tag} ${style.error}`}>Label Warning</label>
+          <label className={`${style.label} ${style.tag} ${style.dark}`}>Label Dark</label>
+          <label className={`${style.label} ${style.tag} ${style.light}`}>Label Light</label>
           </div>
         </sections>
         <hr />
@@ -61,70 +61,72 @@ const Label = () => {
         </div>
 
         <div>
-          <label className={`${style.label} ${style.label_bg}`}>Feb</label>
+          <label className={`${style.label} ${style.tag}`}>Feb</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg}`}>14</label>
+          <label className={`${style.label} ${style.tag}`}>14</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg}`}>2022</label>
+          <label className={`${style.label} ${style.tag}`}>2022</label>
         </div>
 
         
         <div>
-          <label className={`${style.label} ${style.label_bg} ${style.primary}`}>Feb</label>
+          <label className={`${style.label} ${style.tag} ${style.primary}`}>Feb</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.primary}`}>14</label>
+          <label className={`${style.label} ${style.tag} ${style.primary}`}>14</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.primary}`}>2022</label>
+          <label className={`${style.label} ${style.tag} ${style.primary}`}>2022</label>
         </div>
 
         <div>
-          <label className={`${style.label} ${style.label_bg} ${style.secondary}`}>Feb</label>
+          <label className={`${style.label} ${style.tag} ${style.secondary}`}>Feb</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.secondary}`}>14</label>
+          <label className={`${style.label} ${style.tag} ${style.secondary}`}>14</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.secondary}`}>2022</label>
+          <label className={`${style.label} ${style.tag} ${style.secondary}`}>2022</label>
         </div>
 
         <div>
-          <label className={`${style.label} ${style.label_bg} ${style.success}`}>Feb</label>
+          <label className={`${style.label} ${style.tag} ${style.success}`}>Feb</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.success}`}>14</label>
+          <label className={`${style.label} ${style.tag} ${style.success}`}>14</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.success}`}>2022</label>
+          <label className={`${style.label} ${style.tag} ${style.success}`}>2022</label>
         </div>
 
         <div>
-          <label className={`${style.label} ${style.label_bg} ${style.warning}`}>Feb</label>
+          <label className={`${style.label} ${style.tag} ${style.warning}`}>Feb</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.warning}`}>14</label>
+          <label className={`${style.label} ${style.tag} ${style.warning}`}>14</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.warning}`}>2022</label>
+          <label className={`${style.label} ${style.tag} ${style.warning}`}>2022</label>
         </div>
 
         <div>
-          <label className={`${style.label} ${style.label_bg} ${style.error}`}>Feb</label>
+          <label className={`${style.label} ${style.tag} ${style.error}`}>Feb</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.error}`}>14</label>
+          <label className={`${style.label} ${style.tag} ${style.error}`}>14</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.error}`}>2022</label>
+          <label className={`${style.label} ${style.tag} ${style.error}`}>2022</label>
         </div>
 
         <div>
-          <label className={`${style.label} ${style.label_bg} ${style.dark}`}>Feb</label>
+          <label className={`${style.label} ${style.tag} ${style.dark}`}>Feb</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.dark}`}>14</label>
+          <label className={`${style.label} ${style.tag} ${style.dark}`}>14</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.dark}`}>2022</label>
+          <label className={`${style.label} ${style.tag} ${style.dark}`}>2022</label>
         </div>
         <div>
-          <label className={`${style.label} ${style.label_bg} ${style.light}`}>Feb</label>
+          <label className={`${style.label} ${style.tag} ${style.light}`}>Feb</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.light}`}>14</label>
+          <label className={`${style.label} ${style.tag} ${style.light}`}>14</label>
           <span className="separator"></span>
-          <label className={`${style.label} ${style.label_bg} ${style.light}`}>2022</label>
+          <label className={`${style.label} ${style.tag} ${style.light}`}>2022</label>
         </div>
         </sections>
       </div>
+      
+     
     </main>
   );
 };

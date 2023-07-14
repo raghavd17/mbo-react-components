@@ -1,7 +1,9 @@
+// TODO: label with filter varient
 @layer components {
   // Default Label style
   .label {
     // --label-fs: var(--fs-12);
+    --animation-duration: 0.4s;
     --label-padding: var(--size-0-5, .125rem) var(--size-1, 0.25rem);
     --label-radius:var(--radius-sm, 0.125rem);
 
@@ -24,7 +26,7 @@
     --label-bg-warning: var(--color-attention-900);
     --label-bg-error: var(--color-error-900);
     --label-bg-dark: var(--color-neutrals-900);
-    --label-bg-light: var(--color-neutrals-200);
+    --label-bg-light: var(--color-primary-200);
     --label-bg-default:var(--color-neutrals-400);
     // size varints
     --label-fs-xxs: var(--fs-10);
@@ -43,6 +45,7 @@
     font-size: var(--label-fs);
     background: var(--label-bg);
     border-radius: var(--label-radius);
+    transition: all var(--animation-duration);
 
     &_name {
       --label-fg: var(--label-fg-name);
@@ -75,8 +78,8 @@
     }
     // varinats end here
 
-    // with bg varints
-    &_bg {
+    // with tag varints
+    &:is(.tag) {
       --label-fg: var(--color-white);
       --label-bg: var(--label-bg-default);
       padding: var(--label-padding);
@@ -109,10 +112,11 @@
         --label-bg: var(--label-bg-dark);
       }
       &.light {
+        --label-fg:var(--label-fg-dark);
         --label-bg: var(--label-bg-light);
       }
     }
-    // label_bg varint style here
+    // label.tag varint style here
     // sizes classes
     &.xxs {
       --label-fs: var(--label-fs-xxs);
