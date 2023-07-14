@@ -1,8 +1,5 @@
-@mixin label-inactive() {
-  transform: translateY(0);
-}
-
 @mixin label-active() {
+  --label-left-pos:var(--size-2-5);
   font-size: var(--label-size-sm);
   transform: translateY(calc(-1 * var(--size-2-5)));
 }
@@ -27,7 +24,8 @@
   font-weight: var(--fw-400, 400);
 
   &:has(.form_field__input:not(:placeholder-shown)),
-  &:has(.form_field__input:focus) {
+  &:has(.form_field__input:focus),
+  &.filled {
     --bg-color: var(--color-neutrals-white-900);
     --border-color: var(--color-primary-400);
     --label-color: var(--color-neutrals-400);
@@ -70,22 +68,30 @@
     --border-color: var(--color-primary-900);
     --input-color: var(--color-primary-800);
   }
+
+  &:has(.form_field__input:valid, .form_field__input:focus),
+  &.filled {
+    .form_field__icon {
+      align-self: end;
+    }
+  }
 }
+
+
 
 .form_field__input_wrapper {
   display: flex;
   border-bottom: var(--size-0-5) solid;
   border-bottom-color: var(--border-color);
-  align-items: center;
-  padding-inline: var(--size-2);
+  align-items: baseline;
+  padding: var(--size-2);
   gap: var(--size-2);
 }
 
 .form_field__icon {
-  height: 30px;
-  margin-top: 14px;
-  margin-right: 8px;
   color: var(--input-color);
+  line-height: 0;
+  transition: align-self var(--animation-duration);
 }
 
 .form_field__input {
@@ -96,30 +102,41 @@
   display: block;
   font-size: var(--label-size-md);
   outline: 0;
-  padding: var(--size-5) 0 var(--size-2) 0;
+  padding: var(--size-3-5) 0 0 0;
   width: var(--size-full);
+  z-index: 2;
 }
 
 .form_field__label {
-  // @include label-active();
+  --label-left-pos:var(--size-2);
+  --label-top-pos:var(--size-4);
   display: block;
-  left: var(--size-2);
-  top: var(--size-3);
+  left: var(--label-left-pos);
+  top: var(--label-top-pos);
   margin: 0;
   position: absolute;
   transition: all var(--animation-duration);
   color: var(--label-color);
   font-size: var(--label-size-md);
+  z-index: 1;
+  &.has__icon {
+    --label-left-pos:calc(var(--size-2) + 1.5rem); // default spacing along with the left icon width 
+  }
+  &.has__filter {
+    --label-left-pos:calc(var(--size-2) + 2.5rem); // default spacing along with the left icon width 
+  }
 }
 
-.form_field__error {
-  color: var(--error-color);
-  font-size: var(--fs-12);
-  line-height: var(--size-3);
+
+.form_field__info {
   padding: var(--size-2);
-  display: flex;
+  display: grid;
   line-height: 1.125;
   gap: var(--size-1);
   align-items: center;
   background: transparent;
+
+  label {
+    padding: 0;
+  }
 }
