@@ -3,21 +3,22 @@
 
     .dropdown {
         position: relative;
-        z-index: 1;
+        // TODO: Need to work on this this below items 
+        // z-index: 1; 
         // dropshadow on dropdwon open
-        &:before { 
-            display: none;
-            position: fixed;
-            inset:0;
-            background: var(--color-primary-tint-200);
-            content: '';
-            z-index: -1;
-        }
-        &:has([data-dropdown="open"]) {
-            &:before {
-                display: block;
-            }
-        }
+        // &:before { 
+        //     display: none;
+        //     position: fixed;
+        //     inset:0;
+        //     background: var(--color-primary-tint-200);
+        //     content: '';
+        //     z-index: -1;
+        // }
+        // &:has([data-dropdown="open"]) {
+        //     &:before {
+        //         display: block;
+        //     }
+        // }
         // dropshadow on dropdwon open end
         &>&-menu { 
             position: absolute; 
