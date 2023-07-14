@@ -1,0 +1,145 @@
+// TODO: link with pill varient
+@layer components {
+  // Default link style
+  .link {
+    // --link-fs: var(--fs-12);
+    --animation-duration: 0.4s;
+    --link-padding: var(--size-0-5, .125rem) var(--size-1, 0.25rem);
+    --link-radius:var(--radius-sm, 0.125rem);
+
+    --link-fg: var(--color-primary-600); // default color
+    --link-fg-hover: var(--color-primary-400); // default hover color
+    --link-fg-active: var(--color-primary-800); // default active color
+    --link-fg-action: var(--color-action-600); // action color
+    --link-fg-action-hover: var(--color-action-400); // action hover color
+    
+    // link.pill variants
+    --link-pill-fg: var(--color-primary-600);
+    --link-pill-fg-active: var(--color-white);
+    --link-pill-fg-hover: var(--color-white);
+    --link-pill-padding: var(--size-0-5, .125rem) var(--size-2, 0.5rem);
+    // bg varints
+    --link-bg: transparent;
+    --link-bg-default:transparent;
+    --link-bg-default-hover:transparent;
+    --link-pill-bg-default:transparent;
+    --link-pill-bg-hover:var(--color-primary-tint-200);
+    --link-pill-bg-active:var(--color-primary-900);
+    // pill filter 
+    --link-pill-filter-bg:var(--color-primary-tint-200);
+    --link-pill-filter-bg-hover:var(--color-primary-tint-500);
+    --link-pill-filter-fg-hover:var(--color-white);
+    
+    // size varints
+    --link-fs-xxs: var(--fs-10);
+    --link-fs-xs: var(--fs-12);
+    --link-fs-sm: var(--fs-14);
+    --link-fs-md: var(--fs-16);
+    --link-fs-lg: var(--fs-18);
+    --link-fs-xl: var(--fs-20);
+    --link-fs-xxl: var(--fs-24);
+    --link-fs: var(--link-fs-xs, 0.75rem); // default font size
+    
+    --link-decoration: none;
+
+    // link properties
+    
+    color: var(--link-fg);
+    text-decoration: var(--link-decoration);
+    font-size: var(--link-fs);
+    background: var(--link-bg);
+    border-radius: var(--link-radius);
+    transition: all var(--animation-duration);
+    text-underline-offset: var(--size-1);
+    display: flex;
+    gap: var(--size-2);
+    align-items: center;
+   
+
+    &:where(:hover, :focus, :active) {
+      color: var(--link-fg-hover);
+      --link-decoration:underline;
+    }
+    &:where(:active, .active) {
+      color: var(--link-fg-active);
+      --link-decoration:none;
+    }
+
+    // variants
+    &.action {
+      --link-fg: var(--link-fg-action);
+      --link-fg-hover: var(--link-fg-action-hover);
+    }
+    &.light {
+      --link-fg: var(--link-fg-light);
+    }
+    // varinats end here
+
+    
+    // link.tag varint style here
+    &.pill {
+      --link-bg: transparent;
+      --link-fg-hover:var(--link-pill-fg);
+      padding: var(--link-pill-padding);
+      --link-decoration:none;
+      cursor: pointer;
+   
+      &:hover {
+        --link-bg:var(--link-pill-bg-hover);
+        --link-fg-hover:var(--link-pill-fg);
+      }
+      &:is(:active, .active) {
+        --link-fg-active:var(--link-pill-fg-active);
+        --link-bg:var(--link-pill-bg-active);
+        &:hover {
+          --link-bg:var(--link-pill-bg-hover);
+          --link-fg-active:var(--link-pill-fg);
+        }
+      }
+
+      &.filter {
+        --link-bg:var(--link-pill-filter-bg);
+        &:hover {
+          --link-bg:var(--link-pill-filter-bg-hover);
+          --link-fg-hover:var(--link-pill-filter-fg-hover, red);
+        }
+        
+      }
+      
+      
+    }
+    // link.pill varint style here
+    // sizes classes
+    &.xxs {
+      --link-fs: var(--link-fs-xxs);
+    }
+    &.xs {
+      --link-fs: var(--link-fs-xs);
+    }
+    &.sm {
+      --link-fs: var(--link-fs-sm);
+    }
+    &.md {
+      --link-fs: var(--link-fs-md);
+    }
+    &:where(.md, .lg, .xl, .xxl) {
+      --link-fw: var(--fw-500);
+    }
+    &.lg {
+      --link-fs: var(--link-fs-lg);
+    }
+
+    &.xl {
+      --link-fs: var(--link-fs-xl);
+    }
+    &.xxl {
+      --link-fs: var(--link-fs-xxl);
+    }
+  }
+
+  // ex:
+  // <link for="name" class='link'> Name Primary</link> default willl have
+  // <link for="name" class='link pill'> Name Primary</link>
+  // <link for="name" class='link  pill filter lg'> Name Secondary</link>
+  // <link for="name" class='link '> link with bg primary</link>
+}
