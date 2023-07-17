@@ -46,7 +46,10 @@ const Link = () => {
         <sections className="mt-24"> 
           <h6>Link pill varients </h6>
           <div className="cluster" >
-          <a href="#" className={`${style.link} ${style.pill}`}>pill item</a>
+          <a href="#" className={`${style.link} ${style.pill}`}>Date 
+          <svg fill="none" height="" viewBox="0 0 12 12" width="" xmlns="http://www.w3.org/2000/svg" class="icon"><path d="M9.83525 4.71041L6.46058 8.08508C6.46047 8.08519 6.46069 8.08497 6.46058 8.08508C6.24091 8.30475 5.88442 8.30508 5.66475 8.08541C5.66456 8.08522 5.66437 8.08503 5.66418 8.08484L2.28975 4.71041C2.07008 4.49074 2.07008 4.13459 2.28975 3.91492C2.50942 3.69525 2.86558 3.69525 3.08525 3.91492L6.0625 6.89217L9.03975 3.91492C9.25942 3.69525 9.61558 3.69525 9.83525 3.91492C10.0549 4.13459 10.0549 4.49074 9.83525 4.71041Z" fill=""></path></svg>
+          </a>
+          <a href="#" className={`${style.link} ${style.pill}`}>Amount icon</a>
           <a href="#" className={`${style.link} ${style.pill} ${style.filter}`}>
           <svg
                     width="20"
@@ -151,18 +154,8 @@ const Link = () => {
           <a href="#" className={`${style.link} ${style.pill} ${style.active}`}>link pill filter active</a>
           </div>
         </sections>
-
-      
-      {/* Filter varients */}
       <hr />
-        <sections className="mt-24"> 
-        <h5 className="mb-4">Label with Filters</h5>
-          <div className="cluster" >
-          <a href="#" className={`${style.label} ${style.filter}`}>Label Filter</a>
-          <a href="#" className={`${style.label} ${style.filter} ${style.alpha}`}>Label Alpha Transparent</a>
-          </div>
-        </sections>
-        <hr />
+      
       
      
     </main>

@@ -5,7 +5,7 @@
     // --link-fs: var(--fs-12);
     --animation-duration: 0.4s;
     --link-padding: var(--size-0-5, .125rem) var(--size-1, 0.25rem);
-    --link-radius:var(--radius-sm, 0.125rem);
+    --link-radius:var(--radius-rounded, 0.5rem);
 
     --link-fg: var(--color-primary-600); // default color
     --link-fg-hover: var(--color-primary-400); // default hover color
@@ -16,13 +16,9 @@
     // link.pill variants
     --link-pill-fg: var(--color-primary-600);
     --link-pill-fg-active: var(--color-white);
-    --link-pill-fg-hover: var(--color-white);
     --link-pill-padding: var(--size-0-5, .125rem) var(--size-2, 0.5rem);
     // bg varints
     --link-bg: transparent;
-    --link-bg-default:transparent;
-    --link-bg-default-hover:transparent;
-    --link-pill-bg-default:transparent;
     --link-pill-bg-hover:var(--color-primary-tint-200);
     --link-pill-bg-active:var(--color-primary-900);
     // pill filter 
@@ -52,7 +48,7 @@
     transition: all var(--animation-duration);
     text-underline-offset: var(--size-1);
     display: flex;
-    gap: var(--size-2);
+    gap: var(--size-1-5);
     align-items: center;
    
 
@@ -101,7 +97,7 @@
         --link-bg:var(--link-pill-filter-bg);
         &:hover {
           --link-bg:var(--link-pill-filter-bg-hover);
-          --link-fg-hover:var(--link-pill-filter-fg-hover, red);
+          --link-fg-hover:var(--link-pill-filter-fg-hover);
         }
         
       }

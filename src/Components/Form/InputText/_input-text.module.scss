@@ -1,7 +1,7 @@
 @mixin label-active() {
   --label-left-pos:var(--size-2-5);
   font-size: var(--label-size-sm);
-  transform: translateY(calc(-1 * var(--size-2-5)));
+  transform: translateY(calc(-1 * var(--size-3-5)));
 }
 
 .form_field {
@@ -123,7 +123,7 @@
     --label-left-pos:calc(var(--size-2) + 1.5rem); // default spacing along with the left icon width 
   }
   &.has__filter {
-    --label-left-pos:calc(var(--size-2) + 2.5rem); // default spacing along with the left icon width 
+    --label-left-pos:calc(var(--size-2) + 4rem); // default spacing along with the left icon width 
   }
 }
 
