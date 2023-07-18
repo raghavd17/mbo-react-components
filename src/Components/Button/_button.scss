@@ -170,73 +170,8 @@
     }
     // alpha 
 
-    &.action {
-      --btn-bg: var(--color-action-400);
-      --btn-color: var(--color-white);
-
-      &:hover {
-        --btn-bg: var(--color-action-300);
-      }
-
-      &:where(&:active, &.active, &:focus),
-      &[data-dropdown='open'] {
-        --btn-bg: var(--color-action-600);
-      }
-    }
-
-    // .btn.action end 
-
-    &.action-success {
-      --btn-bg: var(--color-success-500);
-      --btn-color: var(--color-white);
-
-      &:hover {
-        --btn-bg: var(--color-success-900);
-      }
-
-      &:where(&:active, &.active, &:focus),
-      &[data-dropdown='open'] {
-        --btn-bg: var(--color-success-900);
-      }
-
-    }
-
-    // .btn.action-success end 
-    &.action-warning {
-      --btn-bg: var(--color-attention-500);
-      --btn-color: var(--color-white);
-
-      &:hover {
-        --btn-bg: var(--color-attention-900);
-      }
-
-      &:where(&:active, &.active, &:focus),
-      &[data-dropdown='open'] {
-        --btn-bg: var(--color-attention-900);
-      }
-
-    }
-
-    // .btn.action-warning end 
-
-    &.action-danger {
-
-      --btn-bg: var(--color-error-300);
-      --btn-color: var(--color-white);
-
-      &:hover {
-        --btn-bg: var(--color-error-900);
-      }
-
-      &:where(&:active, &.active, &:focus),
-      &[data-dropdown='open'] {
-        --btn-bg: var(--color-error-900);
-      }
-
-
-    }
-
-    // .btn.action-danger end 
+   
+   
 
 
     &.danger {
@@ -291,8 +226,8 @@
     }
 
     // .btn.warning
-    // &.link {
-    &[class*='link'] {
+    &.link {
+    // &[class*='link'] {
       --btn-color: var(--color-primary-600);
       --btn-bg: var(--color-transparent);
       --btn-border-color:var(--color-transparent);
@@ -302,13 +237,15 @@
       padding: var(--size-1);
       padding-block:0;
       border: 0;
-      border-bottom-style: solid;
+      // border-bottom-style: solid;
       
 
       &:hover, &:focus, &:active, &.active {
         --btn-color: var(--color-primary-400);
         --btn-border-color: var(--color-primary-400);
-          border-bottom: solid;
+        --btn-bg: var(--color-transparent);
+          border-bottom: solid 1px;
+          margin-block-end:-1px;
       }
 
       &:where(&:active, &.active, &:focus),
@@ -317,62 +254,133 @@
         --btn-border-color: var(--color-primary-400);
       }
       
+      // varints 
+      &.danger {
+        --btn-color: var(--color-error-500);
+  
+        &:hover, &:focus, &:active, &.active {
+          --btn-color: var(--color-error-900);
+          --btn-border-color: var(--color-error-900);
+        }
+  
+        &:where(&:active, &.active, &:focus),
+        &[data-dropdown='open'] {
+          --btn-color: var(--color-error-900);
+          --btn-border-color: var(--color-error-900);
+        }
+  
+      }
+  
+      // .btn.link-danger end 
+  
+      &.success {
+  
+        --btn-color: var(--color-success-500);
+  
+        &:hover, &:focus, &:active, &.active {
+          --btn-color: var(--color-success-900);
+          --btn-border-color: var(--color-success-900);
+        }
+  
+        &:where(&:active, &.active, &:focus),
+        &[data-dropdown='open'] {
+          --btn-color: var(--color-success-900);
+          --btn-border-color: var(--color-success-900);
+        }
+  
+  
+      }
+  
+      &.warning {
+  
+        --btn-color: var(--color-attention-500);
+  
+        &:hover, &:focus, &:active, &.active {
+          --btn-color: var(--color-attention-900);
+          --btn-border-color: var(--color-attention-900);
+        }
+  
+        &:where(&:active, &.active, &:focus),
+        &[data-dropdown='open'] {
+          --btn-color: var(--color-attention-900);
+          --btn-border-color: var(--color-attention-900);
+        }
+      }
 
     }
 
     // .btn.link end 
 
-    &.link-danger {
-      --btn-color: var(--color-error-500);
+    &.action {
+      --btn-bg: var(--color-action-400);
+      --btn-color: var(--color-white);
 
-      &:hover, &:focus, &:active, &.active {
-        --btn-color: var(--color-error-900);
-        --btn-border-color: var(--color-error-900);
+      &:hover {
+        --btn-bg: var(--color-action-300);
       }
 
       &:where(&:active, &.active, &:focus),
       &[data-dropdown='open'] {
-        --btn-color: var(--color-error-900);
-        --btn-border-color: var(--color-error-900);
+        --btn-bg: var(--color-action-600);
       }
 
+      // varints 
+
+      &.success {
+        --btn-bg: var(--color-success-500);
+        --btn-color: var(--color-white);
+  
+        &:hover {
+          --btn-bg: var(--color-success-900);
+        }
+  
+        &:where(&:active, &.active, &:focus),
+        &[data-dropdown='open'] {
+          --btn-bg: var(--color-success-900);
+        }
+  
+      }
+  
+      // .btn.action-success end 
+      &.warning {
+        --btn-bg: var(--color-attention-500);
+        --btn-color: var(--color-white);
+  
+        &:hover {
+          --btn-bg: var(--color-attention-900);
+        }
+  
+        &:where(&:active, &.active, &:focus),
+        &[data-dropdown='open'] {
+          --btn-bg: var(--color-attention-900);
+        }
+  
+      }
+  
+      // .btn.action-warning end 
+  
+      &.danger {
+  
+        --btn-bg: var(--color-error-500);
+        --btn-color: var(--color-white);
+  
+        &:hover {
+          --btn-bg: var(--color-error-900);
+        }
+  
+        &:where(&:active, &.active, &:focus),
+        &[data-dropdown='open'] {
+          --btn-bg: var(--color-error-900);
+        }
+  
+  
+      }
+  
+      // .btn.action-danger end 
     }
 
-    // .btn.link-danger end 
+    // .btn.action end 
 
-    &.link-success {
-
-      --btn-color: var(--color-success-500);
-
-      &:hover, &:focus, &:active, &.active {
-        --btn-color: var(--color-success-900);
-        --btn-border-color: var(--color-success-900);
-      }
-
-      &:where(&:active, &.active, &:focus),
-      &[data-dropdown='open'] {
-        --btn-color: var(--color-success-900);
-        --btn-border-color: var(--color-success-900);
-      }
-
-
-    }
-
-    &.link-warning {
-
-      --btn-color: var(--color-attention-500);
-
-      &:hover, &:focus, &:active, &.active {
-        --btn-color: var(--color-attention-900);
-        --btn-border-color: var(--color-attention-900);
-      }
-
-      &:where(&:active, &.active, &:focus),
-      &[data-dropdown='open'] {
-        --btn-color: var(--color-attention-900);
-        --btn-border-color: var(--color-attention-900);
-      }
-    }
 
     &.sm {
       @include btn-size(sm);

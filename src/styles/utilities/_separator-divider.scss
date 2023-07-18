@@ -32,8 +32,8 @@
 // divide-x | divide-y | divider style
 :where(.divide-x, .divider-x, .divide-y, .divider-y) {
   --border-color: var(
-    --color-neutrals-200,
-    #b8b3bc
+    --color-primary-tint-200,
+    #a199c226
   ); // define color for divider
   --border-width: 1px;
   --border-style: solid;

@@ -8,15 +8,15 @@ const Date = () => {
     
     <h5 className='text-red-500 mb-4 text-5xl'>Date Component </h5>
       <div className='cluster'>
-      <div class="separated">
+      <div className="separated">
         <span>Feb</span>
         <span>14</span>
         <span>2022</span>		
       </div>
-      <div class="separator bullet">
+      <div className="separator bullet">
         
       </div>
-      <div class="separated">
+      <div className="separated">
         <span>Feb</span>
         <span>14</span>
         <span>2022</span>		

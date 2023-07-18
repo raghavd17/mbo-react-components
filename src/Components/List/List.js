@@ -1,6 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './_list.scss'
+import './_list.scss';
+import style from  './../Form/Label/_label.module.scss';
+
+// import  "./../Form/Label/Label";
 
 const List = () => {
   return (
@@ -43,9 +46,8 @@ const List = () => {
         <div className="list-title">Title here
           </div>
         <div className="item-checkbox group" data-state="acctive">
-          <div className="list-label">
-          <span>A</span> -- <span>Z</span>
-          </div>
+          <div>
+        <label className={`${style.label} ${style.tag} ${style.success} ${style.xxs}`}><span>A</span> -- <span>Z</span></label></div>
         </div>
       </li>
       <li className='list-divider'></li>
@@ -53,8 +55,8 @@ const List = () => {
         <div  className="list-title">Title here
           </div>
         
-          <div className="list-label">
-          <span>A</span> --<span>Z</span>
+          <div>
+          <label className={`${style.label} ${style.tag} ${style.dark} ${style.xxs}`}><span>A</span> -- <span>Z</span></label>
           </div>
         
       </li>

@@ -1,21 +1,4 @@
-.form-checkbox {
-  // Label 
-  --label-color: var(--color-neutrals-400);
-  --label-color-hover: var(--color-primary-500);
-  --label-color-active: var(--color-neutrals-900);  
-  
-  --radio-bg: var(--color-neutrals-white-900);
-  --radio-bg-active: var(--color-primary-900);
-  --radio-bg-hover: var(--color-primary-500);
-  --radio-border: var(--color-primary-300);
-  --radio-border-hover: var(--color-primary-500);
-  // shadow 
-  --radio-shadow:none;
-  --radio-shadow-hover:var(--shadow-xxl);
-}
-
 input[type="radio"] {
-  --radio-size: 1.375rem; //22px
   border-radius: var(--radius-full);
   outline: none;
   position: relative;
@@ -28,19 +11,21 @@ input[type="radio"] {
   cursor: pointer;
   height: var(--radio-size);
   aspect-ratio: 1;
-  border: 1px solid var(--radio-border);
+  border: none;
+  outline: calc(var(--radio-size) / 20) solid var(--radio-border);
   background: var(--radio-bg);
   transition: background 0.3s ease, border 0.3s ease;
   box-shadow: var(--radio-shadow);
+  box-sizing: content-box;
   & ~ label {
     color: var(--label-color);
   }
   &:after {
-    width: 20px;
+    width: calc(var(--radio-size));
     aspect-ratio: 1;
     border-radius: var(--radius-full);
     background: var(--radio-bg);
-    transform: scale(0.7);
+    transform: scale(0.75);
     content: "";
     display: block;
     left: 0;
@@ -50,7 +35,7 @@ input[type="radio"] {
   }
   &:checked {
     background: var(--radio-bg);
-    border-color: var(--radio-bg-active);
+    outline-color: var(--radio-bg-active);
     & ~ label {
       --label-color:var(--label-color-active);
     }
