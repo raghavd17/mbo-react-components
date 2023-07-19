@@ -22,7 +22,7 @@ const Radio = () => {
       </div> */}
   <div className='grid-auto-cols'>
     
-    <div className="form-checkbox cluster">
+    <div className="form-checkbox">
       
       <input
         className="radio"
@@ -31,7 +31,7 @@ const Radio = () => {
       />
         <label>Radio</label>
     </div>
-    <div className="form-checkbox cluster">
+    <div className="form-checkbox">
     <input
         className="radio"
         type="radio"

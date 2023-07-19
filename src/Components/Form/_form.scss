@@ -48,9 +48,9 @@
   // Layout styles
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: var(--size-2);
   align-items: center;
+  // &:has(label) {
+  //   gap: var(--size-2);
+  // }
 }
 
-.form-checkbox {
-}
