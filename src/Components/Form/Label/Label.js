@@ -10,7 +10,7 @@ const Label = () => {
         <sections> 
           <div className="cluster" >
           <label className={`${style.label}`}>Label Default</label>
-          <label className={`${style.label} ${style.label_value}`}>Label Value</label>
+          <label className={`${style.label} ${style.value}`}>Label Value</label>
           <label className={`${style.label} ${style.primary}`}>Label Primary</label>
           <label className={`${style.label} ${style.secondary}`}>Label Secondary</label>
           <label className={`${style.label} ${style.success}`}>Label Success</label>

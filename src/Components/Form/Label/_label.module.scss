@@ -47,10 +47,10 @@
     border-radius: var(--label-radius);
     transition: all var(--animation-duration);
 
-    &_name {
+    &.name {
       --label-fg: var(--label-fg-name);
     }
-    &_value {
+    &.value {
       --label-fg: var(--label-fg-value);
     }
 
