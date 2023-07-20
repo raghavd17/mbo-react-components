@@ -122,8 +122,8 @@
         }
       }
 
-      --gap: 0;
-      gap: var(--gap);
+      --btn-gap: 0;
+      gap: var(--btn-gap);
       display: inline-flex;
       align-items: center;
       width: fit-content;
