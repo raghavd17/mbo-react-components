@@ -1,5 +1,5 @@
 @mixin label-active() {
-  --label-left-pos:var(--size-2-5);
+  --label-left-pos:var(--size-2);
   font-size: var(--label-size-sm);
   transform: translateY(calc(-1 * var(--size-2-5)));
 }
@@ -127,7 +127,7 @@
 
 
 .form_field__info {
-  padding: var(--size-2);
+  padding: var(--size-1) var(--size-2);
   display: grid;
   line-height: 1.125;
   gap: var(--size-1);

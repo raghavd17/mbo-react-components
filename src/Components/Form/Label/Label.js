@@ -12,6 +12,7 @@ const Label = () => {
           <label className={`${style.label}`}>Label Default</label>
           <label className={`${style.label} ${style.value}`}>Label Value</label>
           <label className={`${style.label} ${style.primary}`}>Label Primary</label>
+          <label className={`${style.label} ${style.action}`}>Label Action</label>
           <label className={`${style.label} ${style.secondary}`}>Label Secondary</label>
           <label className={`${style.label} ${style.success}`}>Label Success</label>
           <label className={`${style.label} ${style.warning}`}>Label Warning</label>
@@ -22,11 +23,58 @@ const Label = () => {
         </sections>
 
         <hr />
+        <h5 className="text-red-500 mb-4 text-5xl">Label with status Indicator Component </h5>
+        <sections> 
+          <div className="cluster" >
+          <label className={`${style.label}`}> 
+            <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Default
+          </label>
+          <label className={`${style.label} ${style.value}`}>
+            <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Value
+          </label>
+          <label className={`${style.label} ${style.primary}`}>
+          <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Primary
+            </label>
+          <label className={`${style.label} ${style.action}`}>
+          <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Action
+          </label>
+          <label className={`${style.label} ${style.secondary}`}>
+          <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Secondary
+          </label>
+          <label className={`${style.label} ${style.success}`}>
+          <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Success
+          </label>
+          <label className={`${style.label} ${style.warning}`}>
+          <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Warning
+          </label>
+          <label className={`${style.label} ${style.error}`}>
+            <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Warning
+          </label>
+          <label className={`${style.label} ${style.dark}`}>
+            <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Dark
+          </label>
+          <label className={`${style.label} ${style.light}`}>
+          <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Light
+          </label>
+          </div>
+        </sections>
+
+        <hr />
         <sections> 
           <h5 className="mb-4">Label with size</h5>
           <div className="cluster">
           <label className={`${style.label} ${style.xxs}`}>Label xxs</label>
-          <label className={`${style.label} ${style.xs} ${style.label_value}`}>Label xs</label>
+          <label className={`${style.label} ${style.xs} ${style.value}`}>Label xs</label>
           <label className={`${style.label} ${style.sm} ${style.primary}`}>Label sm</label>
           <label className={`${style.label} ${style.md} ${style.secondary}`}>Label md</label>
           <label className={`${style.label} ${style.lg} ${style.success}`}>Label lg</label>
@@ -36,10 +84,20 @@ const Label = () => {
         </sections>
     <hr />
         <sections className="mt-24"> 
-        <h5 className="mb-4">Label with Variants</h5>
+        <h5 className="mb-4">Label Tag Variants</h5>
           <div className="cluster" >
-          <label className={`${style.label} ${style.tag}`}>Label Default</label>
-          <label className={`${style.label} ${style.tag} ${style.primary}`}>Label Primary</label>
+          <label className={`${style.label} ${style.tag}`}>
+          <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+              Label Default
+          </label>
+          <label className={`${style.label} ${style.tag} ${style.primary}`}>
+          <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Primary
+          </label>
+          <label className={`${style.label} ${style.tag} ${style.action}`}>
+          <svg width="20" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon"><circle cx="6" cy="6" r="5" fill=""></circle></svg>
+            Label Action
+          </label>
           <label className={`${style.label} ${style.tag} ${style.secondary}`}>Label Secondary</label>
           <label className={`${style.label} ${style.tag} ${style.success}`}>Label Success</label>
           <label className={`${style.label} ${style.tag} ${style.warning}`}>Label Warning</label>

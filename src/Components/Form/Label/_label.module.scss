@@ -1,43 +1,54 @@
+:root {
+  // color variants
+  --label-fg-primary: var(--color-primary-600);
+  --label-fg-action: var(--color-action-500);
+  --label-fg-secondary: var(--color-secondary-500);
+  --label-fg-success: var(--color-success-900);
+  --label-fg-warning: var(--color-attention-900);
+  --label-fg-error: var(--color-error-900);
+  --label-fg-dark: var(--color-neutrals-900);
+  --label-fg-light: var(--color-neutrals-100);
+  // bg varints
+  --label-bg: transparent;
+  --label-bg-primary: var(--color-primary-600);
+  --label-bg-action: var(--color-action-500);
+  --label-bg-secondary: var(--color-secondary-500);
+  --label-bg-success: var(--color-success-900);
+  --label-bg-warning: var(--color-attention-900);
+  --label-bg-error: var(--color-error-900);
+  --label-bg-dark: var(--color-neutrals-900);
+  --label-bg-light: var(--color-primary-200);
+  --label-padding:0px;
+  --label-padding-tag:var(--size-0-5, .125rem) var(--size-1, 0.25rem);
+  --label-padding-badge:var(--size-0-5, .125rem) var(--size-2, 0.5rem);
+  
+}
 // TODO: label with filter varient
 @layer components {
   // Default Label style
   .label {
     // --label-fs: var(--fs-12);
     --animation-duration: 0.4s;
-    --label-padding: var(--size-0-5, .125rem) var(--size-1, 0.25rem);
     --label-radius:var(--radius-rounded, 0.25rem);
-
     --label-fg: var(--color-neutrals-400); // default color
     --label-fg-name: var(--color-neutrals-400);
     --label-fg-value: var(--color-neutrals-900);
-    // color variants
-    --label-fg-primary: var(--color-primary-600);
-    --label-fg-secondary: var(--color-secondary-500);
-    --label-fg-success: var(--color-success-900);
-    --label-fg-warning: var(--color-attention-900);
-    --label-fg-error: var(--color-error-900);
-    --label-fg-dark: var(--color-neutrals-900);
-    --label-fg-light: var(--color-neutrals-100);
-    // bg varints
-    --label-bg: transparent;
-    --label-bg-primary: var(--color-primary-600);
-    --label-bg-secondary: var(--color-secondary-500);
-    --label-bg-success: var(--color-success-900);
-    --label-bg-warning: var(--color-attention-900);
-    --label-bg-error: var(--color-error-900);
-    --label-bg-dark: var(--color-neutrals-900);
-    --label-bg-light: var(--color-primary-200);
     --label-bg-default:var(--color-neutrals-400);
+  
+    
     // size varints
-    --label-fs-xxs: var(--fs-10);
-    --label-fs-xs: var(--fs-12);
-    --label-fs-sm: var(--fs-14);
-    --label-fs-md: var(--fs-16);
-    --label-fs-lg: var(--fs-18);
-    --label-fs-xl: var(--fs-20);
-    --label-fs-xxl: var(--fs-24);
+  --label-fs-xxs: var(--fs-10);
+  --label-fs-xs: var(--fs-12);
+  --label-fs-sm: var(--fs-14);
+  --label-fs-md: var(--fs-16);
+  --label-fs-lg: var(--fs-18);
+  --label-fs-xl: var(--fs-20);
+  --label-fs-xxl: var(--fs-24);
+
     --label-fs: var(--label-fs-xs, 0.75rem); // default font size
     --label-fw: var(--fw-400);
+    --label-gap: var(--size-1);
+
 
     // label properties
     font-weight: var(--label-fw);
@@ -46,6 +57,10 @@
     background: var(--label-bg);
     border-radius: var(--label-radius);
     transition: all var(--animation-duration);
+    display: inline-flex;
+    gap: var(--label-gap);
+    align-items: center;
+    padding: var(--label-padding);
 
     &.name {
       --label-fg: var(--label-fg-name);
@@ -53,10 +68,19 @@
     &.value {
       --label-fg: var(--label-fg-value);
     }
-
+    > :is(svg) {
+      --fill-color: currentColor;
+      fill: var(--fill-color);
+    }
     // variants
     &.primary {
       --label-fg: var(--label-fg-primary);
+      :is(svg) {
+        --fill-color: var(--color-action-icon);
+      }
+    }
+    &.action {
+      --label-fg: var(--label-fg-action);
     }
     &.secondary {
       --label-fg: var(--label-fg-secondary);
@@ -79,14 +103,17 @@
     // varinats end here
 
     // with tag varints
-    &:is(.tag) {
+    &:is(.tag, .badge) {
       --label-fg: var(--color-white);
       --label-bg: var(--label-bg-default);
-      padding: var(--label-padding);
-      &:not(.success, .primary, .warning, .dark, .error, .secondary) {
+      --label-padding:var(--label-padding-tag);
+      :is(svg) {
+        --fill-color: var(--color-white);
+      }
+      &:not(.success, .action, .primary, .warning, .dark, .error, .secondary) {
         --label-bg: var(--label-bg-default);
       }
-      &:is(.success, .primary, .warning, .dark, .error, .secondary) {
+      &:is(.success, .action, .primary, .warning, .dark, .error, .secondary) {
         --label-fg: var(--color-white);
       }
       &.success {
@@ -96,6 +123,9 @@
       &.primary {
         --label-bg: var(--label-bg-primary);
         
+      }
+      &.action {
+        --label-bg: var(--label-bg-action);
       }
       
       &.secondary {
@@ -117,6 +147,9 @@
       }
     }
     // label.tag varint style here
+    &:is(.badge) { 
+      --label-padding:var(--label-padding-badge);
+    }
     // sizes classes
     &.xxs {
       --label-fs: var(--label-fs-xxs);
