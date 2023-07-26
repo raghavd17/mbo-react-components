@@ -22447,11 +22447,6 @@ svg {
   fill: currentColor;
 }
 
-:is(svg.icon) {
-  aspect-ratio: var(--ratio-square);
-  height: 1em;
-  width: 1em;
-}
 
 h1 {
   font-size: var(--fs-56);
