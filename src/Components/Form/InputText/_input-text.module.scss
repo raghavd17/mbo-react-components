@@ -23,11 +23,7 @@
 
   &:has(.form_field__input:not(:placeholder-shown)),
   &:has(.form_field__input:focus),
-  &.filled {
-    --bg-color: var(--color-neutrals-white-900);
-    --border-color: var(--color-primary-400);
-    --label-color: var(--color-neutrals-400);
-
+  &.filled  {
     .form_field__label {
       @include label-active();
     }
@@ -61,7 +57,9 @@
     --border-color: var(--color-error-500);
   }
   &:has(.form_field__input:valid):not(.error),
-  &.filled {
+  &:focus-within:not(.error),
+  &.filled
+   {
     --bg-color: var(--color-primary-200, #6855b414);
     --border-color: var(--color-primary-900);
     --input-color: var(--color-primary-800);
