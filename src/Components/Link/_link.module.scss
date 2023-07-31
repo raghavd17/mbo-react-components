@@ -79,7 +79,9 @@
       padding: var(--link-pill-padding);
       --link-decoration:none;
       cursor: pointer;
-   
+      &:is(.selected) {
+        font-weight: 500;
+      }
       &:hover {
         --link-bg:var(--link-pill-bg-hover);
         --link-fg-hover:var(--link-pill-fg);

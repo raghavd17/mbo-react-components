@@ -8,7 +8,7 @@ const Checkbox = () => {
 <main className='p-4'>
     
     <h5 className='text-red-500 mb-4 text-5xl'>Checkbox Component </h5>
-     {/*  <div className="form-checkbox">
+     {/*  <div className="form-checkbox cluster">
       <input
         type="checkbox"
         className={checkboxControl}
@@ -21,7 +21,7 @@ const Checkbox = () => {
     </div> */}
 <div className='grid grid-cols-2 grid-gap-sm'>
   <sections className="grid">
-  <div className="form-checkbox">
+  <div className="form-checkbox cluster">
       <input
         className="checkobox"
         type="Checkbox"
@@ -30,7 +30,7 @@ const Checkbox = () => {
         <label>Checkbox</label>
     </div>
     {/* Checkked State  */}
-    <div className="form-checkbox">
+    <div className="form-checkbox cluster">
       <input
         className="checkobox"
         type="Checkbox"
@@ -39,7 +39,7 @@ const Checkbox = () => {
       />
         <label>Checkbox Checked </label>
     </div>
-    <div className="form-checkbox">
+    <div className="form-checkbox cluster">
       <input
         className="checkobox square"
         type="Checkbox"
@@ -49,7 +49,7 @@ const Checkbox = () => {
         <label>Checkbox Sqauare</label>
     </div>
     {/* switch  */}
-    <div className="form-checkbox">
+    <div className="form-checkbox cluster">
         <input
           className="switch"
           type="Checkbox"
@@ -58,7 +58,7 @@ const Checkbox = () => {
           <label>Switch</label>
 </div>
 
-<div className="form-checkbox">
+<div className="form-checkbox cluster">
         <input
           className="switch"
           type="Checkbox"
@@ -71,7 +71,7 @@ const Checkbox = () => {
   </sections>
 {/* col 1 end  */}
 <sections className="grid">
-  <div className="form-checkbox">
+  <div className="form-checkbox cluster">
       <input
         className="checkobox"
         type="Checkbox"
@@ -81,7 +81,7 @@ const Checkbox = () => {
         <label>Checkbox Disabled</label>
     </div>
     {/* Checkked State  */}
-    <div className="form-checkbox">
+    <div className="form-checkbox cluster">
       <input
         className="checkobox"
         type="Checkbox"
@@ -91,7 +91,7 @@ const Checkbox = () => {
       />
         <label>Checkbox Checked State Disabed</label>
     </div>
-    <div className="form-checkbox">
+    <div className="form-checkbox cluster">
       <input
         className="checkobox square"
         type="Checkbox"
@@ -103,7 +103,7 @@ const Checkbox = () => {
         <label>Checkbox Sqauare Checked Disabed</label>
     </div>
     {/* switch  */}
-    <div className="form-checkbox">
+    <div className="form-checkbox cluster">
         <input
           className="switch"
           type="Checkbox"
@@ -113,7 +113,7 @@ const Checkbox = () => {
           <label>Switch Disabed</label>
 </div>
 
-<div className="form-checkbox">
+<div className="form-checkbox cluster">
         <input
           className="switch"
           type="Checkbox"

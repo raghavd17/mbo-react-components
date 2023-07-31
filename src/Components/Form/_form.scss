@@ -49,9 +49,6 @@
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: var(--size-2);
-  // &:has(label) {
-  //   gap: var(--size-2);
-  // }
+  --gutter: var(--size-2);
 }
 
