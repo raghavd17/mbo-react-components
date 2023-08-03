@@ -16,10 +16,12 @@
   --label-width: var(--width-full);
   --font-family: var(--ff-roboto);
   --error-color: var(--color-error-900);
+  --form-field-min-height:70px;
   display: block;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: var(--fw-400, 400);
+  min-height: var(--form-field-min-height);
 
   &:has(.form_field__input:not(:placeholder-shown)),
   &:has(.form_field__input:focus),

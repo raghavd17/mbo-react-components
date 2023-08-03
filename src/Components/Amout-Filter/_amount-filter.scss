@@ -4,13 +4,13 @@
 
   // amount filter
   .mbo-amt {
-    &__dropdown-menu {
-      .dropdown-menu {
+    &__dropdown__menu {
+      .dropdown__menu {
         min-width: 320px;
       }
     }
 
-    // mbo-amt__dropdown-menu
+    // mbo-amt__dropdown__menu
     &__filter {
       margin: var(--size-4);
       display: flex;

@@ -20,7 +20,7 @@
         //     }
         // }
         // dropshadow on dropdwon open end
-        &>&-menu { 
+        &>&__menu { 
             position: absolute; 
             display: none; 
             transform:translateX(var(--dropdown-position)) translateY(calc(var(--dropdown-arrow-size) / 2 + var(--size-1)));
@@ -33,7 +33,7 @@
             z-index: var(--index-50);
         }
 
-        &-menu {
+        &__menu {
             --dropdown-width: 15rem;
             --dropdown-arrow-size: 0.75rem; //12px
             --dropdown-bg: var(--color-white);
@@ -104,25 +104,25 @@
                 }
             }     
         }
-        &-toggle {
+        &_toggle {
             &[data-dropdown='open']{
                 &:has( svg ) {
                     display: flex;
                     gap: var(--size-1);
                     align-items: center;
                     box-shadow: var(--shadow-md);
-                        > svg.dropdown-icon {
+                        > svg.toggle_icon {
                             transform-origin: center;
                             transform: rotate(180deg);
                         }   
                 }
-                    + .dropdown-menu  {
+                    + .dropdown__menu  {
                         display: block;
                     }
             }
             // data-dropdown='open' end
          }
-        //  .dropdown-toggle end 
+        //  .dropdown_toggle end 
     }
 
    

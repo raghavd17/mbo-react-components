@@ -128,7 +128,7 @@
       align-items: center;
       width: fit-content;
 
-      :where(.btn:not(:last-child):not(.dropdown-toggle)) {
+      :where(.btn:not(:last-child):not(.dropdown_toggle)) {
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
       }
@@ -230,28 +230,23 @@
     // &[class*='link'] {
       --btn-color: var(--color-primary-600);
       --btn-bg: var(--color-transparent);
-      --btn-border-color:var(--color-transparent);
       --btn-height: initial;
       box-shadow: none;
       border-radius: 0;
-      padding: var(--size-1);
-      padding-block:0;
-      border: 0;
-      // border-bottom-style: solid;
+      padding: var(--size-0);
+      padding-block:var(--size-0);
       
 
       &:hover, &:focus, &:active, &.active {
         --btn-color: var(--color-primary-400);
-        --btn-border-color: var(--color-primary-400);
         --btn-bg: var(--color-transparent);
-          border-bottom: solid 1px;
-          margin-block-end:-1px;
+        text-decoration: underline;
+        text-underline-offset: var(--size-1);
       }
 
       &:where(&:active, &.active, &:focus),
       &[data-dropdown='open'] {
         --btn-color: var(--color-primary-600);
-        --btn-border-color: var(--color-primary-400);
       }
       
       // varints 
@@ -260,13 +255,11 @@
   
         &:hover, &:focus, &:active, &.active {
           --btn-color: var(--color-error-900);
-          --btn-border-color: var(--color-error-900);
         }
   
         &:where(&:active, &.active, &:focus),
         &[data-dropdown='open'] {
           --btn-color: var(--color-error-900);
-          --btn-border-color: var(--color-error-900);
         }
   
       }
@@ -279,13 +272,11 @@
   
         &:hover, &:focus, &:active, &.active {
           --btn-color: var(--color-success-900);
-          --btn-border-color: var(--color-success-900);
         }
   
         &:where(&:active, &.active, &:focus),
         &[data-dropdown='open'] {
           --btn-color: var(--color-success-900);
-          --btn-border-color: var(--color-success-900);
         }
   
   
@@ -297,13 +288,11 @@
   
         &:hover, &:focus, &:active, &.active {
           --btn-color: var(--color-attention-900);
-          --btn-border-color: var(--color-attention-900);
         }
   
         &:where(&:active, &.active, &:focus),
         &[data-dropdown='open'] {
           --btn-color: var(--color-attention-900);
-          --btn-border-color: var(--color-attention-900);
         }
       }
 

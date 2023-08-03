@@ -22,7 +22,7 @@ const Accordion = () => {
                 {/* {isVisible &&
       (isOpen ? ( */}
                 {/* <Icons name={Icon.MINUS} size="sm" /> */}
-                Icon 
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="none" viewBox="0 0 24 24" class="_icon__icon__Amyr7 _icon__sm__l4hao"><path fill="" fill-rule="evenodd" d="M12 3a1 1 0 0 1 1 1v7h7a1 1 0 1 1 0 2h-7v7a1 1 0 1 1-2 0v-7H4a1 1 0 1 1 0-2h7V4a1 1 0 0 1 1-1Z" clip-rule="evenodd"></path></svg> 
                 {/* ) : ( */}
                 {/* <Icons name={Icon.PLUS} size="sm" />
   ))} */}
@@ -45,7 +45,7 @@ const Accordion = () => {
                 {/* {isVisible &&
       (isOpen ? ( */}
                 {/* <Icons name={Icon.MINUS} size="sm" /> */}
-                Icon 
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="none" viewBox="0 0 24 24" class="_icon__icon__Amyr7 _icon__sm__l4hao"><path fill="" fill-rule="evenodd" d="M12 3a1 1 0 0 1 1 1v7h7a1 1 0 1 1 0 2h-7v7a1 1 0 1 1-2 0v-7H4a1 1 0 1 1 0-2h7V4a1 1 0 0 1 1-1Z" clip-rule="evenodd"></path></svg> 
                 {/* ) : ( */}
                 {/* <Icons name={Icon.PLUS} size="sm" />
   ))} */}

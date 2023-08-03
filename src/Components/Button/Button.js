@@ -17,7 +17,7 @@ const Button = ({children, active, disabled, icon, round, size, type, dropdownTo
             icon && "icon",
             active && "active",
             size,
-            dropdownToggle && "dropdown-toggle",
+            dropdownToggle && "dropdown_toggle",
             split && "split"
             
         );
