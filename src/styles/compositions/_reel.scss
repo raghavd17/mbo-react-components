@@ -9,12 +9,11 @@
 
 .reel {
     --reel-space: 2rem;
-    --reel-padding: 0.5rem;
     display: flex;
     height: auto;
     max-width: 100%;
     margin-inline: auto;
-    padding: var(--reel-padding);
+    padding: var(--reel-padding, 0.5rem);
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 
