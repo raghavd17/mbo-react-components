@@ -29,7 +29,7 @@ $val in $token-breakpoints {
   @include breakpoint-up($b-points) {
 
     @each $name,
-    $space in $token-sizes {
+    $space in $token-spacer-sizes {
       .#{$b-points}\:gap {
         &-#{$name} {
           gap: var(--space-#{$name});
