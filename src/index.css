@@ -1633,7 +1633,7 @@ dialog::backdrop {
   height: auto;
   max-width: 100%;
   margin-inline: auto;
-  padding: 0.5rem;
+  padding: var(--reel-padding, 0.5rem);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -4416,13 +4416,68 @@ hr {
 }
 .click-area a::after {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   content: "";
 }
 
 .disabled {
   pointer-events: none;
   opacity: var(--opacity-30);
+}
+
+:root {
+  --icon-size-xxxs: var(--fs-8);
+  --icon-size-xxs: var(--fs-12);
+  --icon-size-xs: var(--fs-16);
+  --icon-size-sm: var(--fs-20);
+  --icon-size-md: var(--fs-24);
+  --icon-size-lg: var(--fs-28);
+  --icon-size-xl: var(--fs-32);
+  --icon-size-xxl: var(--fs-36);
+  --icon-size-xxxl: var(--fs-40);
+}
+
+svg {
+  fill: currentColor;
+}
+
+:is(svg.icon) {
+  fill: currentColor;
+  --icon-size: ;
+  aspect-ratio: 1/1;
+  height: 1em;
+  width: 1em;
+  font-size: var(--icon-size, inherit);
+}
+:is(svg.icon).xxxs {
+  --icon-size: var(--icon-size-xxxs);
+}
+:is(svg.icon).xxs {
+  --icon-size: var(--icon-size-xxs);
+}
+:is(svg.icon).xs {
+  --icon-size: var(--icon-size-xs);
+}
+:is(svg.icon).sm {
+  --icon-size: var(--icon-size-sm);
+}
+:is(svg.icon).md {
+  --icon-size-md: var(--icon-size-md);
+}
+:is(svg.icon).lg {
+  --icon-size: var(--icon-size-lg);
+}
+:is(svg.icon).xl {
+  --icon-size: var(--icon-size-xl);
+}
+:is(svg.icon).xxl {
+  --icon-size: var(--icon-size-xxl);
+}
+:is(svg.icon).xxxl {
+  --icon-size: var(--icon-size-xxxl);
 }
 
 .block {
@@ -14570,6 +14625,10 @@ hr {
   font-style: italic;
 }
 
+.strong {
+  font-weight: 600;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -22444,6 +22503,11 @@ svg {
   fill: currentColor;
 }
 
+:is(svg.icon) {
+  aspect-ratio: var(--ratio-square);
+  height: 1em;
+  width: 1em;
+}
 
 h1 {
   font-size: var(--fs-56);
