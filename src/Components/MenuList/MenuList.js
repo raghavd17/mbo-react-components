@@ -1,26 +1,27 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './_list.scss';
+import './_menu_list.scss';
 import style from  './../Form/Label/_label.module.scss';
 
 // import  "./../Form/Label/Label";
 
-const List = () => {
+const MenuList = () => {
   return (
     
 <main className='p-4'>
     
-    <h5 className='text-red-500 mb-4 text-5xl'>List Items </h5>
-    <ul className="list">
-      <li className="list_item repel" tabIndex={1}>
+    <h5 className='text-red-500 mb-4 text-5xl'>Menu Items </h5>
+    <ul className="menu__list">
+      <li className="menu__item repel" tabIndex={1}>
         <NavLink className="item-link">  Nav Link here </NavLink>
         <NavLink className="item-link">  Nav Link here </NavLink>
       </li>
-      <li className="list_item cluster" tabIndex={1}>
-          <div className="list-title"> Inactive Data Group item </div>
+      <li className="menu__heading"> Menu Title  </li>
+      <li className="menu__item cluster" tabIndex={1}>
+          <div className="menu__title"> Inactive Data Group item </div>
         
          
-        <div className="form-checkbox">
+        <div className="form_checkbox">
           <input
             className="checkobox"
             type="Checkbox"
@@ -30,10 +31,10 @@ const List = () => {
      
       </li>
 
-      <li className="list_item repel" data-state="active" tabIndex={2}>
-        <div className="list-title">Active data-item
+      <li className="menu__item repel" data-state="active" tabIndex={2}>
+        <div className="menu__title">Active data-item
         </div>
-        <div className="form-checkbox">
+        <div className="form_checkbox">
           <input
             className="checkobox square"
             type="Checkbox"
@@ -42,17 +43,17 @@ const List = () => {
         </div>
       </li>
     
-      <li className="list_item cluster" data-state="" tabIndex={3}> 
-        <div className="list-title">Title here
+      <li className="menu__item cluster" data-state="" tabIndex={3}> 
+        <div className="menu__title">Title here
           </div>
-        <div className="item-checkbox group" data-state="acctive">
+        <div className="item_checkbox group" data-state="acctive">
           <div>
         <label className={`${style.label} ${style.tag} ${style.success} ${style.xxs}`}><span>A</span> -- <span>Z</span></label></div>
         </div>
       </li>
-      <li className='list-divider'></li>
-      <li className="list_item repel" data-state="" tabIndex={4}> 
-        <div  className="list-title">Title here
+      <li className='menu__divider'></li>
+      <li className="menu__item repel" data-state="" tabIndex={4}> 
+        <div  className="menu__title">Title here
           </div>
         
           <div>
@@ -64,7 +65,7 @@ const List = () => {
       
     </ul>
     <h2>Checkbox </h2>
-      <div className="form-checkbox">
+      <div className="form_checkbox">
             <input
               className="checkobox"
               type="Checkbox"
@@ -72,7 +73,7 @@ const List = () => {
             />
           </div>
     <hr/>
-    <div className="item-checkbox" data-state="">
+    <div className="item_checkbox" data-state="">
           <div className="list-label">
           <span>A</span> --<span>Z</span>
           </div>
@@ -83,4 +84,4 @@ const List = () => {
   )
 }
 
-export default List
+export default MenuList

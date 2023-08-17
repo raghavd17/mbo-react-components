@@ -13,7 +13,7 @@
     height: auto;
     max-width: 100%;
     margin-inline: auto;
-    padding: .5rem;
+    padding: var(--reel-padding, 0.5rem);
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 

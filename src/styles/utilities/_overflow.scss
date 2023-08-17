@@ -1,50 +1,14 @@
-.overflow {
-  &-auto {
-    overflow: auto;
-  }
+$overflow: auto, hidden, scroll, visible;
 
-  &-hidden {
-    overflow: hidden;
+@each $val in $overflow {
+  .overflow-#{$val} {
+    overflow: #{$val};
   }
-
-  &-visible {
-    overflow: visible;
+  .overflow-x-#{$val} {
+    overflow-x: #{$val};
   }
-
-  &-scroll {
-    overflow: scroll;
-  }
-
-  &-x-auto {
-    overflow-x: auto;
-  }
-
-  &-x-hidden {
-    overflow-x: hidden;
-  }
-
-  &-x-visible {
-    overflow-x: visible;
-  }
-
-  &-x-scroll {
-    overflow-x: scroll;
-  }
-
-  &-y-auto {
-    overflow-y: auto;
-  }
-
-  &-y-hidden {
-    overflow-y: hidden;
-  }
-
-  &-y-visible {
-    overflow-y: visible;
-  }
-
-  &-y-scroll {
-    overflow-y: scroll;
+  .overflow-y-#{$val} {
+    overflow-y: #{$val};
   }
 }
 

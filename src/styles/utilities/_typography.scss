@@ -70,6 +70,9 @@ $weight in $token-font-weights {
 .italic {
   font-style: italic;
 }
+.strong {
+  font-weight: 600;
+}
 
 .uppercase {
   text-transform: uppercase;

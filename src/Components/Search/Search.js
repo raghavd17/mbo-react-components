@@ -20,8 +20,8 @@ const Search = () => {
       </div>
       {/* search__bar */}
       <div className='search__results'>
-      <ul className="list">
-      <li className="list_item" data-state="" tabIndex={1}> 
+      <ul className="menu__list">
+      <li className="menu__item" data-state="" tabIndex={1}> 
         <div data-avatar="" className={`${style.avatar}`}>
             <picture className={`${style.avatar__media}`}>
               <source media="(min-width:650px)" srcset="https://i.pravatar.cc/300" />
@@ -34,8 +34,8 @@ const Search = () => {
             </div>
           </div>
       </li>
-      <li className='list-divider'></li>
-      <li className="list_item" data-state="" tabIndex={2}> 
+      <li className='menu__divider'></li>
+      <li className="menu__item" data-state="" tabIndex={2}> 
         <div data-avatar=""  className={`${style.avatar} ${style.md}`}>
             <picture  className={`${style.avatar__media}`}>
               <source media="(min-width:650px)" srcset="https://i.pravatar.cc/300" />
@@ -48,8 +48,8 @@ const Search = () => {
             </div>
           </div>
       </li>
-      <li className='list-divider'></li>
-      <li className="list_item" data-state="" tabIndex={3}>
+      <li className='menu__divider'></li>
+      <li className="menu__item" data-state="" tabIndex={3}>
         <div data-avatar="" className={`${style.avatar} ${style.lg}`}>
             <picture  className={`${style.avatar__media}`}>
               <source media="(min-width:650px)" srcset="https://i.pravatar.cc/300" />
@@ -62,8 +62,8 @@ const Search = () => {
             </div>
           </div>
       </li>
-      <li className='list-divider'></li>
-      <li className="list_item" data-state="" tabIndex={4}>
+      <li className='menu__divider'></li>
+      <li className="menu__item" data-state="" tabIndex={4}>
         <div data-avatar="" className={`${style.avatar} ${style.xl}`}>
             <picture  className={`${style.avatar__media}`}>
               <source media="(min-width:650px)" srcset="https://i.pravatar.cc/300" />
@@ -77,7 +77,7 @@ const Search = () => {
           </div>
       </li>
 
-      <li className="list_item" data-state="" tabIndex={1}> 
+      <li className="menu__item" data-state="" tabIndex={1}> 
         <div data-avatar="sm" className={`${style.avatar} ${style.sm}`}>
             
             <div  className={`${style.avatar__content}`}>
@@ -86,8 +86,8 @@ const Search = () => {
             </div>
           </div>
       </li>
-      <li className='list-divider'></li>
-      <li className="list_item" data-state="" tabIndex={2}> 
+      <li className='menu__divider'></li>
+      <li className="menu__item" data-state="" tabIndex={2}> 
         <div data-avatar="md"  className={`${style.avatar} ${style.md}`}>
             
             <div  className={`${style.avatar__content}`}>
@@ -96,8 +96,8 @@ const Search = () => {
             </div>
           </div>
       </li>
-      <li className='list-divider'></li>
-      <li className="list_item" data-state="" tabIndex={3}>
+      <li className='menu__divider'></li>
+      <li className="menu__item" data-state="" tabIndex={3}>
         <div data-avatar="lg" className={`${style.avatar} ${style.lg}`}>
             
             <div  className={`${style.avatar__content}`}>
@@ -106,8 +106,8 @@ const Search = () => {
             </div>
           </div>
       </li>
-      <li className='list-divider'></li>
-      <li className="list_item" data-state="" tabIndex={4}>
+      <li className='menu__divider'></li>
+      <li className="menu__item" data-state="" tabIndex={4}>
         <div data-avatar="xl" className={`${style.avatar} ${style.xl}`}>
             <div  className={`${style.avatar__content}`}>
             <div  className={`${style.avatar__title}`}>Camila Willians </div>

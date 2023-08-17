@@ -1,7 +1,7 @@
 @mixin label-active() {
-  --label-left-pos:var(--size-2-5);
+  --label-left-pos:var(--size-2);
   font-size: var(--label-size-sm);
-  transform: translateY(calc(-1 * var(--size-3-5)));
+  transform: translateY(calc(-1 * var(--size-2-5)));
 }
 
 .form_field {
@@ -13,23 +13,19 @@
   --label-size-sm: var(--fs-10); //10px
   --label-size-md: var(--fs-14); //14px
   --animation-duration: 0.4s;
-
   --label-width: var(--width-full);
   --font-family: var(--ff-roboto);
-
   --error-color: var(--color-error-900);
+  --form-field-min-height:70px;
   display: block;
   font-family: var(--font-family);
   font-style: normal;
   font-weight: var(--fw-400, 400);
+  min-height: var(--form-field-min-height);
 
   &:has(.form_field__input:not(:placeholder-shown)),
   &:has(.form_field__input:focus),
-  &.filled {
-    --bg-color: var(--color-neutrals-white-900);
-    --border-color: var(--color-primary-400);
-    --label-color: var(--color-neutrals-400);
-
+  &.filled  {
     .form_field__label {
       @include label-active();
     }
@@ -40,9 +36,9 @@
   --bg-color: var(--color-neutrals-white-600);
   background: var(--bg-color);
   border-radius: var(--size-0-5);
-  overflow: hidden;
+  // overflow: hidden; // removed as this was causinhgissue with dropdown 
   position: relative;
-
+  
 
   &:hover {
     --bg-color: var(--color-neutrals-white-900);
@@ -63,7 +59,9 @@
     --border-color: var(--color-error-500);
   }
   &:has(.form_field__input:valid):not(.error),
-  &.filled {
+  &:focus-within:not(.error),
+  &.filled
+   {
     --bg-color: var(--color-primary-200, #6855b414);
     --border-color: var(--color-primary-900);
     --input-color: var(--color-primary-800);
@@ -83,7 +81,7 @@
   display: flex;
   border-bottom: var(--size-0-5) solid;
   border-bottom-color: var(--border-color);
-  align-items: baseline;
+  align-items: center;
   padding: var(--size-2);
   gap: var(--size-2);
 }
@@ -109,7 +107,7 @@
 
 .form_field__label {
   --label-left-pos:var(--size-2);
-  --label-top-pos:var(--size-4);
+  --label-top-pos:var(--size-3);
   display: block;
   left: var(--label-left-pos);
   top: var(--label-top-pos);
@@ -129,7 +127,7 @@
 
 
 .form_field__info {
-  padding: var(--size-2);
+  padding: var(--size-1) var(--size-2);
   display: grid;
   line-height: 1.125;
   gap: var(--size-1);
