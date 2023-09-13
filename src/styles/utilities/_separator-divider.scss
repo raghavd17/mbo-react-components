@@ -41,10 +41,12 @@
 .grid{
 	:where(.divide-x > * + *, .divider-x) {
 		display:flex;
+    align-self: stretch;
 	}
 }
 :where(.divide-x > * + *, .divider-x) {
   display: inherit;
+  align-self: stretch;
 
   &:before {
     border-left: var(--border-width) var(--border-style, solid)
