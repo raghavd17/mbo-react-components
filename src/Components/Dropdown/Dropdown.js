@@ -8,7 +8,7 @@ const Dropdown = () => {
   const [isVisible, setIsVisible] = useState(false)
   return (
     
-<main className='p-12'>
+<main className='p-12 pt-80 mt-80'>
     
     <h2 className='text-red-500 mb-16 text-5xl'>Dropdowns</h2>
 
@@ -134,7 +134,7 @@ const Dropdown = () => {
                   <Button type="action-success" icon split className="dropdown_toggle" data-dropdown={`${isVisible?"open": ""}`} onClick={()=>setIsVisible(!isVisible)}> <IconsCaretDown className="icon" /></Button>        
       </div> */}
       
-      <div className='dropdown__menu' data-arrow='true' data-align='end'>
+      <div className='dropdown__menu' data-arrow='true' data-align='top-end'>
         <ul className="menu__list">
           <li className="menu__item" tabIndex={1}>
             <NavLink key={1}  className="item-link"> Link item here </NavLink>
