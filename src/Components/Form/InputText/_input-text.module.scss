@@ -58,7 +58,8 @@
     --bg-color: var(--color-neutrals-white-900);
     --border-color: var(--color-error-500);
   }
-  &:has(.form_field__input:valid):not(.error),
+  // &:has(.form_field__input:valid):not(.error),
+  &:has(.form_field__input:not(:placeholder-shown):not(.error)),
   &:focus-within:not(.error),
   &.filled
    {
@@ -67,7 +68,8 @@
     --input-color: var(--color-primary-800);
   }
 
-  &:has(.form_field__input:valid, .form_field__input:focus),
+  // &:has(.form_field__input:valid, .form_field__input:focus),
+  &:has(.form_field__input:not(:placeholder-shown), .form_field__input:focus),
   &.filled {
     .form_field__icon {
       align-self: end;
