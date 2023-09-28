@@ -1,0 +1,108 @@
+@layer components {
+/*
+ * react-circular-progressbar styles
+ * All of the styles in this file are configurable!
+ */
+
+ :root {
+	--profile-size: 40px;
+	--profile-progress: 20;
+	--profile-bg: var(--color-white);
+	--profile-color: var(--color-primary-600);
+	--profile-radi: var(--radius-full);
+	--profile-trail-color: var(--color-primary-300);
+	--profile-path-color: var(--color-success-200);
+  }
+  .profile {
+	display: grid;
+	place-items: center;
+	place-content: center;
+	grid-template-columns: 1fr;
+	position: relative;
+	inline-size: var(--profile-size);
+	aspect-ratio: var(--ratio-square, 1/1);
+	isolation: isolate;
+  
+	&__media {
+	  border-radius: 100%;
+	  inline-size: calc(100% - 20%);
+	  aspect-ratio: var(--ratio-square, 1/1);
+	  line-height: 0;
+	  text-transform: uppercase;
+	  &:has(> picture, img) {
+		&[data-profile]:before {
+		  display: none;
+		}
+	  }
+	  &[data-profile]:before {
+		grid-column: 1/1;
+		grid-row: 1/1;
+		content: attr(data-profile);
+		display: grid;
+		place-content: center;
+		place-items: center;
+		aspect-ratio: var(--ratio-square, 1/1);
+		border-radius: var(--profile-radi, 100%);
+		background: var(--profile-bg);
+		color: var(--profile-color);
+		inline-size: 100%;
+		text-transform: uppercase;
+		outline: 2px solid var(--color-primary-200);
+		font-size: var(--profile-fs, 1rem);
+	  }
+	}
+	// 	progressbar__media end
+	&__img {
+	  > :is(img, svg) {
+		border-radius: var(--profile-radi, 100%);
+		inline-size: 100%;
+		aspect-ratio: var(--ratio-square, 1/1);
+		height: 100%;
+	  }
+	}
+	&__media,
+	&__progress {
+	  grid-column: 1/1;
+	  grid-row: 1/1;
+	}
+	&__progress {
+	  z-index: -1;
+	  animation: progress-fill 2s reverse; /* 1 */
+	  transform: rotate(-90deg); /* 2, 3 */
+	  transform-origin: center; /* 4 */
+	  stroke-width: 2px;
+	}
+  
+	&__trail {
+	  stroke: var(--profile-trail-color);
+	}
+	&__path {
+	  stroke: var(--profile-path-color);
+	  // stroke-dasharray: var(--profile-progress, 50), 100;
+	  animation: progress-fill 2s reverse; /* 1 */
+	}
+  
+	// size
+  
+	&.md {
+	  --profile-size: 28px;
+	  --profile-fs: 0.75rem;
+	}
+	&.lg {
+	  --profile-size: 40px;
+	  --profile-fs: 1rem;
+	}
+	&.xl {
+	  --profile-size: 56px;
+	  --profile-fs: 1.125rem;
+	}
+  }
+  // .profile end
+  
+  @keyframes progress-fill {
+	to {
+	  stroke-dasharray: 0 100;
+	}
+  }
+  
+}

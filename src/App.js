@@ -11,6 +11,7 @@ import Accordion from './Components/Accordion/Accordion';
 import InputText from './Components/Form/InputText/InputText';
 import Search from './Components/Search/Search';
 import Avatar from './Components/Avatar/Avatar';
+import ProfileStatus from './Components/ProfileStatus/ProfileStatus';
 import InputRadio from './Components/Form/InputRadio/InputRadio';
 import InputCheckbox from './Components/Form/InputCheckbox/InputCheckbox';
 
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/InputText" element={<InputText />} />
           <Route path="/Search" element={<Search />} />
           <Route path="/Avatar" element={<Avatar />} />
+          <Route path="/ProfileStatus" element={<ProfileStatus />} />
           <Route path="/InputRadio" element={<InputRadio />} />
           <Route path="/InputCheckbox" element={<InputCheckbox />} />
 
