@@ -32,18 +32,20 @@
 // divide-x | divide-y | divider style
 :where(.divide-x, .divider-x, .divide-y, .divider-y) {
   --border-color: var(
-    --color-primary-tint-200,
-    #a199c226
+    --color-neutrals-200,
+    #b8b3bc
   ); // define color for divider
   --border-width: 1px;
   --border-style: solid;
 }
-.grid{
-	:where(.divide-x > * + *, .divider-x) {
-		display:flex;
+
+.grid {
+  :where(.divide-x > * + *, .divider-x) {
+    display: flex;
     align-self: stretch;
-	}
+  }
 }
+
 :where(.divide-x > * + *, .divider-x) {
   display: inherit;
   align-self: stretch;
@@ -53,6 +55,7 @@
       var(--border-color);
     content: "";
     margin-inline: var(--space-divider);
+    align-self: stretch;
   }
 }
 
