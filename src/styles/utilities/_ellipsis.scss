@@ -1,0 +1,8 @@
+.text__ellipsis,
+.text__truncate {
+  --label-display: flow-root;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: var(--label-display);
+}
