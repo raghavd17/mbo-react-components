@@ -8,64 +8,66 @@
 // .reel[data-scroll='snap']	        Enables scroll snapping
 
 .reel {
-    --reel-space: 2rem;
     display: flex;
     height: auto;
     max-width: 100%;
-    margin-inline: auto;
+    margin-inline: var(--reel-margin-inline, auto);
     padding: var(--reel-padding, 0.5rem);
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-
-    >* {
-        flex-basis: var(--reel-item-width, calc(33.333% - var(--reel-space)));
-        flex-shrink: 0;
-
-        +* {
-            margin-inline-start: var(--reel-space);
-        }
-
-        // .reel > * + * end here
+    
+    > * {
+      flex-basis: var(
+        --reel-item-width,
+        calc(33.333% - var(--reel-space, 1.25rem))
+      );
+      flex-shrink: 0;
+  
+      + * {
+        margin-inline-start: var(--reel-space, 1.25rem);
+      }
+  
+      // .reel > * + * end here
     }
-
+  
     // .reel > * end here
-    // 
+    //
     &.scrollbar {
-        padding-block-end: clamp(1.375rem, 1.2rem + 0.89vw, 2rem);
+      padding-block-end: clamp(1.375rem, 1.2rem + 0.89vw, 2rem);
     }
-
+  
     // .reel.scrollbar end here
-    &[data-scroll=snap] {
-        scroll-snap-type: x mandatory;
-
-        &>* {
-            scroll-snap-align: start;
-        }
+    &[data-scroll="snap"] {
+      scroll-snap-type: x mandatory;
+  
+      & > * {
+        scroll-snap-align: start;
+      }
     }
-
-    // .reel[data-scroll=snap] end here 
-}
-
-// .reel end 
-
-// EX
-/*
-<h2>Reel with scrollbar</h2> 
-<div class="reel scrollbar">
-  <div>Item</div>
-  <div>Item</div>
-  <div>Item</div>
-  <div>Item</div>
-  <div>Item</div>
-</div>
-
-
-<h2>Reel with snap</h2> 
-<div class="reel" data-scroll='snap'>
-  <div>Item</div>
-  <div>Item</div>
-  <div>Item</div>
-  <div>Item</div>
-  <div>Item</div>
-</div>
-*/
+  
+    // .reel[data-scroll=snap] end here
+  }
+  
+  // .reel end
+  
+  // EX
+  /*
+  <h2>Reel with scrollbar</h2> 
+  <div class="reel scrollbar">
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+  </div>
+  
+  
+  <h2>Reel with snap</h2> 
+  <div class="reel" data-scroll='snap'>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+    <div>Item</div>
+  </div>
+  */

@@ -20,6 +20,7 @@ const Nav = () => {
       <NavLink to={'/InputRadio'} key={7} className="border-b-2 border-primary-300"> Input Radio </NavLink>
       <NavLink to={'/InputCheckbox'} key={8} className="border-b-2 border-primary-300"> Input Checkbox </NavLink>
       <NavLink to={'/Avatar'} key={9} className="border-b-2 border-primary-300"> Avatar </NavLink>
+      <NavLink to={'/ProfileStatus'} key={9} className="border-b-2 border-primary-300"> ProfileStatus </NavLink>
     </ul>
     <Outlet />
   </nav>
