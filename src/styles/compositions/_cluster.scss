@@ -1,17 +1,17 @@
 // Groups items in such a way that a 'cluster' is created that automatically
 // determines how many items can be on a single row (e.g. tag cloud).
 // NOTE: Can be combined with flex based utilities (e.g. .gap-00)
-
-.cluster {
-  --gutter: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gutter, clamp(1.375rem, 1.2rem + 0.89vw, 1rem));
-  justify-content: var(--cluster-horizontal-alignment, flex-start);
-  align-items: var(--cluster-vertical-alignment, center);
-  /* ↓ multiply by -1 to negate the halved value */
+.v2 {
+  .cluster {
+    display: flex;
+    flex-wrap: var(--cluster-wrap, wrap);
+    gap: var(--gutter, clamp(1.375rem, 1.2rem + 0.89vw, 1rem));
+    justify-content: var(--cluster-horizontal-alignment, flex-start);
+    align-items: var(--cluster-vertical-alignment, center);
+    /* ↓ multiply by -1 to negate the halved value */
+  }
 }
-// EX: 
+// EX:
 /*
 <div class="cluster">
   <div>Item 1</div>

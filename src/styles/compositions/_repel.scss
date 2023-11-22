@@ -3,11 +3,11 @@
 // --repel-vertical-alignment	20rem	              How items should align vertically. Can be any acceptable flexbox alignment value..
 
 .repel {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: var(--repel-vertical-alignment, center);
-    gap: var(--gutter, clamp(1.375rem, 1.2rem + 0.89vw, 1rem))
+  display: flex;
+  flex-wrap: var(--repel-wrap, wrap);
+  justify-content: space-between;
+  align-items: var(--repel-vertical-alignment, center);
+  gap: var(--gutter, clamp(1.375rem, 1.2rem + 0.89vw, 1rem));
 }
 
 // EX:
